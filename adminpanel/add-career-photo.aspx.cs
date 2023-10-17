@@ -43,13 +43,13 @@ public partial class adminpanel_add_career_photo : System.Web.UI.Page
                 //Page.ClientScript.RegisterStartupScript(this.GetType(), "myJsFunction", "waitAndMove('add-photos.aspx', 3000);", true);
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Photo Deleted');", true);
             }
-            catch (Exception)
+            catch (Exception )
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Record does not exist');", true);
                 return;
             }
         }
-        pgTitle = "Add Events Photos";
+        pgTitle = "Add Career Activity Photos";
 
     }
 
@@ -118,7 +118,7 @@ public partial class adminpanel_add_career_photo : System.Web.UI.Page
                     strMarkup.Append("</div>");
                     strMarkup.Append("</div>");
                     strMarkup.Append("</div>");
-                    strMarkup.Append("<a href=\"add-career-photos.aspx?albumid=" + Request.QueryString["albumId"] + "&id=" + row["CarActPhotoId"] + "\" title=\"Delete Photo\"  class=\"gAnchdel\"></a>");
+                    strMarkup.Append("<a href=\"add-career-photo.aspx?albumid=" + Request.QueryString["albumId"] + "&id=" + row["CarActPhotoId"] + "\" title=\"Delete Photo\"  class=\"gAnchdel\"></a>");
                     strMarkup.Append("</div>");
                 }
 

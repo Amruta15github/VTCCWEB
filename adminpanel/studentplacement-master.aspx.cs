@@ -294,7 +294,7 @@ public partial class adminpanel_studentplacement : System.Web.UI.Page
         {
             c.ExecuteQuery("Delete StudentPlacement where StudPlcId=" + Request.QueryString["id"]);
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Record Deleted');", true);
-            ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "waitAndMove('news-master.aspx', 2000);", true);
+            ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "waitAndMove('studentplacement-master.aspx', 2000);", true);
         }
         catch (Exception ex)
         {

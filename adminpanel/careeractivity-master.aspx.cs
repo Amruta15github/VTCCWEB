@@ -197,8 +197,8 @@ public partial class adminpanel_careeractivity : System.Web.UI.Page
         try
         {
             c.ExecuteQuery("Delete CareerActivity where CarActId=" + Request.QueryString["id"]);
-            ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Event Data Deleted');", true);
-            ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "waitAndMove('careeractivity.aspx', 2000);", true);
+            ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Careeractivity Data Deleted');", true);
+            ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "waitAndMove('careeractivity-master.aspx', 2000);", true);
         }
         catch (Exception ex)
         {
@@ -226,7 +226,7 @@ public partial class adminpanel_careeractivity : System.Web.UI.Page
 
                 Literal litAnchphto = new Literal();
                 litAnchphto = (Literal)e.Row.FindControl("litAnchphto");
-                litAnchphto.Text = "<a href=\"add-career-photos.aspx?albumId=" + e.Row.Cells[0].Text + "\" class=\"addPhoto\" title=\"Add Photos \"></a>";
+                litAnchphto.Text = "<a href=\"add-career-photo.aspx?albumId=" + e.Row.Cells[0].Text + "\" class=\"addPhoto\" title=\"Add Photos \"></a>";
 
             }
         }
