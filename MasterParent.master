@@ -1,0 +1,343 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterParent.master.cs" Inherits="MasterParent" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+    <title>VTCC Education</title>
+
+    <meta name="description" content="" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link href="css/EnglishMtsts.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <script src="js/jquery-2.2.4.min.js"></script>
+
+    <link href="css/jquery.fancybox.css" rel="stylesheet" />
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <%-- DatePicker --%>
+	<link href="<%=rootPath + "adminpanel/css/duDatepicker.min.css"%> " rel="stylesheet" />
+	<link href="<%=rootPath + "adminpanel/css/duDatepicker-theme.css"%> " rel="stylesheet" />
+	<script src="<%=rootPath + "adminpanel/js/duDatepicker.min.js"%>  "></script>
+
+    <%-- Tost Notifications --%>
+    <link href="css/toastr.css" rel="stylesheet" />
+    <script src="js/toastr.js"></script>
+
+    <script type="text/javascript">
+        function TostTrigger(EventName, MsgText) {
+            // code to be executed
+            Command: toastr[EventName](MsgText)
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-full-width",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "slideDown",
+                "hideMethod": "fadeOut"
+            }
+
+        }
+    </script>
+
+     <style>
+        .qaimg{width: 153px;}
+        .gradeimg{width:140px}
+    </style>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <div class="">
+        <div class="">
+            <div class="">
+                <a href="https://wa.me/919975327900?text=I%20AM%20INTERESTED%20IN%20MAHARASHTRA%20TECHNICAL%20AND%20SELF-EMPLOYMENT%20TRAINING%20SOCIETY%20(MTSTS)%20LEARNING%20CENTER%20PLEASE%20SEND%20ME%20PROPOSAL%20" class="whatsappLink" target="_blank" title="Contact us on Whatsapp"></a>
+            </div>
+
+             <div class="">
+                <a href="#" class="payonline" title="Make Online Payment"></a>
+            </div>
+        </div>
+    </div>
+     <!-- Header Starts -->
+     <header id="header">
+            <div class="topLine"></div>
+            <div class="container-fluid position-relative">
+                <div class="p-2">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2">
+                            <div id="logo" class="text-center">
+                                <style>
+                                    #logo {
+                                        margin-top: 20px;
+                                    }
+                                </style>
+                                <a href="<%= rootPath %>" title="">
+                                   <img src="<%= rootPath + "images/vtcc-logo.png" %>" alt="" title="" /></a>
+                                <span class="space5"></span>
+                             
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-lg-7">
+                            <div class="logoName">
+                                <p class="d-block small headtxt" style="line-height:1.5">
+                                    Accredited certification body by A+ Rating from QUALITY ASSURANCE AND<br />ACCREDITATION COMMITTEE (QAAC), NEW DELHI, INDIA. & an ISO 9001:2015 <br />certification by Emirates International Accreditation Centre (EIAC), Governmental Accreditation <br />Body Dubai & International Accreditation Service (I.A.S.) U.S.A.
+                                </p>
+                               <%-- <span class="space1"></span>
+                                <span class="d-block text-info medium fontRegular">An ISO 9001:2015 Certified</span>
+                                --%>
+                                <h1 class="themeClrPrime semiBold large"> VOCATIONAL TRAINING  &amp; CERTIFICATION 
+                            <br />
+                                    COMMITTEE (VTCC), NEW DELHI, INDIA</h1>
+                                <span class="space15"></span>
+                                <h1 class="themeClrPrime semiBold medium">व्यावसायिक प्रशिक्षण एवम् प्रमाणन समिति, नई दिल्ली, भारत</h1>
+                            
+                            </div>
+                        </div>
+                        <div id="icons">
+                            <div class="col-md-3 d-inline">
+                                <img src="<%=rootPath + "images/icons/grade-plus-1.png" %>" class="img-fluid gradeimg" />
+                                <img src="<%=rootPath + "images/icons/QAAc-new.png" %>" class="img-fluid qaimg"/>
+                                
+                                <span class="space10"></span>
+                                <%--<div class="fontRegular regular text-center lgtext text-uppercase">A+ Rating BY (QAAC), NEW DELHI, India</div>--%>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                    <div class="float_clear"></div>
+                </div>
+                <a id="navBtn" onclick="openNav()"></a>
+         <!-- Navigation Starts -->
+            <nav id="topNavPanel">
+                <div class="container-fluid">
+                    <ul id="topNav">
+                        <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+                        <li><a href="<%= rootPath %>">Home</a></li>
+                        <li class="list">
+                            <a class="subNav">VTCC</a>
+                            <ul class="items">
+                                <li><a href="<%=rootPath + "about-us" %>">Our Profile</a></li>
+                                <li><a href="<%=rootPath + "courses" %>">Courses Information</a></li>
+                                <li><a href="<%=rootPath + "news"  %>">Latest News</a></li>
+                                <li><a href="<%=rootPath + "#" %>">VTCC Tie-ups</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="<%=rootPath + "#" %>">VTCC Learning Center</a></li>
+                        <li><a href="<%=rootPath + "Affiliation-centers" %>">Exam Centers</a></li>
+                        <li><a href="<%=rootPath + "#" %>" <%--target="_blank"--%>>Online Exams</a></li>
+                        <li class="list">
+                            <a class="subNav">Registration</a>
+                            <ul class="items">
+                                <li><a href="<%=rootPath + "center-registration" %>">MLC Registration</a></li>
+                                <li><a href="<%=rootPath + "atc-renewal" %>">MLC Renewal Process</a></li>
+                            </ul>
+                        </li>
+                        <li class="list">
+                            <a class="subNav" href="<%=rootPath + "#" %>" <%--target="_blank"--%>>Verification</a>
+                            <ul class="items">
+                                 <li><a href="<%=rootPath + "#" %>"<%--target="_blank"--%>>Student Certificate Verification</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="<%=rootPath + "document-download" %>">Downloads</a></li>
+                        <li><a href="<%=rootPath + "other-products" %>" class="bgnav">VTCC Other Products</a></li>
+                    </ul>
+                    <!--<div class="float_clear"></div>-->
+                    <div id="mobNav" class="text-left">
+                        <span class="space20"></span>
+                        <div class="pad_30 txtLeft">
+                            <span class="tiny upperCase clrWhite letter-sp-3 mrg_B_15">Phone:</span>
+                            <span class="space1"></span>
+                            <a href="#" class="clrWhite"><span class="fa fa-phone"></span><span class="clrWhite">+91 9975327900</span></a>
+                            <span class="space40"></span>
+                            <span class="tiny upperCase clrWhite letter-sp-3 mrg_B_15">Email:</span>
+                            <span class="space1"></span>
+                            <a href="#" class="clrWhite"><span class="fa fa-envelope"></span><span class="clrWhite">vtccdelhi&#64;gmail&#46;com</span></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navigation Ends -->
+        </header>
+     <!-- Header Ends -->
+     <!-- Content Starts -->
+    <form id="form1" runat="server">
+        <div>
+            <div>
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <!-- Content Ends -->
+    <span class="space40"></span>
+      <!-- Footer Starts -->
+        <footer id="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+
+                       <%-- <div class="col-lg col-md-6 footer-contact">
+                            <h4 class="mb-2">MTSTS</h4>
+                            <span class="fontMedium">MAHARASHTRA TECHNICAL AND SELF-EMPLOYMENT TRAINING SOCIETY</span>
+                            <p>
+                                <span class="fontRegular">Administration Office for Maharashtra :
+                                    <br />
+                                    In front of Priyadarshini Hotel, Miraj.
+                                Dist - Sangli, Pin - 416410.
+                                </span>
+                                <span class="space10"></span>
+                                <strong>Phone:</strong> <a href="tel:+919975327900" class=""><span class="fa fa-phone"></span><span class="">+91 9975327900</span></a><br>
+                                <span class="space10"></span>
+                                <strong>Email:</strong> <a href="mailto:info@mtsts.org" class="">info&#64;mtsts&#46;org</a><br>
+                            </p>
+                        </div>--%>
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%= rootPath %>">Home</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "about-us"  %>">About us</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "courses"  %>">Courses Information</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "news"  %>">Latest News</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "contact-us" %>">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "#" %>">VTCC Learning Center</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "Affiliation-centers" %>">Exam Centers</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "#"  %>" <%--target="_blank"--%>>Online Exam</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "sample-certificates" %>">Certification</a></li>
+                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "other-products" %>">VTCC Other Products</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Other Links</h4>
+                            <ul>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "faq" %>">FAQ </a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "disclaimer" %>">Disclaimer</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href= "<%=rootPath + "terms-services"  %>">Terms Of Services</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href= "<%=rootPath + "privacy-policy"  %>">Privacy Policy</a></li>
+                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "terms-conditions"  %>">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Other Links</h4>
+                            <ul>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href= "<%=rootPath + "#"  %>">Authorised Institute </a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "download-proposal" %>">Franchaise Agreement</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href= "<%=rootPath + "online-payment" %>">Make Online Payment</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href= "<%=rootPath +"center-registration" %>">Online Franchaise Form</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "career-activities" %>">Gallery</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 text-center">
+                             <%--<h4 class="mb-2">MTSTS</h4>--%>
+                             <span class="fontMedium">Vocational Training and Certification Committee,New Delhi,India</span>
+                            <p>
+                                <span class="fontRegular">Sangeet Ratna Abdul Karim Kha Smruti Bhavan, Shivaji Road, In 
+                                   Front of Priyadarshini Hotel, Miraj, Tal-Miraj, Dist-Sangli, Maharashtra-416410
+                              
+                                </span>
+                                <span class="space10"></span>
+                                <strong>Phone:</strong> <a href="#" class=""><span class="fa fa-phone"></span><span class="mrg_R_15">+91 9975327900</span></a>
+                                <strong>Email:</strong> <a href="#" class="">vtccdelhi&#64;gmail&#46;com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row justify-content-md-between pt-15 pb-10">
+                    <div class="col-md-6">
+                        <div class="copyright">
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script>
+                            <strong><span class="semiBold">VTCC</span></strong>. All Rights Reserved
+                        </div>
+                        <div class="credits">Designed by <a href="http://www.intellect-systems.com/">Intellect Systems</a></div>
+                    </div>
+                    <div class="col-md-6 social-links text-md-right pt-3 pt-md-0">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+        <span class="space40"></span>
+
+        <!-- Footer Ends-->
+      <%--urget contact start--%>
+        <div class="bgsrtip enquirystrip">
+            <div class="container text-center">
+                 <span class="space10"></span>
+                <span class="semiBold regular clrWhite">For more information whatsapp message on - 9975327900 | or mail us on  vtccdelhi@gmail.com</span>
+            <span class="space10"></span>
+            </div>
+        </div>
+        <%--urget contact end--%>
+    
+    <script type="text/javascript">
+        function openNav() {
+            //alert("demo");
+            document.getElementById("topNavPanel").style.width = "320px";
+            document.getElementById("navBtn").style.zIndex = "0";
+        }
+        function closeNav() {
+            document.getElementById("topNavPanel").style.width = "0";
+            document.getElementById("navBtn").style.zIndex = "5";
+        }
+    </script>
+    <script>
+        const list = document.querySelectorAll('.list');
+
+        function accordion(e) {
+            e.stopPropagation();
+            if (this.classList.contains('active')) {
+                this.classList.remove('active');
+            }
+            else if (this.parentElement.parentElement.classList.contains('active')) {
+                this.classList.add('active');
+            }
+            else {
+                for (i = 0; i < list.length; i++) {
+                    list[i].classList.remove('active');
+                }
+                this.classList.add('active');
+            }
+        }
+        for (i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', accordion);
+        }
+
+    </script>
+
+</body>
+</html>

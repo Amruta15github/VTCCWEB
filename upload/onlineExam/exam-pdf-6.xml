@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<certificate>
+	<QuizTitle visible="1" left="244" top="269" right="608" bottom="292">
+		<font>
+			<name>Tahoma</name>
+			<size>14</size>
+			<style>b</style>
+			<color>0</color>
+		</font>
+	</QuizTitle>
+	<UserID visible="1" left="250" top="161" right="581" bottom="190">
+		<font>
+			<name>Tahoma</name>
+			<size>18</size>
+			<style>b</style>
+			<color>0</color>
+		</font>
+	</UserID>
+	<UserScore visible="1" left="364" top="388" right="470" bottom="411">
+		<font>
+			<name>Tahoma</name>
+			<size>14</size>
+			<style></style>
+			<color>255</color>
+		</font>
+	</UserScore>
+	<CurrentDate visible="1" left="364" top="484" right="470" bottom="507">
+		<font>
+			<name>Tahoma</name>
+			<size>14</size>
+			<style></style>
+			<color>52377</color>
+		</font>
+	</CurrentDate>
+</certificate>
