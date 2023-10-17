@@ -161,7 +161,16 @@
 							<a href="studentplacement-master.aspx" class="nav-link">
 								<i class="nav-icon fa fa-graduation-cap"></i>
 								<p>
-									StudentPlacement
+									Student Placement
+								</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="careeractivity-master.aspx" class="nav-link">
+								<i class="nav-icon fa fa-chart-bar"></i>
+								<p>
+									Career Activity
 								</p>
 							</a>
 						</li>

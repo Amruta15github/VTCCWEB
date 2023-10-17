@@ -41,7 +41,7 @@
 
             <%-- Small Box --%>
             <div class="col-lg-3 col-6">
-                <div class="small-box bg-red">
+                <div class="small-box bg-purple">
                     <div class="inner">
                         <h3><%=arrCounts[3] %></h3>
                         <p>Center Registration</p>
@@ -55,7 +55,7 @@
 
              <%-- Small Boxces --%>
              <div class="col-lg-3 col-6">
-                <div class="small-box bg-purple">
+                <div class="small-box bg-red">
                     <div class="inner">
                         <h3><%=arrCounts[4]%></h3>
                         <p>Download</p>
@@ -84,7 +84,7 @@
 
               <%-- Small Boxces --%>
             <div class="col-lg-3 col-6">
-                <div class="small-box bg-primary">
+                <div class="small-box bg-green">
                     <div class="inner">
                         <h3><%=arrCounts[6]%></h3>
                         <p>Student Placement</p>
@@ -93,6 +93,20 @@
                         <i class="ion ion-bag"></i>
                     </div>
                     <a href="studentplacement-master.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i> </a>
+                </div>
+            </div>
+
+               <%-- Small Boxces --%>
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-orange">
+                    <div class="inner">
+                        <h3><%=arrCounts[7]%></h3>
+                        <p>Career Activity</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                    <a href="careeractivity-master.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i> </a>
                 </div>
             </div>
 

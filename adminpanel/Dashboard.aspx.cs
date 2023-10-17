@@ -32,7 +32,7 @@ public partial class adminpanel_Dashboard : System.Web.UI.Page
 
             arrCounts[6] = c.returnAggregate("Select Count(StudPlcId) From StudentPlacement ").ToString();
 
-
+            arrCounts[7] = c.returnAggregate("Select Count(CarActId) From CareerActivity ").ToString();
 
         }
         catch (Exception ex)
