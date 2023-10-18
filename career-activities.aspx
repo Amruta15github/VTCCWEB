@@ -27,8 +27,8 @@
      <div class="container ">
       <h2 class="pageH2 large themeClrThr text-center">Our Career Activities</h2>
       <span class="space30"></span>
-         <div class="container ">
-        <span class="semiBold medium themeClrPrime">Career Assessment</span>
+          <%=careerstr %>
+        <%--<span class="semiBold medium themeClrPrime">Career Assessment</span>
         <span class="space10"></span>
         <span class="fontRegular">05 - Apr - 2023 | <span class="fontRegular">Mark Wiens</span></span>
         <span class="space20"></span>
@@ -50,7 +50,7 @@
                 <img class="img-fluid" src ="images/carreract-img2.jpg" alt=""/></a>   
             </div>
         </div>      
-        </div>
+      --%>
 
     
          </div>

@@ -172,7 +172,7 @@ public partial class adminpanel_careeractivity : System.Web.UI.Page
             }
             else
             {
-                c.ExecuteQuery("Update JobOpenings set CarActId=" + maxId + ", CarActDate = '" + appDate + "', CarActTitle='" + txtcaractTitle.Text + "', CarActDescription='" + txtcaractDesc.Text + "' where CarActId=" + maxId);
+                c.ExecuteQuery("Update CareerActivity set CarActId=" + maxId + ", CarActDate = '" + appDate + "', CarActTitle='" + txtcaractTitle.Text + "', CarActDescription='" + txtcaractDesc.Text + "' where CarActId=" + maxId);
 
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Career Activity Updated');", true);
             }
