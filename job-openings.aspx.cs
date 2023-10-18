@@ -79,7 +79,7 @@ public partial class job_openings : System.Web.UI.Page
                     {
 
                         strMarkup.Append("<div class=\"col-md-6 mb-4\">");
-                        strMarkup.Append("<div class=\"p-3 boxShadow border\">");
+                        strMarkup.Append("<div class=\"p-3 border border-secondary\">");
                         strMarkup.Append("<div class=\"p-2\">");
 
 

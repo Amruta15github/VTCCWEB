@@ -126,7 +126,9 @@ public partial class placed_students : System.Web.UI.Page
                     foreach (DataRow placrow in dtstudeninfo.Rows)
                     {
 
-                        strMarkup.Append("<div class=\"col-md-6\">");
+                        strMarkup.Append("<div class=\"col-md-6 mb-4\">");
+                        strMarkup.Append("<div class=\"p-3 border border-secondary\">");
+                        strMarkup.Append("<div class=\"p-2\">");
                         strMarkup.Append("<div class=\"row\">");
 
                         if (placrow["StudPlcStudentPhoto"] != DBNull.Value && placrow["StudPlcStudentPhoto"].ToString() != "" && placrow["StudPlcStudentPhoto"].ToString() != "no-photo.png" && placrow["StudPlcStudentPhoto"] != null)
@@ -145,16 +147,17 @@ public partial class placed_students : System.Web.UI.Page
                         strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Post - <span class=\"fontRegular small line-ht-5\">" + placrow["StudPlcJobPost"].ToString() + "</span></div>");
                         strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Country - <span class=\"fontRegular small line-ht-5\">" + placrow["StudPlcCountry"].ToString() + "</span></div>");
                         strMarkup.Append("</div>");//col-md-9
-
-
-                        if (ncount < dtstudeninfo.Rows.Count)
-                        {
-                            strMarkup.Append("<span class=\"greyLine\"></span>");
-                        }
-                        ncount++;
+  
                         strMarkup.Append("</div>");//row2
+                        strMarkup.Append("</div>");//p2
+                        strMarkup.Append("</div>");//box
                         strMarkup.Append("</div>");//col-md-6
 
+                        //if (ncount < dtstudeninfo.Rows.Count)
+                        //{
+                        //    strMarkup.Append("<span class=\"greyLine\"></span>");
+                        //}
+                        //ncount++;
                         }
                         strMarkup.Append("</div>");//row1
                         strMarkup.Append("<span class=\"space50\"></span>");
