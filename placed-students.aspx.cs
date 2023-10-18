@@ -141,11 +141,11 @@ public partial class placed_students : System.Web.UI.Page
                         strMarkup.Append("<div class=\"col-md-9\">");
                         strMarkup.Append("<div class=\"semiBold semiMedium  mb-2\">" + placrow["StudPlcStudentName"].ToString() + "</div>");
                         DateTime nDate = Convert.ToDateTime(placrow["StudPlcDate"]);
-                        strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Date - <span class=\"fontRegular small line-ht-5\">" + nDate.ToString("dd MMM yyyy") + "</span></div>");
-                        strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Course - <span class=\"fontRegular small line-ht-5\">" + placrow["StudPlcCourseName"].ToString() + "</span></div>");
-                        strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Company - <span class=\"fontRegular small line-ht-5\">" + placrow["StudPlcCompanyName"].ToString() + "</span></div>");
-                        strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Post - <span class=\"fontRegular small line-ht-5\">" + placrow["StudPlcJobPost"].ToString() + "</span></div>");
-                        strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Country - <span class=\"fontRegular small line-ht-5\">" + placrow["StudPlcCountry"].ToString() + "</span></div>");
+                        strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Date - <span class=\"fontRegular Regular line-ht-5\">" + nDate.ToString("dd MMM yyyy") + "</span></div>");
+                        strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Course - <span class=\"fontRegular Regular line-ht-5\">" + placrow["StudPlcCourseName"].ToString() + "</span></div>");
+                        strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Company - <span class=\"fontRegular Regular line-ht-5\">" + placrow["StudPlcCompanyName"].ToString() + "</span></div>");
+                        strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Post - <span class=\"fontRegular Regular line-ht-5\">" + placrow["StudPlcJobPost"].ToString() + "</span></div>");
+                        strMarkup.Append("<div class=\"regular fontRegular semiBold mb-1\">Country - <span class=\"fontRegular Regular line-ht-5\">" + placrow["StudPlcCountry"].ToString() + "</span></div>");
                         strMarkup.Append("</div>");//col-md-9
   
                         strMarkup.Append("</div>");//row2
