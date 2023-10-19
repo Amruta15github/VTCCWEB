@@ -13,17 +13,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href= "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <link href="css/EnglishMtsts.css" rel="stylesheet" />
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <script src="js/jquery-2.2.4.min.js"></script>
+    <link href="<%=rootPath +"css/EnglishMtsts.css"%>" rel="stylesheet" />
+    <link href="<%=rootPath +"css/bootstrap.css"%>" rel="stylesheet" />
+    <link href="<%=rootPath +"css/main.css"%>" rel="stylesheet" />
+    <link href="<%=rootPath +"css/font-awesome.min.css"%>" rel="stylesheet" />
+    <script src="<%=rootPath +"js/jquery-2.2.4.min.js"%>"></script>
 
-    <link href="css/jquery.fancybox.css" rel="stylesheet" />
-    <script src="js/jquery.fancybox.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <link href="<%=rootPath +"css/jquery.fancybox.css"%>" rel="stylesheet" />
+    <script src="<%=rootPath +"js/jquery.fancybox.js"%>"></script>
+
+    <script src="<%=rootPath +"js/bootstrap.min.js"%>"></script>
 
     <%-- DatePicker --%>
 	<link href="<%=rootPath + "adminpanel/css/duDatepicker.min.css"%> " rel="stylesheet" />

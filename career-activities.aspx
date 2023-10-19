@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterParent.master" AutoEventWireup="true" CodeFile="career-activities.aspx.cs" Inherits="career_activities" %>
 <%@ MasterType VirtualPath="~/MasterParent.master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <!-- Page Header Starts -->
@@ -28,7 +30,7 @@
       <h2 class="pageH2 large themeClrThr text-center">Our Career Activities</h2>
       <span class="space30"></span>
           <%=careerstr %>
-        <%--<span class="semiBold medium themeClrPrime">Career Assessment</span>
+       <%-- <span class="semiBold medium themeClrPrime">Career Assessment</span>
         <span class="space10"></span>
         <span class="fontRegular">05 - Apr - 2023 | <span class="fontRegular">Mark Wiens</span></span>
         <span class="space20"></span>
@@ -49,11 +51,11 @@
                  <a href="images/carreract-img2.jpg" data-fancybox="imggroup1">
                 <img class="img-fluid" src ="images/carreract-img2.jpg" alt=""/></a>   
             </div>
-        </div>      
-      --%>
+        </div>      --%>
+      
 
-    
-         </div>
+      
+     </div>
 
     
 </asp:Content>

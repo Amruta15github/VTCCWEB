@@ -62,7 +62,7 @@ public partial class career_activities : System.Web.UI.Page
                         strMarkup.Append("<p class=\"fontRegular line-ht-5 regular mrg_B_15\">" + carDesc + "</p>");
                         strMarkup.Append("<span class=\"space10\"></span>");
 
-                      
+
 
                         if (ncount < dtcareer.Rows.Count)
                         {
@@ -111,24 +111,24 @@ public partial class career_activities : System.Web.UI.Page
                     strMarkup.Append("<span class=\"semiMedium themeClrThr fontRegular\">Total Views : " + row["ViewsCount"].ToString() + "</span>");
                     strMarkup.Append("<span class=\"space20\"></span>");
 
-                   
+
                     //photo
                     using (DataTable dtphotosdata = c.GetDataTable("Select CarActPhotoId, CarActPhotoName From CareerActivityPhotos Where FK_CarActId=" + row["CarActId"] + ""))
                     {
                         strMarkup.Append("<div class=\"row\">");
                         foreach (DataRow pow in dtphotosdata.Rows)
                         {
-                           
+
                             strMarkup.Append("<div class=\"col-md-4\">");
                             strMarkup.Append("<div class=\"p-2 rounded\">");
+
                             if (pow["CarActPhotoName"] != DBNull.Value && pow["CarActPhotoName"].ToString() != "" && pow["CarActPhotoName"].ToString() != "no-photo.png" && pow["CarActPhotoName"] != null)
                             {
-                                strMarkup.Append("<a href=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" data-fancybox=\"imggroup\"><img src=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" alt=\"" + pow["CarActPhotoName"].ToString() + "\" class=\"img-fluid\" /></a>");
+                                strMarkup.Append("<a href=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" data-fancybox=\"imggroup1\"><img src=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" alt=\"" + pow["CarActPhotoName"].ToString() + "\" class=\"img-fluid\" /></a>");
                             }
                             strMarkup.Append("</div>");//rounded
-                            strMarkup.Append("</div>");//col-md-4
-                           
-                            strMarkup.Append("<span class=\"space20\"></span>");
+                            strMarkup.Append("</div>");//col-md-4                           
+                            strMarkup.Append("<span class=\"space10\"></span>");
                         }
 
                     }
@@ -136,7 +136,7 @@ public partial class career_activities : System.Web.UI.Page
                     strMarkup.Append("<div class=\"float_clear\"></div>");
                     strMarkup.Append("<span class=\"space20\"></span>");
                     strMarkup.Append("<p class=\"fontregular line-ht-5\">" + Regex.Replace(row["CarActDescription"].ToString(), @"\r\n?|\n", "<br />") + "</p>");
-                   
+
 
                     bCrumbStr = "<ul class=\"bCrumb\"><li><a href=\"" + Master.rootPath + "\">Home</a></li><li>&raquo;</li><li><a href=\"" + Master.rootPath + "career-activities\">Career Activity</a></li><li>&raquo;</li><li>" + row["CarActTitle"].ToString() + "</li></ul>";
                     careerstr = strMarkup.ToString();
