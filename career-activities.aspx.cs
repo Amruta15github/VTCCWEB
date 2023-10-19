@@ -6,16 +6,28 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Text;
+using System.Text.RegularExpressions;
+
 
 public partial class career_activities : System.Web.UI.Page
 {
     iClass c = new iClass();
-    public string careerstr;
+    public string careerstr, bCrumbStr;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
-            GetCareerActivity();
+            if (String.IsNullOrEmpty(Page.RouteData.Values["CarActId"].ToString()))
+            {
+                GetCareerActivity();
+
+            }
+            else
+            {
+                string[] arrLinks = Page.RouteData.Values["CarActId"].ToString().Split('-');
+                GetDetails(Convert.ToInt32(arrLinks[arrLinks.Length - 1]));
+
+            }
         }
     }
 
@@ -33,38 +45,24 @@ public partial class career_activities : System.Web.UI.Page
                     foreach (DataRow row in dtcareer.Rows)
                     {
                         strMarkup.Append("<span class=\"space30\"></span>");
-                        strMarkup.Append("<span class=\"semiBold medium themeClrThr \">" + row["CarActTitle"].ToString() + "</span>");
+                        string nUrl = Master.rootPath + "career-activities/" + c.UrlGenerator(row["CarActTitle"].ToString().ToLower() + "-" + row["CarActId"].ToString());
+
+                        string caractTitle = row["CarActTitle"].ToString().Length >= 17 ? row["CarActTitle"].ToString().Substring(0, 17) + "..." : row["CarActTitle"].ToString();
+                        strMarkup.Append("<a href=\"" + nUrl + "\" class=\" semiBold medium themeClrThr\">" + caractTitle + "</a>");
+
                         strMarkup.Append("<span class=\"space10\"></span>");
+
+                        //date
                         DateTime nDate = Convert.ToDateTime(row["CarActDate"].ToString());
                         strMarkup.Append("<span class=\"fontRegular\">" + nDate.ToString("dd MMM yyyy") + "<span class=\"fontRegular\"></span></span>");  /*|  " + row["centName"].ToString() + " </span>");*/
-                        strMarkup.Append("<span class=\"space30\"></span>");
-                        //strMarkup.Append("<span class=\"semiMedium themeClrPrime fontregular\">Total Views : " + row["ViewsCount"].ToString() + "</span>");
-                        //strMarkup.Append("<span class=\"space30\"></span>");
-                        strMarkup.Append("<p class=\"fontRegular line-ht-5 regular clrDarkGrey\">" + row["CarActDescription"].ToString() + "</p>");
-                        strMarkup.Append("<span class=\"space15\"></span>");
-                        strMarkup.Append("<div class=\"row\">");
+                        strMarkup.Append("<span class=\"space10\"></span>");
 
-                        using (DataTable dtphotosdata = c.GetDataTable("Select CarActPhotoId, CarActPhotoName From CareerActivityPhotos Where FK_CarActId=" + row["CarActId"] + ""))
-                        {
-                            foreach (DataRow pow in dtphotosdata.Rows)
-                            {
-                                strMarkup.Append("<div class=\"col-md-4\">");
-                                strMarkup.Append("<div class=\"\">");
-                                strMarkup.Append("<div class=\"p-2 rounded\">");
-                                if (pow["CarActPhotoName"] != DBNull.Value && pow["CarActPhotoName"].ToString() != "" && pow["CarActPhotoName"].ToString() != "no-photo.png" && pow["CarActPhotoName"] != null)
-                                {
-                                    strMarkup.Append("<a href=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" data-fancybox=\"imggroup\"><img src=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" alt=\"" + pow["CarActPhotoName"].ToString() + "\" class=\"img-fluid\" /></a>");
-                                }
-                                strMarkup.Append("</div>");
-                                strMarkup.Append("</div>");
-                                strMarkup.Append("</div>");
-                                strMarkup.Append("<span class=\"space20\"></span>");
-                            }
+                        string carDesc = row["CarActDescription"].ToString().Length >= 154 ? row["CarActDescription"].ToString().Substring(0, 154) + "..." : row["CarActDescription"].ToString();
 
-                        }
+                        strMarkup.Append("<p class=\"fontRegular line-ht-5 regular mrg_B_15\">" + carDesc + "</p>");
+                        strMarkup.Append("<span class=\"space10\"></span>");
 
-                        strMarkup.Append("</div>");
-                        strMarkup.Append("<div class=\"float_clear\"></div>");
+                      
 
                         if (ncount < dtcareer.Rows.Count)
                         {
@@ -87,6 +85,70 @@ public partial class career_activities : System.Web.UI.Page
         {
             careerstr = c.ErrNotification(3, ex.Message.ToString());
             return;
+        }
+    }
+
+    private void GetDetails(int NwsIdx)
+    {
+        try
+        {
+            c.ExecuteQuery("Update CareerActivity Set ViewsCount=ViewsCount+1 Where CarActId=" + NwsIdx);
+            using (DataTable dtNws = c.GetDataTable("Select * From CareerActivity Where CarActId=" + NwsIdx))
+            {
+                if (dtNws.Rows.Count > 0)
+                {
+                    DataRow row = dtNws.Rows[0];
+                    StringBuilder strMarkup = new StringBuilder();
+
+                    this.Title = row["CarActTitle"].ToString() + "| Careeer Activity, Events of VTCC Education.";
+
+                    strMarkup.Append("<span class=\"space15\"></span>");
+                    strMarkup.Append("<h2 class=\"pageH2 themeClrPrime mrg_B_5\">" + row["CarActTitle"].ToString() + "</h2>");
+                    DateTime nDate = Convert.ToDateTime(row["CarActDate"]);
+                    strMarkup.Append("<span class=\"careerpost\"> VTCC Education | " + nDate.ToString("dd MMM yyyy") + "</span>"); /*|  " + row["centName"].ToString() + " </span>");*/
+
+                    strMarkup.Append("<span class=\"space15\"></span>");
+                    strMarkup.Append("<span class=\"semiMedium themeClrThr fontRegular\">Total Views : " + row["ViewsCount"].ToString() + "</span>");
+                    strMarkup.Append("<span class=\"space20\"></span>");
+
+                   
+                    //photo
+                    using (DataTable dtphotosdata = c.GetDataTable("Select CarActPhotoId, CarActPhotoName From CareerActivityPhotos Where FK_CarActId=" + row["CarActId"] + ""))
+                    {
+                        strMarkup.Append("<div class=\"row\">");
+                        foreach (DataRow pow in dtphotosdata.Rows)
+                        {
+                           
+                            strMarkup.Append("<div class=\"col-md-4\">");
+                            strMarkup.Append("<div class=\"p-2 rounded\">");
+                            if (pow["CarActPhotoName"] != DBNull.Value && pow["CarActPhotoName"].ToString() != "" && pow["CarActPhotoName"].ToString() != "no-photo.png" && pow["CarActPhotoName"] != null)
+                            {
+                                strMarkup.Append("<a href=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" data-fancybox=\"imggroup\"><img src=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" alt=\"" + pow["CarActPhotoName"].ToString() + "\" class=\"img-fluid\" /></a>");
+                            }
+                            strMarkup.Append("</div>");//rounded
+                            strMarkup.Append("</div>");//col-md-4
+                           
+                            strMarkup.Append("<span class=\"space20\"></span>");
+                        }
+
+                    }
+                    strMarkup.Append("</div>");//row
+                    strMarkup.Append("<div class=\"float_clear\"></div>");
+                    strMarkup.Append("<span class=\"space20\"></span>");
+                    strMarkup.Append("<p class=\"fontregular line-ht-5\">" + Regex.Replace(row["CarActDescription"].ToString(), @"\r\n?|\n", "<br />") + "</p>");
+                   
+
+                    bCrumbStr = "<ul class=\"bCrumb\"><li><a href=\"" + Master.rootPath + "\">Home</a></li><li>&raquo;</li><li><a href=\"" + Master.rootPath + "career-activities\">Career Activity</a></li><li>&raquo;</li><li>" + row["CarActTitle"].ToString() + "</li></ul>";
+                    careerstr = strMarkup.ToString();
+
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            careerstr = c.ErrNotification(3, ex.Message.ToString());
+            return;
+
         }
     }
 }

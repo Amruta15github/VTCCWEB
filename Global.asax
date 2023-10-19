@@ -14,7 +14,8 @@
 
         routes.MapPageRoute("news-route", "news/{newsId}", "~/news.aspx", false, new System.Web.Routing.RouteValueDictionary { { "newsId", string.Empty } });
         routes.MapPageRoute("jobs-route", "job-openings/{JobId}", "~/job-openings.aspx", false, new System.Web.Routing.RouteValueDictionary { { "JobId", string.Empty } });
-        
+        routes.MapPageRoute("career-activities-route", "career-activities/{CarActId}", "~/career-activities.aspx", false, new System.Web.Routing.RouteValueDictionary { { "CarActId", string.Empty } });
+
         routes.MapPageRoute("abt-route", "about-us", "~/about-us.aspx");
         routes.MapPageRoute("course-route", "courses", "~/courses.aspx");
         routes.MapPageRoute("contact-route", "contact-us", "~/contact-us.aspx");
@@ -27,7 +28,7 @@
         routes.MapPageRoute("sam-certificates-route", "sample-certificates", "~/sample-certificates.aspx");
         routes.MapPageRoute("download-proposal-route", "download-proposal", "~/download-proposal.aspx");
         //routes.MapPageRoute("job-openings-route", "job-openings", "~/job-openings.aspx");
-        routes.MapPageRoute("career-activities-route", "career-activities", "~/career-activities.aspx");
+       //routes.MapPageRoute("career-activities-route", "career-activities", "~/career-activities.aspx");
         routes.MapPageRoute("placed-students-route", "placed-students", "~/placed-students.aspx");
         routes.MapPageRoute("faq-route", "faq", "~/faq.aspx");
         routes.MapPageRoute("disclaimer-route", "disclaimer", "~/disclaimer.aspx");

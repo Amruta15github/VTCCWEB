@@ -91,9 +91,10 @@ public partial class _Default : System.Web.UI.Page
                             string nUrl = rootPath + "news/" + c.UrlGenerator(row["newsTitle"].ToString().ToLower() + "-" + row["newsId"].ToString());
                             string nwsTitle = row["newsTitle"].ToString().Length >= 17 ? row["newsTitle"].ToString().Substring(0, 17) + "..." : row["newsTitle"].ToString();
                             strMarkup.Append("<a href=\"" + nUrl + "\" >");
-                            strMarkup.Append("<h5 class=\"featurette-heading fw-normal lh-1 medium themeClrPrime\">" + nwsTitle + "</h5>");
+                            strMarkup.Append("<h5 class=\"featurette-heading fw-normal lh-1 medium themeClrThr\">" + nwsTitle + "</h5>");
                             strMarkup.Append("</a>");
                             string nwsDesc = row["newsDesc"].ToString().Length >= 154 ? row["newsDesc"].ToString().Substring(0, 154) + "..." : row["newsDesc"].ToString();
+                            strMarkup.Append("<span class=\"space10\"></span>");
                             strMarkup.Append("<p>" + nwsDesc + "</p>");
                             strMarkup.Append("</div>");//col-md-7
 
@@ -137,7 +138,10 @@ public partial class _Default : System.Web.UI.Page
 
 
                         strMarkup.Append("<div class=\"text-center pt-40\">");
+                        strMarkup.Append("<span class=\"space30\"></span>");
                         strMarkup.Append("<a href=\"news\" class=\"primary-btn text-uppercase letter-sp-2\">More News</a>");
+                         
+
                         strMarkup.Append("</div>");//pt-40 
                         strMarkup.Append("</div>"); //container
                        

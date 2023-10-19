@@ -136,14 +136,14 @@ public partial class job_openings : System.Web.UI.Page
                     this.Title = row["JobTitle"].ToString() + "| JobOpenings, Events of VTCC Education.";
 
                     strMarkup.Append("<div class=\"container\">");
-                    strMarkup.Append("<h2 class=\"pageH2 themeClrThr mrg_B_5 capitalize\">" + row["JobTitle"].ToString() + "</h2>");
+                    strMarkup.Append("<h2 class=\"pageH2 themeClrPrime mrg_B_5 \">" + row["JobTitle"].ToString() + "</h2>");
                     strMarkup.Append("<span class=\"space15\"></span>");
 
                     DateTime nDate = Convert.ToDateTime(row["JobDate"]);
                     strMarkup.Append("<span class=\"jobspost\"> VTCC Education | " + nDate.ToString("dd MMM yyyy") + "</span>");
 
                     strMarkup.Append("<span class=\"space15\"></span>");
-                    strMarkup.Append("<span class=\"semiMedium themeClrPrime fontregular\">Total Views : " + row["JobViews"].ToString() + "</span>");
+                    strMarkup.Append("<span class=\"semiMedium themeClrThr fontregular\">Total Views : " + row["JobViews"].ToString() + "</span>");
                     strMarkup.Append("<span class=\"space20\"></span>");
 
                     strMarkup.Append("<span class=\"semiMedium fontregular\"> Job Skills : " + row["JobSkills"].ToString() + "</span>");
