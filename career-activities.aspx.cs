@@ -111,7 +111,8 @@ public partial class career_activities : System.Web.UI.Page
                     strMarkup.Append("<span class=\"semiMedium themeClrThr fontRegular\">Total Views : " + row["ViewsCount"].ToString() + "</span>");
                     strMarkup.Append("<span class=\"space20\"></span>");
 
-
+                   
+                    strMarkup.Append("<p class=\"fontregular line-ht-5\">" + Regex.Replace(row["CarActDescription"].ToString(), @"\r\n?|\n", "<br />") + "</p>");
                     //photo
                     using (DataTable dtphotosdata = c.GetDataTable("Select CarActPhotoId, CarActPhotoName From CareerActivityPhotos Where FK_CarActId=" + row["CarActId"] + ""))
                     {
@@ -134,8 +135,7 @@ public partial class career_activities : System.Web.UI.Page
                     }
                     strMarkup.Append("</div>");//row
                     strMarkup.Append("<div class=\"float_clear\"></div>");
-                    strMarkup.Append("<span class=\"space20\"></span>");
-                    strMarkup.Append("<p class=\"fontregular line-ht-5\">" + Regex.Replace(row["CarActDescription"].ToString(), @"\r\n?|\n", "<br />") + "</p>");
+                    
 
 
                     bCrumbStr = "<ul class=\"bCrumb\"><li><a href=\"" + Master.rootPath + "\">Home</a></li><li>&raquo;</li><li><a href=\"" + Master.rootPath + "career-activities\">Career Activity</a></li><li>&raquo;</li><li>" + row["CarActTitle"].ToString() + "</li></ul>";
