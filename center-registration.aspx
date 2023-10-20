@@ -106,26 +106,14 @@
                                 <asp:DropDownList ID="ddrState" CssClass="cmbBox" runat="server"  AutoPostBack="true" OnSelectedIndexChanged="ddrState_SelectedIndexChanged">
                                     <asp:ListItem Value="0"><-Select State-></asp:ListItem>
                                 </asp:DropDownList>
-                                 <%-- <select class="form-control" id="ddrState">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>  
-                                <option>5</option>
-                            </select>--%>
+                                
                         </div>
                         <div class="form-group col-md-6">
                             <label for="exampleFormControlSelect1" class="fontRegular semiBold clrBlack">Select District: *</label>
                             <asp:DropDownList ID="ddrDistrict" CssClass="cmbBox"  runat="server">
                                     <asp:ListItem Value="0"><-Select District-></asp:ListItem>
                                 </asp:DropDownList>
-                            <%--<select class="form-control" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select--%>
+                         
                         </div>
                         </div>
 
@@ -191,10 +179,7 @@
                             </div>
                         </div>
                       
-                       <%-- <div class="form-group">
-                            <div id="recaptcha" style="transform: scale(0.77); -webkit-transform: scale(0.77); transform-origin: 0 0; -webkit-transform-origin: 0 0;"></div>
-						<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-                        </div>--%>
+                      
                         <asp:Button ID="btnSubmit" CssClass="btn themeBgThr clrWhite" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
                         <asp:Button ID="btnCancel" CssClass="btn btn-secondary" runat="server" Text="Cancel" />
                     </form>
@@ -203,7 +188,8 @@
             </asp:UpdatePanel> 
             </div>
         </div>
-          <%--<span class="space30"></span>
+         
+        <span class="space30"></span>
         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="tiny"><i class="fa fa-circle " aria-hidden="true"></i></span> We, ATC (PROPOSED AUTHORIZED TRAINING CENTER) understand and agree that</p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">1. The location of the proposed Centre shall be fixed only in the specific Area as selected by us and the selected location shall not be changed by us anytime during, and subsequent to the Network Partner Registration Process </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">2. VTTC New Delhi reserves the right</p>
@@ -212,8 +198,11 @@
          <p class="clrDarkGrey regular fontRegular mrg_B_20">3. In case we are granted authorization</p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">a. We are responsible for maintaining the confidentiality of the password and login account given by VTCC New Delhi </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">b. We shall abide by the various guidelines, communications, norms issued and specified by VTCC from time to time</p>
-         <asp:Button ID="btnagree" CssClass="btn themeBgThr clrWhite" runat="server" Text="I Agree & Continue..."/>
-    --%></div>
+         <span class="space10"></span>
+         <asp:CheckBox ID="Chkagree" runat="server" /> <a href="#">Accept terms and conditions for continue the from</a>
+         <span class="space20"></span>
+        <asp:Button ID="btnagree" CssClass="btn themeBgThr clrWhite" runat="server" Text="I Agree & Continue..."/>
+    </div>
     <!-- registration form Ends -->
     <span class="space30"></span>
 </asp:Content>
