@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterParent.master" AutoEventWireup="true" CodeFile="news.aspx.cs" Inherits="news" %>
 <%@ MasterType VirtualPath="~/MasterParent.master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <%--//Readmore:hover{border-bottom:1px solid #1fbad6;}--%>
+   
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
       <!-- Page Header Starts -->

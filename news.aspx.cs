@@ -121,7 +121,7 @@ public partial class news : System.Web.UI.Page
                         strMarkup.Append("<span class=\"newspost\"> VTCC Education | " + nDate.ToString("dd MMM yyyy") + "</span>");
 
                         strMarkup.Append("<span class=\"space15\"></span>");
-                        strMarkup.Append("<span class=\"semiMedium themeClrSec fontRegular\">Total Views : " + row["readCount"].ToString() + "</span>");
+                        strMarkup.Append("<span class=\"semiMedium themeClrThr fontRegular\">Total Views : " + row["readCount"].ToString() + "</span>");
                         strMarkup.Append("<span class=\"space20\"></span>");
 
                         //Sharing Options

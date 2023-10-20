@@ -1,8 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterParent.master" AutoEventWireup="true" CodeFile="career-activities.aspx.cs" Inherits="career_activities" %>
 <%@ MasterType VirtualPath="~/MasterParent.master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style>
+    .image-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden; /* Hide any parts of the image that exceed the container */
+      }
 
+   .image-container img {
+    width: 100%; /* Make the image expand to fill the container width */
+    height: auto; /* Maintain the aspect ratio by adjusting the height automatically */
+    }
 
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <!-- Page Header Starts -->

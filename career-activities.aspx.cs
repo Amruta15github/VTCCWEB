@@ -124,7 +124,7 @@ public partial class career_activities : System.Web.UI.Page
 
                             if (pow["CarActPhotoName"] != DBNull.Value && pow["CarActPhotoName"].ToString() != "" && pow["CarActPhotoName"].ToString() != "no-photo.png" && pow["CarActPhotoName"] != null)
                             {
-                                strMarkup.Append("<a href=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" data-fancybox=\"imggroup1\"><img src=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" alt=\"" + pow["CarActPhotoName"].ToString() + "\" class=\"img-fluid\" /></a>");
+                                strMarkup.Append("<a href=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" data-fancybox=\"imggroup1\"><img src=\"" + Master.rootPath + "upload/careeractivity/" + pow["CarActPhotoName"].ToString() + "\" alt=\"" + pow["CarActPhotoName"].ToString() + "\" class=\"img-fluid image-container image-container img \" /></a>");
                             }
                             strMarkup.Append("</div>");//rounded
                             strMarkup.Append("</div>");//col-md-4                           
