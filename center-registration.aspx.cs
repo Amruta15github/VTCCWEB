@@ -12,7 +12,7 @@ public partial class center_registration : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         btnSubmit.Attributes.Add("onclick", "this.disabled=true; this.value='Processing...';" + ClientScript.GetPostBackEventReference(btnSubmit, null) + ";");
-        //btnCancel.Attributes.Add("onclick", "this.disabled=true; this.value='Processing...';" + ClientScript.GetPostBackEventReference(btnSubmit, null) + ";");
+        
 
         if (!IsPostBack)
         {
@@ -65,11 +65,7 @@ public partial class center_registration : System.Web.UI.Page
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter  Valid Mobile No');", true);
                 return;
             }
-            //else if (c.ValidateMobile(txtwhatsappNo.Text) == false)
-            //{
-            //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter  Valid Whatsapp No');", true);
-            //    return;
-            //}
+           
             else if (c.EmailAddressCheck(txtEmail.Text) == false)
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter  Valid Email Address');", true);
@@ -131,9 +127,6 @@ public partial class center_registration : System.Web.UI.Page
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Please agree to the terms before submitting the form.');", true);
                 return;
             }
-
-
-
 
             int maxId = c.NextId("CentersData", "CenterID");
             //int wishReg = 0;
