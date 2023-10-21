@@ -21,10 +21,7 @@ public partial class center_registration : System.Web.UI.Page
         }
     }
 
-    //protected void UpdatePanel1_Load(object sender, EventArgs e)
-    //{
-    //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "grecaptcha.render('recaptcha', {'sitekey': '6LcNBIUUAAAAADbX-_n6UhdJhtAxQDgiypcyZqSN'});", true);
-    //}
+    
 
     protected void ddrState_SelectedIndexChanged(object sender, EventArgs e)
     {

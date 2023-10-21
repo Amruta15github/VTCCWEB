@@ -1,6 +1,33 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterParent.master" AutoEventWireup="true" CodeFile="courses.aspx.cs" Inherits="courses" %>
 <%@ MasterType VirtualPath="~/MasterParent.master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+     <style>
+    .course-thumbnail {
+      width: 300px;
+      height: 169px; 
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      cursor: pointer;
+    }
+
+         .course:hover {
+            
+             background: #e8ba99;
+         }
+
+    .course-title {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .course-description {
+      margin-top: 10px;
+    }
+  </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <!-- Page Header Starts -->
@@ -27,67 +54,15 @@
      <div class="container ">
       <h2 class="pageH2 large themeClrThr text-center">Courses We Offer</h2>
       <span class="space30"></span>
-           <p class="text-center clrDarkGrey regular fontRegular">This Page Is Under Construction</p>
+
+         <a href="~/courseinfo.aspx" runat="server">
+             <div class="course course-thumbnail">
+                 <div class="course-title clrBlack">Course Title</div>
+                 <div class="course-description clrBlack">A brief description of the course goes here.</div>
+             </div>
+         </a>
+
          </div>
-          <%--<div class="col-sm-6">
-                    <div class="p-4">
-                        <div class="courseborder">
-                            <div class="p-4">
-
-                                <div class="themeBgPrime absbox shadow">
-                                    <div class="p-3">
-                                        <h5 class="semiBold semiMedium clrWhite">Trade Name :-  Short Terms courses in Computer Application Appliactions Apllication </h5>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="p-3">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                            <ul class="bulletlist">
-                                                <li class="fontRegular clrDarkGrey"><span class="list">&#187;</span>Short Terms courses in Computer ( Below 6 Months)</li>
-                                                <li class="fontRegular clrDarkGrey"><span class="list">&#187;</span>Short Terms courses in Computer ( Below 6 Months)</li>
-                                                <li class="fontRegular clrDarkGrey"><span class="list">&#187;</span>Short Terms courses in Computer ( Below 6 Months)</li>
-                                            </ul>
-                                        </div>
-                                           <div class="col-sm-6">
-                                            <ul class="bulletlist">
-                                                <li class="fontRegular clrDarkGrey"><span class="list">&#187;</span>Short Terms courses in Computer ( Below 6 Months)</li>
-                                                <li class="fontRegular clrDarkGrey"><span class="list">&#187;</span>Short Terms courses in Computer ( Below 6 Months)</li>
-                                                <li class="fontRegular clrDarkGrey"><span class="list">&#187;</span>Short Terms courses in Computer ( Below 6 Months)</li>
-                                            </ul>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-               <div class="col-sm-6 ">
-                    <div class="p-4">
-                        <div class="courseborder">
-                            <div class="p-4">
-                                <div class="themeBgPrime absbox shadow">
-                                    <div class="p-3">
-                                        <h5 class="semiBold semiMedium clrWhite">Trade Name :-  Short Terms courses in Computer Application Appliactions Apllication </h5>
-                                    </div>
-                                </div>
-                                
-                                <div class="">
-                                    <div class="p-3">
-                                        <ul class="bulletlist">
-                                            <li class="fontRegular clrDarkGrey"><span class="list">&#187;</span>Short Terms courses in Computer ( Below 6 Months)</li>
-                                            <li class="fontRegular clrDarkGrey"><span class="list">&#187;</span>Short Terms courses in Computer ( Below 6 Months)</li>
-                                            <li class="fontRegular clrDarkGrey"><span class="list">&#187;</span>Short Terms courses in Computer ( Below 6 Months)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-         </div>--%>
-  
+        
 </asp:Content>
 

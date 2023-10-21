@@ -207,7 +207,7 @@
          <asp:CheckBox ID="Chkagree" runat="server" /> <a href="#">Accept terms and conditions for continue the from</a>
          <span class="space20"></span>
         <div style="display: flex; justify-content: center; align-items: center;">
-        <asp:Button ID="btnSubmit" CssClass="btn themeBgThr clrWhite" runat="server" Text="I Agree & Continue..." OnClick="btnSubmit_Click"/>
+        <asp:Button ID="btnSubmit" CssClass="btn themeBgThr clrWhite" runat="server" Text="Submit" OnClick="btnSubmit_Click"/>
         </div>
     </div>
     <!-- registration form Ends -->

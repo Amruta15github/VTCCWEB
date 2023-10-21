@@ -58,7 +58,7 @@
                 <div class="small-box bg-red">
                     <div class="inner">
                         <h3><%=arrCounts[4]%></h3>
-                        <p>Download</p>
+                        <p>Download Data</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
@@ -73,7 +73,7 @@
                 <div class="small-box bg-primary">
                     <div class="inner">
                         <h3><%=arrCounts[5]%></h3>
-                        <p>JobOpenings</p>
+                        <p>Job Openings</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
