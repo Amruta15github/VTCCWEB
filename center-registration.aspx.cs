@@ -12,7 +12,7 @@ public partial class center_registration : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         btnSubmit.Attributes.Add("onclick", "this.disabled=true; this.value='Processing...';" + ClientScript.GetPostBackEventReference(btnSubmit, null) + ";");
-        btnCancel.Attributes.Add("onclick", "this.disabled=true; this.value='Processing...';" + ClientScript.GetPostBackEventReference(btnSubmit, null) + ";");
+        //btnCancel.Attributes.Add("onclick", "this.disabled=true; this.value='Processing...';" + ClientScript.GetPostBackEventReference(btnSubmit, null) + ";");
 
         if (!IsPostBack)
         {
@@ -85,6 +85,7 @@ public partial class center_registration : System.Web.UI.Page
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'This Email Address is already registered with us');", true);
                 return;
             }
+          
 
             //Insert Update data
             //int maxId = lblId.Text == "[New]" ? c.NextId("NewsData", "newsId") : Convert.ToInt32(lblId.Text);
@@ -123,6 +124,16 @@ public partial class center_registration : System.Web.UI.Page
                 gender = "3";
             }
 
+            //checkbox
+
+            if (Chkagree.Checked == false)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Please agree to the terms before submitting the form.');", true);
+                return;
+            }
+
+
+
 
             int maxId = c.NextId("CentersData", "CenterID");
             //int wishReg = 0;
@@ -139,8 +150,10 @@ public partial class center_registration : System.Web.UI.Page
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Registration request has been submited successfully');", true);
 
             //clear all
-            txtCity.Text = txtOwner.Text= txtorgname.Text = txtEmail.Text = txttaluka.Text  = txtbday.Text = txtrole.Text = txtMobNo.Text = gender ="";
-            ddrDistrict.SelectedIndex = ddrState.SelectedIndex = ddltypeoforg.SelectedIndex = 0; 
+            txtCity.Text = txtOwner.Text= txtorgname.Text = txtEmail.Text = txttaluka.Text  = txtbday.Text = txtrole.Text = txtMobNo.Text =  "";
+            ddrDistrict.SelectedIndex = ddrState.SelectedIndex = ddltypeoforg.SelectedIndex = 0;
+            Radiomale.Checked = Radiofemale.Checked = Radiotransgender.Checked = false;
+            Chkagree.Checked = false ;
         }
         catch (Exception ex)
         {

@@ -41,9 +41,10 @@
             setupcalendar();
         });
     </script>
+     
+ 
 
-
-  
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
       <!-- Page Header Starts -->
@@ -79,6 +80,10 @@
                     <span class="semiBold semiMedium themeClrQtr">Basic Details:</span>
                     <span class="space20"></span>
                     <form>
+
+                    <!-- Your form fields and other HTML elements go here -->
+                    <!-- For example, you have input fields, checkboxes, and the submit button -->
+
                         <span class="space10"></span>
                        <%-- <div class="form-group">
                             <label class="semiBold regular mr-30 clrBlack">I wish to register for: *</label>
@@ -180,8 +185,8 @@
                         </div>
                       
                       
-                        <asp:Button ID="btnSubmit" CssClass="btn themeBgThr clrWhite" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
-                        <asp:Button ID="btnCancel" CssClass="btn btn-secondary" runat="server" Text="Cancel" />
+                        <%--<asp:Button ID="btnSubmit" CssClass="btn themeBgThr clrWhite" runat="server" Text="Submit" OnClick="btnSubmit_Click" />--%>
+                        <%--<asp:Button ID="btnCancel" CssClass="btn btn-secondary" runat="server" Text="Cancel" />--%>
                     </form>
                 </div>
                     </ContentTemplate>
@@ -201,7 +206,9 @@
          <span class="space10"></span>
          <asp:CheckBox ID="Chkagree" runat="server" /> <a href="#">Accept terms and conditions for continue the from</a>
          <span class="space20"></span>
-        <asp:Button ID="btnagree" CssClass="btn themeBgThr clrWhite" runat="server" Text="I Agree & Continue..."/>
+        <div style="display: flex; justify-content: center; align-items: center;">
+        <asp:Button ID="btnSubmit" CssClass="btn themeBgThr clrWhite" runat="server" Text="I Agree & Continue..." OnClick="btnSubmit_Click"/>
+        </div>
     </div>
     <!-- registration form Ends -->
     <span class="space30"></span>
