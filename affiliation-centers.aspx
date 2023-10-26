@@ -28,6 +28,16 @@ tr:nth-child(even) {
   background-color:rgba(250, 243, 246, 0.8);
 }
 </style>
+
+      <style>
+        .other {
+           color:black;
+          
+        }
+            .other:hover {
+                color:#d19563;
+            }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
        <!-- Page Header Starts -->
@@ -55,7 +65,7 @@ tr:nth-child(even) {
       <span class="space30"></span>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC) open all over India affiliations for institutes which are imparting Technical Education/training to students and sending them for the qualifying Examinations conducted by the COMMITTEE. </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">ATC can start short terms and diploma courses approved by VTCC Expert Committee.</p>
-         <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack">VTCC ATC Affiliation :-</span></p>
+         <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold semiMedium mrg_B_10 mt-4 themeClrThr">VTCC ATC Affiliation :-</span></p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrDarkGrey">AFFILIATION FEE, RENEWAL AFFILIATION ARE AS FOLLOWS :-</span></p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrDarkGrey">VTCC NEW DELHI AFFILIATION FEE IS ₹ 5500 /YEAR (NON-REFUNDABLE)</span></p>
          <li class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrDarkGrey">ATC renewal FEE ₹ 5000 /YEAR (Non-Refundable)</span></li>
@@ -148,7 +158,7 @@ tr:nth-child(even) {
   </tr>
 </table>
      <span class="space30"></span>    
-<p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack">Required Documents for ATC</span></p>
+         <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold semiMedium clrBlack">Required Documents for ATC :-</span></p>
          <p class="clrDarkGrey regular fontRegular mrg_B_10">After provisional registration, the training center must complete its profile with the required documents for receiving the VTCC final registration code.</p>
          <p class="clrDarkGrey regular fontRegular mrg_B_10">Upload the Following documents in ATC login after provisional approval. The Center will receive the final registration certificate after VTCC Team does document verification.</p>
          <li class="clrDarkGrey regular fontRegular mrg_B_10"> I card size scan copy of the Photo the Owner </li>
@@ -160,6 +170,39 @@ tr:nth-child(even) {
          <li class="clrDarkGrey regular fontRegular mrg_B_20"> Center out door photo (eg. Board Photo)  </li>
 
          <a href="#">Apply for ATC click here </a>
-     </div>
+          <span class="greyLine"></span>
+
+         <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold semiMedium mrg_B_10 mt-4 themeClrThr">Franchisee (ATC) Benefits  :-</span></p>
+         <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrDarkGrey">ATC benefits after Getting Franchisee from VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC)</span></p>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> ATC will use VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC) brand name and logo on their advertisements/Banners etc.</li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> Internationally valid certification for students. </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> ATC will receive the ATC center code after getting affiliation from VTCC. </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> ATC will use a center login ID and Password for various login facilities. </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> Online Student Certificate verification facility </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> Online Student Registration facility. </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> Online examination facility free online exam. No extra online exam charges for ATC. </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> Area-wise Online Job alert facilities to students. </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> ATC can post their local jobs from their login. And is automatically displayed on the VTCC website with center name, address, mobile number  </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> ATC can post their placed students from their login, and it's automatically displayed on the VTCC web site with the center name, address, and mobile number. This will also help generate student inquiries. </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> ATC will get student practice exam application on mobile  </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> Discount on various Digital Marketing Materials Eg. Marketing Images, Marketing Software like WhatsApp Marketing software, Online Digital Card and many more. </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> ATCs Can Download a Student certificate digital copy at any time from their login. </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> Internationally valid certification for students. </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> VTCC- Digital Job alert card </li>
+          <li class="clrDarkGrey regular fontRegular mrg_B_10"> Free Bonuses worth 20,000/- after final accreditation of the center. </li>
+          <span class="greyLine"></span>
+
+         <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold semiMedium mrg_B_10 mt-4 themeClrThr">FREE ATC KIT UNDER BUSINESS BOOSTER SCHEME FOR ATC :-</span></p>
+         <p class="clrDarkGrey regular fontRegular mrg_B_20">VTCC NEW Delhi will send a <span class="semiBold clrBlack">Franchisee certification  </span> to the AUTHORIZED TRAINING CENTER (2 Original Copies, 1 with frame and a second copy for official purposes). Refer to the sample copies in the sample certificate page section.</p>
+         <p class="clrDarkGrey regular fontRegular mrg_B_30">VTCC NEW Delhi will send a  <span class="semiBold clrBlack">candidate Sample certifications  </span> to an AUTHORIZED TRAINING CENTER (2 Sets – 1 For Notice Board and a second copy for the student inquiry table/notice board).</p>
+
+          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold semiMedium clrBlack">Digital Products :-</span></p>
+         
+          <p class="clrDarkGrey semiBold semiMedium mrg_B_10"><span class="tiny"><i class="fa fa-circle " aria-hidden="true"></i></span> ATC FREE Bonus 1</p>
+          <a href="https://www.indiabrand.co.in/bulk-whatsapp-marketing-software-Whatchat-Pro" class=" other regular semiBold clrBlack">  WHATSAPP MARKETING SOFTWARE FOR FREE </a> 
+          <p class="clrBlack regular fontRegular mrg_B_40">(REGULAR PRICE 2000/Year) </p>
+         
+          <span class="greyLine"></span>
+         </div>
 </asp:Content>
 

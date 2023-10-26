@@ -72,7 +72,7 @@
      <div class="">
         <div class="">
             <div class="">
-                <a href="https://wa.me/919975327900?text=I%20AM%20INTERESTED%20IN%20MAHARASHTRA%20TECHNICAL%20AND%20SELF-EMPLOYMENT%20TRAINING%20SOCIETY%20(MTSTS)%20LEARNING%20CENTER%20PLEASE%20SEND%20ME%20PROPOSAL%20" class="whatsappLink" target="_blank" title="Contact us on Whatsapp"></a>
+                <a href="https://wa.me/917498503730?text=I%20AM%20INTERESTED%20IN%20VOCATIONAL%20TRAINING%20%26%20CERTIFICATION%0ACOMMITTEE%20(VTCC)%2C%20NEW%20DELHI%2C%20INDIA%E2%80%99S%20ATC%20AFFILIATION.%20PLEASE%20SEND%20ME%20PROPOSAL%0A" class="whatsappLink" target="_blank" title="Contact us on Whatsapp"></a>
             </div>
 
              <div class="">
@@ -144,14 +144,14 @@
                                 <li><a href="<%=rootPath + "#" %>">VTCC Tie-ups</a></li>
                             </ul>
                         </li>
-                        <li><a href="<%=rootPath + "#" %>">VTCC Learning Center</a></li>
-                        <li><a href="<%=rootPath + "Affiliation-centers" %>">Exam Centers</a></li>
+                        <li><a href="<%=rootPath + "Affiliation-centers" %>">VTCC ATC Affiliation</a></li>
+                        <li><a href="<%=rootPath + "#" %>">Exam Centers</a></li>
                         <li><a href="<%=rootPath + "#" %>" <%--target="_blank"--%>>Online Exams</a></li>
                         <li class="list">
                             <a class="subNav">Registration</a>
                             <ul class="items">
-                                <li><a href="<%=rootPath + "center-registration" %>">MLC Registration</a></li>
-                                <li><a href="<%=rootPath + "atc-renewal" %>">MLC Renewal Process</a></li>
+                                <li><a href="<%=rootPath + "center-registration" %>">ATC Registration</a></li>
+                                <li><a href="<%=rootPath + "atc-renewal" %>">ATC Renewal Process</a></li>
                             </ul>
                         </li>
                         <li class="list">
@@ -200,21 +200,7 @@
                 <div class="container">
                     <div class="row">
 
-                       <%-- <div class="col-lg col-md-6 footer-contact">
-                            <h4 class="mb-2">MTSTS</h4>
-                            <span class="fontMedium">MAHARASHTRA TECHNICAL AND SELF-EMPLOYMENT TRAINING SOCIETY</span>
-                            <p>
-                                <span class="fontRegular">Administration Office for Maharashtra :
-                                    <br />
-                                    In front of Priyadarshini Hotel, Miraj.
-                                Dist - Sangli, Pin - 416410.
-                                </span>
-                                <span class="space10"></span>
-                                <strong>Phone:</strong> <a href="tel:+919975327900" class=""><span class="fa fa-phone"></span><span class="">+91 9975327900</span></a><br>
-                                <span class="space10"></span>
-                                <strong>Email:</strong> <a href="mailto:info@mtsts.org" class="">info&#64;mtsts&#46;org</a><br>
-                            </p>
-                        </div>--%>
+                      
                         <div class="col-lg-3 col-md-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
@@ -256,7 +242,7 @@
                             </ul>
                         </div>
                         <div class="col-12 text-center">
-                             <%--<h4 class="mb-2">MTSTS</h4>--%>
+                               <h4 class="fontMedium">Administration Office for Maharashtra</h4>
                              <span class="fontMedium">Vocational Training and Certification Committee,New Delhi,India</span>
                             <p>
                                 <span class="fontRegular">Sangeet Ratna Abdul Karim Kha Smruti Bhavan, Shivaji Road, In 
@@ -264,7 +250,7 @@
                               
                                 </span>
                                 <span class="space10"></span>
-                                <strong>Phone:</strong> <a href="#" class=""><span class="fa fa-phone"></span><span class="mrg_R_15">+91 9975327900</span></a>
+                                <strong>Phone:</strong> <a href="#" class=""><span class="fa fa-phone"></span><span class="mrg_R_15"> 7498503730</span></a>
                                 <strong>Email:</strong> <a href="#" class="">vtccdelhi&#64;gmail&#46;com</a>
                             </p>
                         </div>
@@ -299,7 +285,7 @@
         <div class="bgsrtip enquirystrip">
             <div class="container text-center">
                  <span class="space10"></span>
-                <span class="semiBold regular clrWhite">For more information whatsapp message on - 9975327900 | or mail us on  vtccdelhi@gmail.com</span>
+                <span class="semiBold regular clrWhite">For more information whatsapp message on - 7498503730 | or mail us on  vtccdelhi@gmail.com</span>
             <span class="space10"></span>
             </div>
         </div>

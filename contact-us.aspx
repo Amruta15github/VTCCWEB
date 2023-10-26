@@ -35,7 +35,8 @@
         <div class="box col-md-4">
            <img src="images/icons/address.png" />
            <span class="space5"></span>
-          <h5 class="card-title">Address</h5>              
+          <h5 class="card-title">Address</h5> 
+            <h4 class="card-title clrDarkGrey"> Administration Office for Maharashtra</h4>
           <h4 class="card-title clrDarkGrey">Vocational Training and Certification Committee,New Delhi,India</h4>         
           <p class="card-text">Sangeet Ratna Abdul Karim Kha Smruti Bhavan, Shivaji Road, In Front of Priyadarshini Hotel, Miraj, Tal-Miraj, Dist-Sangli, Maharashtra-416410</p>
         </div>
@@ -45,7 +46,7 @@
              <span class="space5"></span>
              <h5 class="card-title">Contact No</h5>
              <span class="space5"></span>
-          <p class="card-text">+91-9975327900</p>
+          <p class="card-text"> 7498503730</p>
         </div>
 
         <div class=" box col-md-4">

@@ -82,7 +82,7 @@
     <div class="">
         <div class="">
             <div class="">
-                <a href="https://wa.me/919975327900?text=I%20AM%20INTERESTED%20IN%20MAHARASHTRA%20TECHNICAL%20AND%20SELF-EMPLOYMENT%20TRAINING%20SOCIETY%20(MTSTS)%20LEARNING%20CENTER%20PLEASE%20SEND%20ME%20PROPOSAL%20" class="whatsappLink" target="_blank" title="Contact us on Whatsapp"></a>
+                <a href="https://wa.me/917498503730?text=I%20AM%20INTERESTED%20IN%20VOCATIONAL%20TRAINING%20%26%20CERTIFICATION%0ACOMMITTEE%20(VTCC)%2C%20NEW%20DELHI%2C%20INDIA%E2%80%99S%20ATC%20AFFILIATION.%20PLEASE%20SEND%20ME%20PROPOSAL%0A" class="whatsappLink" target="_blank" title="Contact us on Whatsapp"></a>
             </div>
 
              <div class="">
@@ -114,9 +114,13 @@
                                 <p class="d-block small headtxt" style="line-height:1.5">
                                     Accredited certification body by A+ Rating from QUALITY ASSURANCE AND<br />ACCREDITATION COMMITTEE (QAAC), NEW DELHI, INDIA. & an ISO 9001:2015 <br />certification by Emirates International Accreditation Centre (EIAC), Governmental Accreditation <br />Body Dubai & International Accreditation Service (I.A.S.) U.S.A.
                                 </p>
-                                <%--<span class="space1"></span>
-                                <span class="d-block text-info medium fontRegular">An ISO 9001:2015 Certified</span>
-                                --%>
+                               
+                                <span class=" themeClrPrime fontRegular">
+                                    (A NATIONAL.  COMMITTEE UNDER INDIAN ACT 1882, N.C.T. OF DELHI, GOVERNMENT OF INDIA)
+                                    <br />
+                                    (Registration Number - 847/2022-2023/B-4/VOL.No 4742
+                                </span>
+                                 <span class="space5"></span>
                                 <h1 class=" themeClrPrime semiBold large"> VOCATIONAL TRAINING  &amp; CERTIFICATION 
                                 <br />
                                     COMMITTEE (VTCC), NEW DELHI, INDIA</h1>
@@ -155,14 +159,14 @@
                                 <li><a href="<%=rootPath +"#"%>">VTCC Tie-ups</a></li>
                             </ul>
                         </li>
-                        <li><a href="<%=rootPath +"#"%>">VTCC Learning Center</a></li>
-                        <li><a href="<%=rootPath +"Affiliation-centers"%>">Exam Centers</a></li>
+                        <li><a href="<%=rootPath +"Affiliation-centers"%>">VTCC ATC Affiliation</a></li>
+                        <li><a href="<%=rootPath +"#"%>">Exam Centers</a></li>
                         <li><a href="<%=rootPath +"#"%>" <%--target="_blank"--%>>Online Exams</a></li>
                         <li class="list">
                             <a class="subNav">Registration</a>
                             <ul class="items">
-                                <li><a href="<%=rootPath +"center-registration"%>">MLC Registration</a></li>
-                                <li><a href="<%=rootPath+"atc-renewal"%>">MLC Renewal Process</a></li>
+                                <li><a href="<%=rootPath +"center-registration"%>">ATC Registration</a></li>
+                                <li><a href="<%=rootPath+"atc-renewal"%>">ATC Renewal Process</a></li>
                             </ul>
                         </li>
                         <li class="list">
@@ -378,7 +382,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 search-course-right section-gap">
-                        <h4 class="text-white pb-20 text-center mb-30 pt-30 fontMedium">VTCC Learning Center <br /> Authorized Login</h4>
+                        <h4 class="text-white pb-20 text-center mb-30 pt-30 fontMedium">VTCC ATC <br /> Authorized Login</h4>
                         <div class="form-wrap">
                             <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="Enter Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'User Name'"></asp:TextBox>
                             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'"></asp:TextBox>
@@ -556,7 +560,7 @@
     <div class="width100" id="doctors">
         <span class="space40"></span>
         <div class="col_1140 txtCenter">
-           <%-- <h4 class="extra-large clrWhite fontRegular mrg_B_10">Meet Our Doctors</h4>--%>
+         
             <section class="doc-profile slider">
                 <div class="slide"><img src="images/icons/grade-plus-1.png" class="width100 img-fluid " style="width:140px"/><span class="space5"></span></div>
                 <div class="slide"><img src="images/about-us/EIAC blue logo.JPG" class="width100 img-fluid mt-5 "style="width:140px"/><span class="space5"></span></div>
@@ -578,21 +582,7 @@
                 <div class="container">
                     <div class="row">
 
-                       <%-- <div class="col-lg col-md-6 footer-contact">
-                            <h4 class="mb-2">MTSTS</h4>
-                            <span class="fontMedium">MAHARASHTRA TECHNICAL AND SELF-EMPLOYMENT TRAINING SOCIETY</span>
-                            <p>
-                                <span class="fontRegular">Administration Office for Maharashtra :
-                                    <br />
-                                    In front of Priyadarshini Hotel, Miraj.
-                                Dist - Sangli, Pin - 416410.
-                                </span>
-                                <span class="space10"></span>
-                                <strong>Phone:</strong> <a href="tel:+919975327900" class=""><span class="fa fa-phone"></span><span class="">+91 9975327900</span></a><br>
-                                <span class="space10"></span>
-                                <strong>Email:</strong> <a href="mailto:info@mtsts.org" class="">info&#64;mtsts&#46;org</a><br>
-                            </p>
-                        </div>--%>
+                   
                         <div class="col-lg-3 col-md-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
@@ -634,7 +624,7 @@
                             </ul>
                         </div>
                         <div class="col-12 text-center">
-                             <%--<h4 class="mb-2">MTSTS</h4>--%>
+                             <h4 class="fontMedium">Administration Office for Maharashtra</h4>
                              <span class="fontMedium">Vocational Training and Certification Committee,New Delhi,India</span>
                             <p>
                                 <span class="fontRegular">Sangeet Ratna Abdul Karim Kha Smruti Bhavan, Shivaji Road, In 
@@ -642,7 +632,7 @@
                               
                                 </span>
                                 <span class="space10"></span>
-                                <strong>Phone:</strong> <a href="#" class=""><span class="fa fa-phone"></span><span class="mrg_R_15">+91 9975327900</span></a>
+                                <strong>Phone:</strong> <a href="#" class=""><span class="fa fa-phone"></span><span class="mrg_R_15"> 7498503730</span></a>
                                 <strong>Email:</strong> <a href="#" class="">vtccdelhi&#64;gmail&#46;com</a>
                             </p>
                         </div>
@@ -677,7 +667,7 @@
         <div class="bgsrtip enquirystrip">
             <div class="container text-center">
                  <span class="space10"></span>
-                <span class="semiBold regular clrWhite">For more information whatsapp message on - 9975327900 | or mail us on vtccdelhi@gmail.com</span>
+                <span class="semiBold regular clrWhite">For more information whatsapp message on - 7498503730 | or mail us on vtccdelhi@gmail.com</span>
             <span class="space10"></span>
             </div>
         </div>

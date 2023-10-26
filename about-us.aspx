@@ -35,9 +35,9 @@
      <div class="container">
       <h2 class="pageH2 large themeClrThr text-center">ABOUT VTCC (INTRODUCTION) – </h2>
       <span class="space30"></span>
-      <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack">THE VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC)</span>is the only certification Committee in India that is Accredited <span class="semiBold clrBlack">A+ Rating by QUALITY ASSURANCE AND ACCREDITATION COMMITTEE, NEW DELHI, INDIA (QAAC) (गुणवत्ता आश्वासन एवं प्रत्यायन समिति, नई दिल्ली, भारत . ) for providing quality services for students and training centers</span></p>
+      <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack">THE VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC)</span>is the only certification Committee in India that is Accredited <span class="semiBold clrBlack">A+ Rating by QUALITY ASSURANCE AND ACCREDITATION COMMITTEE, NEW DELHI, INDIA (QAAC) (गुणवत्ता आश्वासन एवं प्रत्यायन समिति, नई दिल्ली, भारत . ) for providing quality services for students and training centers.</span></p>
       <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack">VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC), </span>has played a significant role in technical/vocational education and certification. The VTCC started conducting Examinations of the students sponsored by the Affiliated Institutions at various centers all over India. These examinations have gained immense popularity in India and abroad.</p>
-      <p class="clrDarkGrey regular fontRegular mrg_B_20">The<span class="semiBold clrBlack">VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC), </span>has designed updated business and skill development courses. It includes various skills and certification programs, e.g. diploma courses, workshop courses, participation training courses, and short-term courses, in any skills, educational, management, vocational, employment-oriented, technical, industrial, corporate etc. The syllabus for various vocational/technical / Professional Examinations is introduced and revised from time to time. VTCC & students' certificate designs for these Career oriented courses are issued and valid as per Government order of NES-EEM NO 1/2010/PT.I-VII/7 9, NO. DGE & T-M 27014/1/2009-EE.I, MINISTRY OF LABOUR & EMPLOYMENT, NEW DELHI, INDIA, and it's valid for private employment or industrial jobs </p>
+      <p class="clrDarkGrey regular fontRegular mrg_B_20">The<span class="semiBold clrBlack">VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC), </span>has designed updated business and skill development courses. It includes various skills and certification programs, e.g. diploma courses, workshop courses, participation training courses, and short-term courses, in any skills, educational, management, vocational, employment-oriented, technical, industrial, corporate etc. The syllabus for various vocational/technical / Professional Examinations is introduced and revised from time to time. VTCC & students' certificate designs for these Career oriented courses are issued and valid as per Government order of NES-EEM NO 1/2010/PT.I-VII/7 9, NO. DGE & T-M 27014/1/2009-EE.I, MINISTRY OF LABOUR & EMPLOYMENT, NEW DELHI, INDIA, and it's valid for private employment or industrial jobs .</p>
       <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack">Get Your Courses Recognized: -  </span>In the VTCC Courses Recognition Program, VTCC assesses and recognizes your courses as conforming to the requirements of Global standards. Gaining recognition for your approach could increase your visibility and overall value if it becomes recognized by VTCC. Getting your course recognition is a perfect way to differentiate from your competition. After the VTCC course approval, ATC can start courses for their designed courses or syllabus.</p>
       <span class="greyLine"></span>
 
@@ -81,7 +81,7 @@
 
          <p class="clrDarkGrey semiMedium mrg_B_20 "><span class="semiBold clrBlack">Executive Council</span></p>
          <span class="shortLine themeBgThr"></span>
-         <p class="clrDarkGrey regular fontRegular mrg_B_20">Executive Council is the principal Council of the Institution to monitor & control the executive functions of the Institution. This Council assists the Board of Management in the discharge of many of its processes of Academic and Administrative nature to strengthen the Institution in all respects.s </p>
+         <p class="clrDarkGrey regular fontRegular mrg_B_20">Executive Council is the principal Council of the Institution to monitor & control the executive functions of the Institution. This Council assists the Board of Management in the discharge of many of its processes of Academic and Administrative nature to strengthen the Institution in all respects.</p>
 
 
          <p class="clrDarkGrey semiMedium mrg_B_20 "><span class="semiBold clrBlack">Academic Council</span></p>
@@ -176,23 +176,24 @@
          <div class="text-center">
          <img src="images/about-us/iaf-logo-w256.png" class="img-fluid qaimg"  />
          <img src="images/about-us/IAS-Active.jpg" class="img-fluid qaimg"  />
-         <img src="images/about-us/IAS-Vaild-QR.jpg" class="mr-3" />
-         <img src="images/about-us/Emirates-International-Accreditation-Centre-(EIAC)1.jpg" class="mr-3" />
+         <%--<img src="images/about-us/IAS-Vaild-QR.jpg" class="mr-3" />
+         <img src="images/about-us/Emirates-International-Accreditation-Centre-(EIAC)1.jpg" class="mr-3" />--%>
          <img src="images/vtcc-logo.png"/>
              </div>
          <span class="space30"></span>
-         <p class=" clrBlack regular fontRegular mrg_B_10">International Verification Links :</p>
+        <%-- <p class=" clrBlack regular fontRegular mrg_B_10">International Verification Links :</p>
          <a href="https://www.iafcertsearch.org/certification/901dc646-96cd-5100-84cc-d024e90eb5e4">https://www.iafcertsearch.org/certification/901dc646-96cd-5100-84cc-d024e90eb5e4</a>
          <br />
          <a href="https://www.iafcertsearch.org/certification/9890cf82-0584-5317-9dee-d7ef2700a686">https://www.iafcertsearch.org/certification/9890cf82-0584-5317-9dee-d7ef2700a686</a>
+         --%>
          <span class="greyLine"></span>
 
-         <p class="clrDarkGrey semiMedium mrg_B_20"><span class="semiBold themeClrThr">Maharashtra Technical & Self Employment Training Society (MTSTS) for IIT Mumbai Courses.</span></p>
+        <%-- <p class="clrDarkGrey semiMedium mrg_B_20"><span class="semiBold themeClrThr">Maharashtra Technical & Self Employment Training Society (MTSTS) for IIT Mumbai Courses.</span></p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">VTCC did a tie-up with Maharashtra Technical & Self Employment Training Society (MTSTS) for IIT Mumbai AICTE-approved courses all over India.  MTSTS is An ISO 9001:2015 Certified society Associate Knowledge Partner of AICTE Approved IIT Bombay (National Mission on Education through ICT, Ministry of Education, Govt. of India) </p>
          <img src="images/vtcc-logo.png" class="mr-3"/>
-         <img src="images/about-us/logo-mtsts1.png" class="mr-3" />
+         <img src="images/about-us/logo-mtsts.png" class="mr-3" />
          <img src="images/about-us/IIT Mumbai logo.png" class="img-fluid qaimg" />
-         <span class="greyLine"></span>
+         <span class="greyLine"></span>--%>
 
          <p class="clrDarkGrey semiMedium mrg_B_20"><span class="semiBold themeClrThr">UDYAM APPROVAL </span></p>
          <img src="images/about-us/msme logo.jpg" class="img-fluid" />
