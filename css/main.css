@@ -5228,17 +5228,16 @@ body {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-    contentolor: #929292;
+    color: #929292;
     font-size: 14px;
-    /*background: #eef0ef;*/
-    background: #313131;
+    background: #14182c;
 }
 #footer span, #footer a{color:#929292;}
 
-#footer .footer-top {
-  padding: 40px 0 20px 0;
-  background: #3c3b3b;
-}
+    #footer .footer-top {
+        padding: 40px 0 20px 0;
+        background: #141937;
+    }
 
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;

@@ -53,15 +53,80 @@
     <section id="jobopenings "></section>
      <div class="container ">
       <h2 class="pageH2 large themeClrThr text-center">Courses We Offer</h2>
-      <span class="space30"></span>
+       <span class="space30"></span>
 
-         <a href="~/courseinfo.aspx" runat="server">
-             <div class="course course-thumbnail">
-                 <div class="course-title clrBlack">Course Title</div>
-                 <div class="course-description clrBlack">A brief description of the course goes here.</div>
-             </div>
-         </a>
+       <div class="row">             
+     <div style="margin: 0 auto">
+      <h5 class="semiBold semiMedium  mrg_B_10 mt-4" style="text-decoration: underline; text-underline-offset: 0.4em">CERTIFICATE COURSES/ SHORT TERM COURSES</h5>
+       
+      </div>
+       </div>
 
+        <span class="space30"></span>   
+        <div class="row">           
+            <div class="col-md-4">
+                <div class=" course course-thumbnail">
+                 <div class="course-title clrBlack ">INFORMATION AND COMMUNICATION TECHNOLOGY </div>
+                 <div class="course-description clrBlack ">A brief description of the course goes here.</div>                    
+                </div>
+                <div class="card-body">
+                <a href="courseinfo.aspx">Download</a>
+                 </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class=" course course-thumbnail">
+                 <div class="course-title clrBlack ">CUTTING TAILORING, DRESS MAKING AND FASHION DESIGNING </div>
+                 <div class="course-description clrBlack ">A brief description of the course goes here.</div>                    
+                </div>
+                <div class="card-body">
+                <a href="courseinfo.aspx">Download</a>
+                 </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="course course-thumbnail">
+                   <div class="course-title clrBlack ">Mobile Repairing</div>
+                 <div class="course-description clrBlack ">A brief description of the course goes here.</div> 
+                </div>
+                <div class="card-body">
+                <a href="courseinfo.aspx">Download</a>
+                 </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="course course-thumbnail">
+                   <div class="course-title clrBlack ">Interior Designing </div>
+                 <div class="course-description clrBlack ">A brief description of the course goes here.</div> 
+                </div>
+                <div class="card-body">
+                <a href="courseinfo.aspx">Download</a>
+                 </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="course course-thumbnail">
+                   <div class="course-title clrBlack ">PERSONALITY DEVELOPMENT SKILLS</div>
+                 <div class="course-description clrBlack ">A brief description of the course goes here.</div> 
+                </div>
+                <div class="card-body">
+                <a href="courseinfo.aspx">Download</a>
+                 </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="course course-thumbnail">
+                   <div class="course-title clrBlack ">OTHER LANGUAGE TRAINING COURSES </div>
+                 <div class="course-description clrBlack ">A brief description of the course goes here.</div> 
+                </div>
+                <div class="card-body">
+                <a href="courseinfo.aspx">Download</a>
+                 </div>
+            </div>
+
+            
+            </div>
+        
          </div>
         
 </asp:Content>

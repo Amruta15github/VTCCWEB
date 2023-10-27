@@ -46,11 +46,11 @@ tr:nth-child(even) {
             <div class="bottomLight"></div>
             <div class="container">
                 <div class="pg_TB_pad">
-                    <h1 class="pageH1 clrWhite fontMedium">Affiliation Centers</h1>
+                    <h1 class="pageH1 clrWhite fontMedium">Affiliation </h1>
                     <ul class="bCrumb">
                         <li><a href="<%= Master.rootPath %>">Home</a></li>
                         <li>&raquo;</li>
-                        <li>Exam Center</li>
+                        <li>VTCC ATC Affiliation</li>
                     </ul>
                     <div class="float_clear"></div>
                 </div>
@@ -196,13 +196,7 @@ tr:nth-child(even) {
          <p class="clrDarkGrey regular fontRegular mrg_B_20">VTCC NEW Delhi will send a <span class="semiBold clrBlack">Franchisee certification  </span> to the AUTHORIZED TRAINING CENTER (2 Original Copies, 1 with frame and a second copy for official purposes). Refer to the sample copies in the sample certificate page section.</p>
          <p class="clrDarkGrey regular fontRegular mrg_B_30">VTCC NEW Delhi will send a  <span class="semiBold clrBlack">candidate Sample certifications  </span> to an AUTHORIZED TRAINING CENTER (2 Sets – 1 For Notice Board and a second copy for the student inquiry table/notice board).</p>
 
-         <%-- <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold semiMedium clrBlack">Digital Products :-</span></p>
-         
-          <p class="clrDarkGrey semiBold semiMedium mrg_B_10"><span class="tiny"><i class="fa fa-circle " aria-hidden="true"></i></span> ATC FREE Bonus 1</p>
-          <a href="https://www.indiabrand.co.in/bulk-whatsapp-marketing-software-Whatchat-Pro" class=" other regular semiBold clrBlack">  WHATSAPP MARKETING SOFTWARE FOR FREE </a> 
-          <p class="clrBlack regular fontRegular mrg_B_40">(REGULAR PRICE 2000/Year) </p>
-         
-          <span class="greyLine"></span>--%>
+        
          </div>
 </asp:Content>
 

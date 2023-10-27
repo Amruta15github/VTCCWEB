@@ -85,12 +85,7 @@
                     <!-- For example, you have input fields, checkboxes, and the submit button -->
 
                         <span class="space10"></span>
-                       <%-- <div class="form-group">
-                            <label class="semiBold regular mr-30 clrBlack">I wish to register for: *</label>
-                            <asp:RadioButton ID="compcourse" runat="server" Checked="true"/>
-                            <label class="regular fontRegular">Computer Course</label>
-                            <span class="space20"></span>
-                            </div>--%>
+                      
                          <div class="form-row">
                          <div class="form-group col-md-6">
                             <label for="inputorgname" class="fontRegular semiBold clrBlack">Name of Organization/Center : *</label>

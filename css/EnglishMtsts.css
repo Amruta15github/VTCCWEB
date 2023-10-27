@@ -149,9 +149,9 @@
 .themeBgThr {background:#d19563;} /* orange*/
 
 .themeClrPrime{color:#443252;}
-.themeClrSec{color:#00a8eb;}
+.themeClrSec{color:#00a8eb;}/* blue*/
 .themeClrThr{color: #d19563;} /*orange*/
-.themeClrQtr{color:#5f79ee;} 
+.themeClrQtr{color:#5f79ee;} /*faintpurple*/
 
     .bgsrtip {
         background: #6d69ac;
@@ -194,7 +194,7 @@
 /*.callLink{background:url('../images/icons/skype.png') no-repeat center center; display:inline-block; height:40px; width:40px; position:fixed; right:0; top :40%; text-decoration:none; z-index:9999; border-radius: 5px 0px 0px 5px; -webkit-box-shadow: -2px 2px 5px 0px rgba(148,148,148,1);-moz-box-shadow: -2px 2px 5px 0px rgba(148,148,148,1);box-shadow: -2px 2px 5px 0px rgba(148,148,148,1);}*/
 .whatsappLink{background:url('../images/icons/whatsapp.png') no-repeat center center #fff; display:inline-block; height:70px; width:70px; position:fixed; right:0; top :45%; text-decoration:none; z-index:9999; border-radius:100%; /*border-radius: 5px 0px 0px 5px;*/ -webkit-box-shadow: -2px 2px 5px 0px rgba(148,148,148,1);-moz-box-shadow: -2px 2px 5px 0px rgba(148,148,148,1);box-shadow: -2px 2px 5px 0px rgba(148,148,148,1);}
 
-.payonline { background: url('../images/icons/mobpaymentbill1.jpg') no-repeat center center #fff;
+.payonline { background: url('../images/icons/paymentvtcc.jpg') no-repeat center center #fff;
     display: inline-block;
     height: 70px;
     width: 70px;
