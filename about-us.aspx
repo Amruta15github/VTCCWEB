@@ -112,7 +112,8 @@
          <p class="clrDarkGrey regular fontRegular mrg_B_30"><span class="semiBold clrBlack">QUALITY ASSURANCE AND ACCREDITATION COMMITTEE, NEW DELHI, INDIA (QAAC) </span>is an independent, Assessment & Certification Agency & a National organization for recognized quality standard certification & various Accreditation. </p>
          <img src="images/vtcc-logo.png" class="mr-3" />
          <img src="images/icons/QAAc-new.png" class="img-fluid qaimg mr-3" />
-         <img src="images/" />
+         <img src="images/about-us/Avtcc-new.png"  />
+        
          <p class="clrDarkGrey regular fontRegular mrg_B_30"><span class="semiBold clrBlack">VTCC</span> Accredited<span class="semiBold clrBlack"> A+</span> Rating by<span class="semiBold clrBlack"> AQUALITY ASSURANCE AND ACCREDITATION COMMITTEE, NEW DELHI, INDIA (QAAC) गुणवत्ता आश्वासन एवं प्रत्यायन समिति, नई दिल्ली, भारत . VTCC is the only certification body in India Accredited A+ by QAAC</span></p>
          <span class="greyLine"></span>
 

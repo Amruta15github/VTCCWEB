@@ -169,7 +169,7 @@ tr:nth-child(even) {
          <li class="clrDarkGrey regular fontRegular mrg_B_10"> Undertaking by the Coordinator. </li>
          <li class="clrDarkGrey regular fontRegular mrg_B_20"> Center out door photo (eg. Board Photo)  </li>
 
-         <a href="#">Apply for ATC click here </a>
+         <a href="center-registration">Apply for ATC click here </a>
           <span class="greyLine"></span>
 
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold semiMedium mrg_B_10 mt-4 themeClrThr">Franchisee (ATC) Benefits  :-</span></p>

@@ -157,8 +157,20 @@
                                 <asp:TextBox ID="txtbday" class="form-control" placeholder="Birth Date" runat="server" ></asp:TextBox>
                             </div>
                             <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect1" class="fontRegular semiBold clrBlack">Role: *</label>
-                          <asp:TextBox ID="txtrole" class="form-control" placeholder="Role" MaxLength="30" runat="server" ></asp:TextBox>
+                             <label for="inputrole"  class="fontRegular semiBold clrBlack">Role :* </label>
+                                <asp:DropDownList ID="ddlrole" CssClass="cmbBox" runat="server" AutoPostBack="true">
+                                    <asp:ListItem Value="0"><- Select Role -></asp:ListItem>
+                                    <asp:ListItem Value="1">Sole Proprietor</asp:ListItem>
+                                    <asp:ListItem Value="2">Director</asp:ListItem>
+                                    <asp:ListItem Value="3">Chairman</asp:ListItem>
+                                    <asp:ListItem Value="4">Principal</asp:ListItem>
+                                    <asp:ListItem Value="5">Managing Director</asp:ListItem>
+                                    <asp:ListItem Value="6">Partner</asp:ListItem>
+                                    <asp:ListItem Value="7">Managing Trustee</asp:ListItem>
+                                    <asp:ListItem Value="8">Register</asp:ListItem>
+                                    <asp:ListItem Value="9">Manager Trustee</asp:ListItem>
+                                    <asp:ListItem Value="10">Others</asp:ListItem>
+                                </asp:DropDownList>
                             </div>
 
                         </div>
@@ -176,6 +188,11 @@
                             <div class="form-group col-md-6">
                                 <label for="inputmobno" class="fontRegular semiBold clrBlack">Mobile No.:*</label>
                                 <asp:TextBox ID="txtMobNo"  class="form-control" Maxlength="10" placeholder="Mobile Number" runat="server"></asp:TextBox>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="inputpincode" class="fontRegular semiBold clrBlack">Pincode :* </label>
+                                <asp:TextBox ID="txtpin" class="form-control"  Maxlength="15" placeholder="Pincode" runat="server"></asp:TextBox>
                             </div>
                         </div>
                       

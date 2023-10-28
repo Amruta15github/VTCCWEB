@@ -54,19 +54,16 @@ tr:nth-child(even) {
     <section id="Affiliation"></section>
      <div class="container">
       <h2 class="pageH2 large themeClrThr text-center">ATC List (Authorized Training Centers List) </h2>
+         <asp:UpdatePanel ID="UpdatePanel1" runat="server" >
+            <ContentTemplate>
       <span class="space50"></span>
 
       <div class="form-row">
-        <div class="form-group col-md-6">
-           
-             <label for="inputpincode" class="fontRegular semiBold clrBlack">Pincode : </label>
-             <asp:TextBox ID="txtpin"  class="form-control"  runat="server"></asp:TextBox>
-           </div>
-
+       
            <div class="form-group col-md-6">
              <label for="typeoforg" class="fontRegular semiBold clrBlack"> Select State : </label>
-             <asp:DropDownList ID="ddlstate" CssClass="cmbBox" runat="server" AutoPostBack="true">
-                 <%--OnSelectedIndexChanged="ddrState_SelectedIndexChanged"--%>
+             <asp:DropDownList ID="ddlstate" CssClass="cmbBox" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlstate_SelectedIndexChanged">
+               
                  <asp:ListItem Value="0"><- Select State -></asp:ListItem>
              </asp:DropDownList>
           </div>
@@ -74,14 +71,22 @@ tr:nth-child(even) {
              <div class="form-group col-md-6">
              <label for="typeoforg" class="fontRegular semiBold clrBlack"> Select District : </label>
              <asp:DropDownList ID="ddldist" CssClass="cmbBox" runat="server" AutoPostBack="true">
-                 <%--OnSelectedIndexChanged="ddrState_SelectedIndexChanged"--%>
+               
                  <asp:ListItem Value="0"><- Select District -></asp:ListItem>
              </asp:DropDownList>
              </div> 
            
-         </div>  
+           <div class="form-group col-md-6">          
+             <label for="inputpincode" class="fontRegular semiBold clrBlack">Pincode : </label>
+             <asp:TextBox ID="txtpin"  class="form-control"  runat="server"></asp:TextBox>
+           </div>
+         </div> 
+
+            </ContentTemplate>
+            </asp:UpdatePanel> 
           <span class="space20"></span>
-            <asp:Button ID="btnSearch" CssClass="btn themeBgThr clrWhite" runat="server" Text="Search" />
+            <asp:Button ID="btnSearch" CssClass="btn themeBgThr clrWhite" runat="server" Text="Search" OnClick="btnSearch_Click" />
+                   
          </div>
         
 </asp:Content>

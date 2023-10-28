@@ -61,143 +61,118 @@
 				
                 <span class="space10"></span>
 
-                       <div class="form-row">
-					 <div class="form-group col-md-6">
-						<label>Name of the Organization/Center: *</label>
-						<asp:TextBox ID="txtorgname" runat="server" CssClass="form-control"  MaxLength="50"></asp:TextBox>
-					</div>
-                    
-                           <div class="form-group col-md-6">
-                               <label for="typeoforg" class="fontRegular semiBold clrBlack">Type of Organization: *</label>
-                               <asp:DropDownList ID="ddltypeoforg" CssClass="form-control" runat="server" AutoPostBack="true">                                
-                                   <asp:ListItem Value="0"><- Select Organization -></asp:ListItem>
-                               </asp:DropDownList>
-                           </div>
-					 <%--<div class="form-group col-md-6">
-						<label>Institute affilliation:</label>
-						<asp:TextBox ID="txtinstaffi" runat="server" CssClass="form-control" 
-							MaxLength="200" ></asp:TextBox>
-					</div>--%>
-                           </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Name of the Organization/Center: *</label>
+                        <asp:TextBox ID="txtorgname" runat="server" CssClass="form-control" MaxLength="50"></asp:TextBox>
+                    </div>
 
-                  <div class="form-row">
-                            <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect1" class="fontRegular semiBold clrBlack">Select State: *</label>
-                                <asp:DropDownList ID="ddrstate" CssClass="form-control" runat="server"  AutoPostBack="true" OnSelectedIndexChanged="ddrState_SelectedIndexChanged" > 
-                                </asp:DropDownList>
-                                 <%-- <select class="form-control" id="ddrState">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>  
-                                <option>5</option>
-                            </select>--%>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect2" class="fontRegular semiBold clrBlack">Select District: *</label>
-                            <asp:DropDownList ID="ddrdist" CssClass="form-control" runat="server">
-                                    <asp:ListItem Value="0"><-Select District-></asp:ListItem>
-                                </asp:DropDownList>
-                            <%--<select class="form-control" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select--%>
-                         </div>
-                        </div>
+                    <div class="form-group col-md-6">
+                        <label for="typeoforg" class="fontRegular semiBold clrBlack">Type of Organization: *</label>
+                        <asp:DropDownList ID="ddltypeoforg" CssClass="form-control" runat="server" AutoPostBack="true">
+                            <asp:ListItem Value="0"><- Select Organization -></asp:ListItem>
+                        </asp:DropDownList>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlSelect1" class="fontRegular semiBold clrBlack">Select State: *</label>
+                        <asp:DropDownList ID="ddrstate" CssClass="form-control" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddrState_SelectedIndexChanged">
+                        </asp:DropDownList>
+
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlSelect2" class="fontRegular semiBold clrBlack">Select District: *</label>
+                        <asp:DropDownList ID="ddrdist" CssClass="form-control" runat="server">
+                            <asp:ListItem Value="0"><-Select District-></asp:ListItem>
+                        </asp:DropDownList>
+
+                    </div>
+                </div>
 
 
 
-                     <div class="form-row">
-                          <div class="form-group col-md-6">
-                                <label for="inputtaluka" class="fontRegular semiBold clrBlack">Taluka: *</label>
-                                <asp:TextBox ID="txttaluka"  class="form-control" Maxlength="30"   runat="server" ></asp:TextBox>
-                            </div>
-                          <div class="form-group col-md-6">
-                                <label for="inputCity" class="fontRegular semiBold clrBlack">City Name: *</label>
-                                <asp:TextBox ID="txtcity"  class="form-control" MaxLength="30"  runat="server"></asp:TextBox>
-                            </div>
-					 <%--<div class="form-group col-md-6">
-						<label>From year: *</label>
-						<asp:TextBox ID="txtfromyear" runat="server" CssClass="form-control" 
-							 ></asp:TextBox>
-					</div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputtaluka" class="fontRegular semiBold clrBlack">Taluka: *</label>
+                        <asp:TextBox ID="txttaluka" class="form-control" MaxLength="30" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputCity" class="fontRegular semiBold clrBlack">City Name: *</label>
+                        <asp:TextBox ID="txtcity" class="form-control" MaxLength="30" runat="server"></asp:TextBox>
+                    </div>
+
+
+                </div>
+
+
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Name of Owner: *</label>
+                        <asp:TextBox ID="txtowner" runat="server" CssClass="form-control"
+                            MaxLength="50"></asp:TextBox>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputgender" class="fontRegular semiBold clrBlack">Gender: *</label>
+                        <br />
+                        <asp:RadioButton ID="Radiomale" value="1" GroupName="gender" Style="margin-left: 10px" runat="server" />
+                        <label for="male">Male</label>
+                        <asp:RadioButton ID="Radiofemale" value="2" GroupName="gender" Style="margin-left: 10px" runat="server" />
+                        <label for="Female">Female</label>
+                        <asp:RadioButton ID="Radiotransgender" value="3" GroupName="gender" Style="margin-left: 10px" runat="server" />
+                        <label for="Transgender">Transgender</label>
+                    </div>
+                </div>
+
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputbday" class="fontRegular semiBold clrBlack">Birth Date: *</label>
+                        <asp:TextBox ID="txtbday" class="form-control" runat="server"></asp:TextBox>
+                    </div>
                    <div class="form-group col-md-6">
-                                <label for="inputpin" class="fontRegular semiBold clrBlack">PinCode: *</label>
-                                <asp:TextBox ID="txtPin"  class="form-control" Maxlength="15"  runat="server"></asp:TextBox>
-                            </div>--%>
-                         </div>
-
-                <%-- <div class="form-row">
-					<div class="form-group col-md-6">
-						<label for="inputAddress1" class="fontRegular semiBold clrBlack">The detailed configuration of Computers available at the institute</label>
-                        <asp:TextBox ID="txtcompconfig"  class="form-control" TextMode="MultiLine" Height="100" Maxlength="200"   runat="server"></asp:TextBox>
-                       </div> 
-                
-                            <div class="form-group col-md-6">
-                             <label for="inputAddress2" class="fontRegular semiBold clrBlack">Address of the institute: *</label>
-                            <asp:TextBox ID="txtInstituteAdd"  class="form-control" TextMode="MultiLine" Height="100" Maxlength="200" runat="server"></asp:TextBox>
-                        </div>
-                      </div>--%>
-                  
-
-                     <div class="form-row">
-					 <div class="form-group col-md-6">
-						<label>Name of Owner: *</label>
-						<asp:TextBox ID="txtowner" runat="server" CssClass="form-control" 
-							MaxLength="50" ></asp:TextBox>
-					    </div>
-					 <div class="form-group col-md-6">
-                                <label for="inputgender" class="fontRegular semiBold clrBlack">Gender: *</label>
-                                <br />
-                                <asp:RadioButton ID="Radiomale" value="1" GroupName="gender" style="margin-left: 10px" runat="server" />
-                                <label for="male">Male</label>
-                                <asp:RadioButton ID="Radiofemale" value="2" GroupName="gender" style="margin-left: 10px" runat="server" />
-                                <label for="Female">Female</label>
-                                <asp:RadioButton ID="Radiotransgender" value="3" GroupName="gender" style="margin-left: 10px" runat="server" />
-                                <label for="Transgender">Transgender</label>
-                            </div>  
-                        </div>
-
-                        
-
-                          <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputbday" class="fontRegular semiBold clrBlack">Birth Date: *</label>
-                                <asp:TextBox ID="txtbday" class="form-control" runat="server" ></asp:TextBox>
-                            </div>
-                            <div class="form-group col-md-6">
-                            <label for="exampleFormControlSelect1" class="fontRegular semiBold clrBlack">Role: *</label>
-                          <asp:TextBox ID="txtrole" class="form-control" MaxLength="30" runat="server" ></asp:TextBox>
+                             <label>Role :* </label>
+                                <asp:DropDownList ID="ddlrole" CssClass="form-control" runat="server" AutoPostBack="true">
+                                    <asp:ListItem Value="0"><- Select Role -></asp:ListItem>
+                                    <asp:ListItem Value="1">Sole Proprietor</asp:ListItem>
+                                    <asp:ListItem Value="2">Director</asp:ListItem>
+                                    <asp:ListItem Value="3">Chairman</asp:ListItem>
+                                    <asp:ListItem Value="4">Principal</asp:ListItem>
+                                    <asp:ListItem Value="5">Managing Director</asp:ListItem>
+                                    <asp:ListItem Value="6">Partner</asp:ListItem>
+                                    <asp:ListItem Value="7">Managing Trustee</asp:ListItem>
+                                    <asp:ListItem Value="8">Register</asp:ListItem>
+                                    <asp:ListItem Value="9">Manager Trustee</asp:ListItem>
+                                    <asp:ListItem Value="10">Others</asp:ListItem>
+                                </asp:DropDownList>
                             </div>
 
-                        </div>
-                      
-                        <div class="form-row">
-                             <div class="form-group col-md-6">
-                                <label for="inputemailid" class="fontRegular semiBold clrBlack">Email Id:*</label>
-                                <asp:TextBox ID="txtemail"  class="form-control" Maxlength="50" runat="server"></asp:TextBox>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputmobno" class="fontRegular semiBold clrBlack">Mobile No.:*</label>
-                                <asp:TextBox ID="txtMobNo"  class="form-control" Maxlength="10"  runat="server"></asp:TextBox>
-                            </div>
-                        </div>
+                </div>
 
-                       <%-- <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputemailid" class="fontRegular semiBold clrBlack">Email Id:*</label>
-                                <asp:TextBox ID="txtemailid"  class="form-control" Maxlength="50" runat="server"></asp:TextBox>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputwebadd" class="fontRegular semiBold clrBlack">Website address:</label>
-                                <asp:TextBox ID="txtWebAdd"  class="form-control" Maxlength="50"  runat="server"></asp:TextBox>
-                            </div>
-                        </div>--%>
-     				
-				 <%--actregno,username--%>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputemailid" class="fontRegular semiBold clrBlack">Email Id:*</label>
+                        <asp:TextBox ID="txtemail" class="form-control" MaxLength="50" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputmobno" class="fontRegular semiBold clrBlack">Mobile No.:*</label>
+                        <asp:TextBox ID="txtMobNo" class="form-control" MaxLength="10" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputpin" class="fontRegular semiBold clrBlack">PinCode: *</label>
+                        <asp:TextBox ID="txtPin" class="form-control" MaxLength="15" runat="server"></asp:TextBox>
+                    </div>
+                </div>
+
+
+
+
+                <%--actregno,username--%>
 				<span class="space20"></span>           
                     <span class="h4">For Office Use</span>
 					 <span class="space5"></span>

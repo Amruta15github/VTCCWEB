@@ -45,14 +45,15 @@ public partial class center_registration : System.Web.UI.Page
         {
             txtCity.Text = txtCity.Text.Trim().Replace("'", "");
             txttaluka.Text = txttaluka.Text.Trim().Replace("'", "");
-            txtrole.Text = txtrole.Text.Trim().Replace("'", "");
+            
             txtEmail.Text = txtEmail.Text.Trim().Replace("'", "");
             txtbday.Text = txtbday.Text.Trim().Replace("'", "");
             txtorgname.Text = txtorgname.Text.Trim().Replace("'", "");
             txtMobNo.Text = txtMobNo.Text.Trim().Replace("'", "");
             txtOwner.Text = txtOwner.Text.Trim().Replace("'", "");
+            txtpin.Text = txtpin.Text.Trim().Replace("'", "");
 
-            if (txtCity.Text == "" || txtEmail.Text == "" || txtbday.Text == "" || txtorgname.Text == "" || txtMobNo.Text == "" || txttaluka.Text == "" || txtOwner.Text == "" || txtrole.Text == "" || ddltypeoforg.SelectedValue=="" || ddrState.SelectedValue=="" || ddrDistrict.SelectedValue=="")
+            if (txtCity.Text == "" || txtEmail.Text == "" || txtbday.Text == "" || txtorgname.Text == "" || txtMobNo.Text == "" || txttaluka.Text == "" || txtOwner.Text == "" || ddlrole.SelectedValue == "" || txtpin.Text == "" || ddltypeoforg.SelectedValue=="" || ddrState.SelectedValue=="" || ddrDistrict.SelectedValue=="")
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'All * marked fields are mandatory');", true);
                 return;
@@ -126,22 +127,14 @@ public partial class center_registration : System.Web.UI.Page
             }
 
             int maxId = c.NextId("CentersData", "CenterID");
-            //int wishReg = 0;
-            //if (compcourse.Checked == true)
-            //{
-            //    wishReg = 1;
-            //}
-            //else if (compcourse.Checked == false)
-            //{
-            //    wishReg = 0;
-            //}
-            c.ExecuteQuery("Insert Into CentersData (CenterID, CenterRegDate, CenterName, FK_CenterTypeID, CenterState, CenterDistrict, CenterTaluka, CenterCity, CenterOwnerName, CenterOwnerGender, CenterOwnerBdate, CenterOwnerRole, CenterMobile, CenterEmailId, CenterStatus, DelMark) Values (" + maxId + ", '" + DateTime.Now + "', '" + txtorgname.Text + "', " + ddltypeoforg.SelectedValue + ", " + ddrState.SelectedValue + ", " + ddrDistrict.SelectedValue + ",  '" + txtCity.Text + "','" + txttaluka.Text + "','" + txtOwner.Text + "', '" + gender + "', '" + appDate + "','" + txtrole.Text + "','" + txtMobNo.Text + "', '" + txtEmail.Text + "',' Pending  ', 0)");
+           
+            c.ExecuteQuery("Insert Into CentersData (CenterID, CenterRegDate, CenterName, FK_CenterTypeID, CenterState, CenterDistrict, CenterTaluka, CenterCity, CenterOwnerName, CenterOwnerGender, CenterOwnerBdate, CenterOwnerRole, CenterMobile, CenterEmailId,CenterPincode, CenterStatus, DelMark) Values (" + maxId + ", '" + DateTime.Now + "', '" + txtorgname.Text + "', " + ddltypeoforg.SelectedValue + ", " + ddrState.SelectedValue + ", " + ddrDistrict.SelectedValue + ",  '" + txtCity.Text + "','" + txttaluka.Text + "','" + txtOwner.Text + "', '" + gender + "', '" + appDate + "','" + ddlrole.SelectedValue + "','" + txtMobNo.Text + "', '" + txtEmail.Text + "','" + txtpin.Text + "',' Pending  ', 0)");
 
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Registration request has been submited successfully');", true);
 
             //clear all
-            txtCity.Text = txtOwner.Text= txtorgname.Text = txtEmail.Text = txttaluka.Text  = txtbday.Text = txtrole.Text = txtMobNo.Text =  "";
-            ddrDistrict.SelectedIndex = ddrState.SelectedIndex = ddltypeoforg.SelectedIndex = 0;
+            txtCity.Text = txtOwner.Text= txtorgname.Text = txtEmail.Text = txttaluka.Text  = txtbday.Text =  txtMobNo.Text = txtpin.Text=  "";
+            ddrDistrict.SelectedIndex = ddrState.SelectedIndex = ddltypeoforg.SelectedIndex = ddlrole.SelectedIndex = 0;
             Radiomale.Checked = Radiofemale.Checked = Radiotransgender.Checked = false;
             Chkagree.Checked = false ;
         }
