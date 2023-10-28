@@ -208,7 +208,7 @@
                             <p class="pt-10 pb-10 text-light">
                                 A Society Woking for Industry sector for providing self-employment training to the Students and Job seekers.
                             </p>
-                            <a href="#" class="primary-btn text-uppercase letter-sp-2">Get Started</a>
+                            <a href="affiliation-centers" class="primary-btn text-uppercase letter-sp-2">Get Started</a>
                         </div>
                     </div>
                 </div>
