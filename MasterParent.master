@@ -214,7 +214,7 @@
                         <div class="col-lg-3 col-md-6 footer-links">
                             <h4>Quick Links</h4>
                             <ul>
-                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "Affiliation-centers" %>">VTCC ATC Affiliation</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "affiliation-centers" %>">VTCC ATC Affiliation</a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "training-centers" %>">Exam Centers</a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "#"  %>" <%--target="_blank"--%>>Online Exam</a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "sample-certificates" %>">Certification</a></li>
@@ -234,7 +234,7 @@
                         <div class="col-lg-3 col-md-6 footer-links">
                             <h4>Other Links</h4>
                             <ul>
-                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href= "<%=rootPath + "#"  %>">Authorised Institute </a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href= "<%=rootPath + "training-centers"  %>">Authorised Institute </a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath + "download-proposal" %>">Franchaise Agreement</a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href= "<%=rootPath + "online-payment" %>">Make Online Payment</a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href= "<%=rootPath +"center-registration" %>">Online Franchaise Form</a></li>
