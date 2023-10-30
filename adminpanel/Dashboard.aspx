@@ -53,6 +53,20 @@
                 </div>
             </div>
 
+              <%-- Small Box --%>
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h3><%=arrCounts[8] %></h3>
+                        <p>Upload Certificate</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                    <a href="upload-certificate-list.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
              <%-- Small Boxces --%>
              <div class="col-lg-3 col-6">
                 <div class="small-box bg-red">

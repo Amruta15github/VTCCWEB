@@ -73,6 +73,7 @@
        
         <span class="space30"></span>
         <div class="row">
+          
             <div class="col-md-8">
                  <asp:UpdatePanel ID="UpdatePanel1" runat="server" >
                 <ContentTemplate>
@@ -80,9 +81,6 @@
                     <span class="semiBold semiMedium themeClrQtr">Basic Details:</span>
                     <span class="space20"></span>
                     <form>
-
-                    <!-- Your form fields and other HTML elements go here -->
-                    <!-- For example, you have input fields, checkboxes, and the submit button -->
 
                         <span class="space10"></span>
                       
@@ -195,14 +193,16 @@
                                 <asp:TextBox ID="txtpin" class="form-control"  Maxlength="15" placeholder="Pincode" runat="server"></asp:TextBox>
                             </div>
                         </div>
-                      
-                      
-                        <%--<asp:Button ID="btnSubmit" CssClass="btn themeBgThr clrWhite" runat="server" Text="Submit" OnClick="btnSubmit_Click" />--%>
-                        <%--<asp:Button ID="btnCancel" CssClass="btn btn-secondary" runat="server" Text="Cancel" />--%>
+                                
                     </form>
                 </div>
                     </ContentTemplate>
             </asp:UpdatePanel> 
+            </div>
+
+               <div class="col-md-4">
+                <!-- Image on the side -->
+                <img src="images/atc-process-vtcc.png" alt="Registration Image" class="img-fluid"/>
             </div>
         </div>
          
