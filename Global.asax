@@ -38,6 +38,7 @@
         routes.MapPageRoute("other-products-route", "other-products", "~/other-products.aspx");
         routes.MapPageRoute("online-payment-route", "online-payment", "~/online-payment.aspx");
         routes.MapPageRoute("affiliation-centers-route", "affiliation-centers", "~/affiliation-centers.aspx");
+        routes.MapPageRoute("verify-certificate-route", "verify-certificate", "~/verify-student-certificate.aspx");
     }
 
     void Application_End(object sender, EventArgs e)

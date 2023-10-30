@@ -131,6 +131,13 @@
 						</li>
 					   
 						<li class="nav-item">
+							<a href="upload-certificate-list.aspx" class="nav-link">
+								<i class="nav-icon fas fa-certificate"></i>
+								<p>Upload Certificate</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
 							<a href="news-master.aspx" class="nav-link">
 								<i class="nav-icon fa fa-newspaper"></i>
 								<p>

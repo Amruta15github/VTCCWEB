@@ -159,7 +159,7 @@
                                 <li><a href="<%=rootPath +"#"%>">VTCC Tie-ups</a></li>
                             </ul>
                         </li>
-                        <li><a href="<%=rootPath +"Affiliation-centers"%>">VTCC ATC Affiliation</a></li>
+                        <li><a href="<%=rootPath +"affiliation-centers"%>">VTCC ATC Affiliation</a></li>
                         <li><a href="<%=rootPath +"training-centers"%>">Exam Centers</a></li>
                         <li><a href="<%=rootPath +"#"%>" <%--target="_blank"--%>>Online Exams</a></li>
                         <li class="list">
@@ -172,7 +172,7 @@
                         <li class="list">
                             <a class="subNav" href="<%=rootPath +"#"%>" <%--target="_blank"--%>>Verification</a>
                             <ul class="items">
-                                 <li><a href="<%=rootPath +"#"%>" <%--target="_blank"--%>>Student Certificate Verification</a></li>
+                                <li><a href="verify-certificate" >Student Certificate Verification</a></li>
                             </ul>
                         </li>
 
@@ -208,7 +208,7 @@
                             <p class="pt-10 pb-10 text-light">
                                 A Society Woking for Industry sector for providing self-employment training to the Students and Job seekers.
                             </p>
-                            <a href="#" class="primary-btn text-uppercase letter-sp-2">Get Started</a>
+                            <a href="affiliation-centers" class="primary-btn text-uppercase letter-sp-2">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -362,7 +362,7 @@
                         <div class="row details-content">
                             <div class="col single-detials">
                                 <span class="fa fa-graduation-cap"></span>
-                                <a href="#"> <%--target="_blank"--%>
+                                <a href="verify-certificate" target="_blank"> 
                                     <h4 class="medium fontMedium">Verify Students Certificate</h4>
                                 </a>
                                 <p>
@@ -596,7 +596,7 @@
                         <div class="col-lg-3 col-md-6 footer-links">
                             <h4>Quick Links</h4>
                             <ul>
-                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath +"Affiliation-centers"%>">VTCC ATC Affiliation</a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath +"affiliation-centers"%>">VTCC ATC Affiliation</a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath +"training-centers"%>">Exam Centers</a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath +"#"%>" <%--target="_blank"--%>>Online Exam</a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath +"sample-certificates"%>">Certification</a></li>
@@ -616,7 +616,7 @@
                         <div class="col-lg-3 col-md-6 footer-links">
                             <h4>Other Links</h4>
                             <ul>
-                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath +"#"%>">Authorised Institute </a></li>
+                                <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath +"training-centers"%>">Authorised Institute </a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath +"download-proposal"%>">Franchaise Agreement</a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath +"online-payment"%>">Make Online Payment</a></li>
                                 <li><i class="fa fa-angle-right"></i>&nbsp;<a href="<%=rootPath +"center-registration"%>">Online Franchaise Form</a></li>
