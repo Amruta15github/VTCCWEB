@@ -144,7 +144,7 @@
                                 <li><a href="<%=rootPath + "#" %>">VTCC Tie-ups</a></li>
                             </ul>
                         </li>
-                        <li><a href="<%=rootPath + "Affiliation-centers" %>">VTCC ATC Affiliation</a></li>
+                        <li><a href="<%=rootPath + "affiliation-centers" %>">VTCC ATC Affiliation</a></li>
                         <li><a href="<%=rootPath + "training-centers" %>">Exam Centers</a></li>
                         <li><a href="<%=rootPath + "#" %>" <%--target="_blank"--%>>Online Exams</a></li>
                         <li class="list">
