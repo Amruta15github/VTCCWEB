@@ -125,6 +125,10 @@
                                 <label for="inputCity" class="fontRegular semiBold clrBlack">City Name: *</label>
                                 <asp:TextBox ID="txtCity"  class="form-control"  runat="server" placeholder="City" MaxLength="30"></asp:TextBox>
                             </div>
+                              <div class="form-group col-md-6">
+                                <label for="inputaddress" class="fontRegular semiBold clrBlack">Address: *</label>
+                                <asp:TextBox ID="txtaddress"  class="form-control"  runat="server" placeholder="Address" MaxLength="200" TextMode="MultiLine"></asp:TextBox>
+                            </div>
                         </div>
 
                         <span class="space20"></span>                        

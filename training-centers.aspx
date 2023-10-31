@@ -63,7 +63,7 @@ tr:nth-child(even) {
       <asp:Label ID="lblId" runat="server" Text="[New]"></asp:Label>
       <div class="form-row">
            <div class="form-group col-md-6">
-             <label for="typeoforg" class="fontRegular semiBold clrBlack"> Select State : </label>
+             <label for="typeoforg" class="fontRegular semiBold clrBlack"> Select State :* </label>
              <asp:DropDownList ID="ddlstate" CssClass="cmbBox" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlstate_SelectedIndexChanged">
                
                  <asp:ListItem Value="0"><- Select State -></asp:ListItem>
@@ -71,7 +71,7 @@ tr:nth-child(even) {
           </div>
 
              <div class="form-group col-md-6">
-             <label for="typeoforg" class="fontRegular semiBold clrBlack"> Select District : </label>
+             <label for="typeoforg" class="fontRegular semiBold clrBlack"> Select District :* </label>
              <asp:DropDownList ID="ddldist" CssClass="cmbBox" runat="server" AutoPostBack="true">
                
                  <asp:ListItem Value="0"><- Select District -></asp:ListItem>
@@ -79,7 +79,7 @@ tr:nth-child(even) {
              </div> 
            
            <div class="form-group col-md-6">          
-             <label for="inputpincode" class="fontRegular semiBold clrBlack">Pincode : </label>
+             <label for="inputpincode" class="fontRegular semiBold clrBlack">Pincode :* </label>
              <asp:TextBox ID="txtpin"  class="form-control"  runat="server"></asp:TextBox>
            </div>
          </div> 
@@ -91,41 +91,42 @@ tr:nth-child(even) {
 
          
         <div id="viewtable" runat="server">
-         <%--table--%>
-         <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Center Name</th>    
-      <th scope="col">Pincode</th>
-      <th scope="col">Mobile No</th>
-      <th scope="col">Email</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">shreecpmputers</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    
-    </tr>
-    <tr>
-      <th scope="row">jspider</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      
-    </tr>
-    <tr>
-      <th scope="row">wisdom</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-     
-    </tr>
-     
-  </tbody>
-</table>
+		<div class="formPanel table-responsive-md">
+
+            <asp:GridView ID="gvexam" runat="server" GridLines="None"
+                AutoGenerateColumns="false">
+                <%-- <HeaderStyle CssClass="thead-dark" />--%>
+				<%--<RowStyle CssClass="" />
+				<AlternatingRowStyle CssClass="alt" />--%>
+			<Columns>
+               <%--  <asp:BoundField DataField="CenterID">
+						<HeaderStyle CssClass="HideCol" />
+						<ItemStyle  CssClass="HideCol"/>
+					</asp:BoundField>--%>
+
+                 <asp:BoundField DataField="CenterName" HeaderText=" Center Name">
+						<ItemStyle Width="15%" />
+					</asp:BoundField>
+
+                 <asp:BoundField DataField="CenterPincode" HeaderText="Pincode">
+						<ItemStyle Width="15%" />
+					</asp:BoundField>
+
+                 <asp:BoundField DataField="CenterMobile" HeaderText="Mobileno">
+						<ItemStyle Width="15%" />
+					</asp:BoundField>
+
+                 <asp:BoundField DataField="CenterEmailId" HeaderText="EmailId">
+						<ItemStyle Width="10%" />
+					</asp:BoundField>
+                </Columns>
+                <EmptyDataTemplate>
+					<span class="warning">Its Empty Here... :(</span>
+				</EmptyDataTemplate>
+				<%--<PagerStyle CssClass="" />--%>
+            </asp:GridView>
+            </div>
+       
         </div>
       
      </div>
