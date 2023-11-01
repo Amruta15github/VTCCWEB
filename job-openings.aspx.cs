@@ -26,7 +26,7 @@ public partial class job_openings : System.Web.UI.Page
                     GetJobs();
 
                 }
-                 else
+                else
                 {
                     string[] arrLinks = Page.RouteData.Values["JobId"].ToString().Split('-');
                     GetjobsDetails(Convert.ToInt32(arrLinks[arrLinks.Length - 1]));
@@ -86,14 +86,15 @@ public partial class job_openings : System.Web.UI.Page
                         string nUrl = Master.rootPath + "job-openings/" + c.UrlGenerator(row["JobTitle"].ToString().ToLower() + "-" + row["JobId"].ToString());
 
                         string jobsTitle = row["JobTitle"].ToString().Length >= 17 ? row["JobTitle"].ToString().Substring(0, 17) + "..." : row["JobTitle"].ToString();
+
                         strMarkup.Append("<a href=\"" + nUrl + "\"class=\" semiBold semiMedium themeClrThr\">" + jobsTitle + "</a>");
 
                         strMarkup.Append("<span class=\"shortLine themeBgPrime\"></span>");
                         strMarkup.Append("</div>"); //p-2
 
                         strMarkup.Append("<div class=\"p-2\">");
-                      
-                        DateTime nDate = Convert.ToDateTime(row["JobDate"]);                       
+
+                        DateTime nDate = Convert.ToDateTime(row["JobDate"]);
                         strMarkup.Append("<div class=\"regular fontRegular semiBold\">Posted On-<span class=\"fontRegular regular line-ht-5\">" + nDate.ToString("dd MMM yyyy") + "</span></div>");
                         strMarkup.Append("<span class=\"space10\"></span>");
                         strMarkup.Append("<div class=\"regular fontRegular semiBold\">Posted By-<span class=\"fontRegular regular line-ht-5\">" + row["JobTitle"].ToString() + "</span></div>");
@@ -101,7 +102,7 @@ public partial class job_openings : System.Web.UI.Page
                         strMarkup.Append("</div>");//p-2
                         strMarkup.Append("</div>");//col-md-6
                         strMarkup.Append("</div>");//boxShadow
-                        
+
                     }
                     strMarkup.Append("<div class=\"float_clear\"></div>");
                     jobstr = strMarkup.ToString();
@@ -133,10 +134,14 @@ public partial class job_openings : System.Web.UI.Page
                     DataRow row = dtjob.Rows[0];
                     StringBuilder strMarkup = new StringBuilder();
 
+
                     this.Title = row["JobTitle"].ToString() + "| JobOpenings, Events of VTCC Education.";
 
+
                     strMarkup.Append("<div class=\"container\">");
+
                     strMarkup.Append("<h2 class=\"pageH2 themeClrPrime mrg_B_5 \">" + row["JobTitle"].ToString() + "</h2>");
+
                     strMarkup.Append("<span class=\"space15\"></span>");
 
                     DateTime nDate = Convert.ToDateTime(row["JobDate"]);
@@ -151,23 +156,21 @@ public partial class job_openings : System.Web.UI.Page
                     strMarkup.Append("<span class=\"semiMedium fontregular\"> Job Experience : " + row["JobExperience"].ToString() + "</span>");
                     strMarkup.Append("<span class=\"space15\"></span>");
 
-                    //string jobtype = "";
+                    // Get the industry name based on FK_JobIndId
+                    string JobIndName = GetIndustryName(Convert.ToInt32(row["FK_JobIndId"]));
 
-                    //if (row["JobType"] == 1)
-                    //{
-                    //    string = "Full Time";
-                    //}
+                    strMarkup.Append("<span class=\"semiMedium fontregular\"> Job Industry : " + JobIndName + "</span>");
 
-                    //else (jobtype = 2)
-                    //{
-                    //    string = "Part Time";
-                    //}
+                    strMarkup.Append("<span class=\"space15\"></span>");
 
-                    //strMarkup.Append("<span class=\"semiMedium fontregular\"> Job Type : " + row["JobType"].ToString() + "</span>");
                     strMarkup.Append("<span class=\"semiMedium fontregular\"> Job Type : " + GetJobTypeDisplayName(Convert.ToInt32(row["JobType"])) + "</span>");
 
                     strMarkup.Append("<span class=\"space15\"></span>");
                     strMarkup.Append("<p class=\" semiMedium fontregular\">Job Description : " + Regex.Replace(row["JobInform"].ToString(), @"\r\n?|\n", "<br />") + "</p>");
+
+                    string JobUrl = row["JobUrl"].ToString();
+                    strMarkup.Append("<a href=\"" + row["JobUrl"].ToString() + "\" class=\"Readmore fontRegular\">More Details</a>");
+
                     strMarkup.Append("</div>");//container
 
                     bCrumbStr = "<ul class=\"bCrumb\"><li><a href=\"" + Master.rootPath + "\">Home</a></li><li>&raquo;</li><li><a href=\"" + Master.rootPath + "job-openings\">Jobs Openings</a></li><li>&raquo;</li><li>" + row["JobTitle"].ToString() + "</li></ul>";
@@ -183,6 +186,23 @@ public partial class job_openings : System.Web.UI.Page
 
 
         }
+    }
+
+   
+    private string GetIndustryName(int JobIndId)
+    {
+        using (DataTable dtind = c.GetDataTable("select JobIndName from JobIndustries where JobIndId =" + JobIndId))
+        {
+            if (dtind.Rows.Count > 0)
+            {
+                return dtind.Rows[0]["JobIndName"].ToString();
+            }
+            else
+            {
+                return "Unknown Industry";
+            }
+        }
+
     }
 }
 

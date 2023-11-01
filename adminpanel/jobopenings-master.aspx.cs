@@ -118,7 +118,8 @@ public partial class adminpanel_jobopenings_master : System.Web.UI.Page
                     ddljobind.SelectedValue = row["FK_JobIndId"].ToString();
                     txtexp.Text = row["JobExperience"].ToString();
                     ddljobtype.SelectedValue = row["JobType"].ToString();
-                   
+                    txtjoburl.Text = row["JobUrl"].ToString();
+
                 }
             }
         }
@@ -182,13 +183,13 @@ public partial class adminpanel_jobopenings_master : System.Web.UI.Page
 
             if (lblId.Text == "[New]")
             {
-                c.ExecuteQuery("Insert into JobOpenings (JobId, JobDate, JobTitle, JobInform, JobSkills, FK_JobIndId, JobExperience, JobType, JobViews) Values (" + maxId + ",  '" + appDate + "', '" + txtjobTitle.Text + "', '" + txtjobinfo.Text + "','" + txtskills.Text + "'," + ddljobind.SelectedValue + ",'" + txtexp.Text + "'," + ddljobtype.SelectedValue + ",0)");
+                c.ExecuteQuery("Insert into JobOpenings (JobId, JobDate, JobTitle, JobInform, JobSkills, FK_JobIndId, JobExperience, JobType, JobViews, JobUrl) Values (" + maxId + ",  '" + appDate + "', '" + txtjobTitle.Text + "', '" + txtjobinfo.Text + "','" + txtskills.Text + "'," + ddljobind.SelectedValue + ",'" + txtexp.Text + "'," + ddljobtype.SelectedValue + ",0,'" + txtjoburl.Text + "')");
 
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Job Added');", true);
             }
             else
             {
-                c.ExecuteQuery("Update JobOpenings set JobId=" + maxId + ", JobDate = '" + appDate + "', JobTitle='" + txtjobTitle.Text + "', JobInform='" + txtjobinfo.Text + "', JobSkills='" + txtskills.Text + "', FK_JobIndId= " + ddljobind.SelectedValue + ", JobExperience= '" + txtexp.Text + "', JobType= '" + ddljobtype.SelectedValue + "' where JobId=" + maxId);
+                c.ExecuteQuery("Update JobOpenings set JobId=" + maxId + ", JobDate = '" + appDate + "', JobTitle='" + txtjobTitle.Text + "', JobInform='" + txtjobinfo.Text + "', JobSkills='" + txtskills.Text + "', FK_JobIndId= " + ddljobind.SelectedValue + ", JobExperience= '" + txtexp.Text + "', JobType= '" + ddljobtype.SelectedValue + "', JobUrl='" + txtjoburl.Text + "' where JobId=" + maxId);
 
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Job Updated');", true);
             }
@@ -196,7 +197,7 @@ public partial class adminpanel_jobopenings_master : System.Web.UI.Page
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "waitAndMove('jobopenings-master.aspx', 2000);", true);
 
             //clear all
-            txtjobTitle.Text = txtjobinfo.Text = txtskills.Text = txtexp.Text = "";
+            txtjobTitle.Text = txtjobinfo.Text = txtskills.Text = txtexp.Text = txtjoburl.Text= "";
             ddljobind.SelectedIndex = ddljobtype.SelectedIndex= 0;
 
         }

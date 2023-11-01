@@ -111,6 +111,8 @@
                <span class="space15"></span>
                <p class="line-ht-5 fontRegular"> Job Experience : 1 year</p>
                <span class="space15"></span>
+               <p class="line-ht-5 fontRegular"> Job URL : testing</p>
+               <span class="space15"></span>
                <p class="fontregular line-ht-5">Software testing is the act of examining the artifacts and the behavior of the software under test by validation and verification.</p>
               
           </div>--%>

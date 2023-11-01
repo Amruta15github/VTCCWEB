@@ -55,7 +55,7 @@
 
               <%-- Small Box --%>
             <div class="col-lg-3 col-6">
-                <div class="small-box bg-red">
+                <div class="small-box bg-primary">
                     <div class="inner">
                         <h3><%=arrCounts[8] %></h3>
                         <p>Upload Certificate</p>
@@ -112,7 +112,7 @@
 
                <%-- Small Boxces --%>
             <div class="col-lg-3 col-6">
-                <div class="small-box bg-orange">
+                <div class="small-box bg-warning">
                     <div class="inner">
                         <h3><%=arrCounts[7]%></h3>
                         <p>Career Activity</p>
@@ -126,7 +126,7 @@
 
               <%-- Small Boxces --%>
              <div class="col-lg-3 col-6">
-                <div class="small-box bg-yellow">
+                <div class="small-box bg-info">
                     <div class="inner">
                         <h3><%=arrCounts[2]%></h3>
                         <p>Testimonials </p>

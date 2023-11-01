@@ -84,12 +84,16 @@
                     </asp:DropDownList>
                     </div>
 
-
 					<div class="form-group col-md-6">
 						<label>Job Description :*</label>
 						<asp:TextBox ID="txtjobinfo" runat="server" CssClass="form-control textarea" Height="200px" Width="100%"  textmode="MultiLine"></asp:TextBox>
 					</div>
 
+					<div class="form-group col-md-6">
+						<label>Job URL:</label>
+						<asp:TextBox ID="txtjoburl" runat="server" CssClass="form-control" Width="100%" 
+							MaxLength="200" ></asp:TextBox>					
+				    </div>
 					
 					
                 </div>
@@ -108,7 +112,7 @@
     </asp:UpdatePanel>
 	<div id="viewinfo" runat="server">
 		<a href="jobopenings-master.aspx?action=new" runat="server" class="btn btn-primary btn-md">Add New</a>
-		<%--<a href="contactdata.aspx?action=new" runat="server" class="btn btn-primary btn-md">Add New</a>--%>
+		
 		<span class="space20"></span>
 		<div class="formPanel table-responsive-md">
 			<asp:GridView ID="gvjobopening" runat="server" CssClass="table table-striped table-bordered table-hover" GridLines="None" 

@@ -41,7 +41,7 @@
       <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack">Get Your Courses Recognized: -  </span>In the VTCC Courses Recognition Program, VTCC assesses and recognizes your courses as conforming to the requirements of Global standards. Gaining recognition for your approach could increase your visibility and overall value if it becomes recognized by VTCC. Getting your course recognition is a perfect way to differentiate from your competition. After the VTCC course approval, ATC can start courses for their designed courses or syllabus.</p>
       <span class="greyLine"></span>
 
-         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="tiny"><i class="fa fa-circle " aria-hidden="true"></i></span> OUR VISION :- </p>
+         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="regular"><i class="fa fa-eye " aria-hidden="true"></i></span> OUR VISION :- </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">We are going to recognize & certified affiliated institutes, non-governmental organizations, various computer training & vocational training institutes, colleges, other vocational training centers in different parts of India and abroad for affiliated under<span class="semiBold clrBlack">VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC)</span>in all over India for holding Examinations, certifying students for their skill training and awarding student certificates to successful students accordance with standards and Rules & Regulations laid down by the Committee. Generally, to do all acts, things and deeds that are incidental or conducive to attaining the aims and objects of the society. <span class="semiBold clrBlack">VTTC plays all important role as per our vision regarding </span></p>
          <p class="clrDarkGrey regular fontRegular mrg_B_10"><span class="semiBold clrBlack">Guidance to Vocational / Technical institutions.</span></p>
          <p class="regular semiBold mrg_B_5 mt-4 clrBlack"><span class="semiMedium"><i class="fa fa-angle-right " aria-hidden="true"></i></span>  Affiliation of Institutions in India and abroad. </p>
@@ -61,13 +61,9 @@
          <p class="regular semiBold mrg_B_5 mt-4 clrBlack"><span class="semiMedium"><i class="fa fa-angle-right " aria-hidden="true"></i></span>  Library facility. </p>     
          <span class="greyLine"></span>
 
-         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="tiny"><i class="fa fa-circle " aria-hidden="true"></i></span> EXPERT COMMITTEES :- </p>
+         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="regular"><i class="fa fa-user " aria-hidden="true"></i></span> EXPERT COMMITTEES :- </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_30"><span class="semiBold clrBlack">VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC)</span>established various expert committees for designing student qualification frameworks, preparing examination structures, evaluating skill training programs, taking exams, issuing certificates, appointing training centers and examination centers, evaluating students etc., for control assessment and certification work.</p>
-        <%-- <p class="regular semiBold mrg_B_5 mt-4 clrBlack"><span class="semiMedium"><i class="fa fa-angle-right " aria-hidden="true"></i></span> Board of Management </p> 
-         <p class="regular semiBold mrg_B_5 mt-4 clrBlack"><span class="semiMedium"><i class="fa fa-angle-right " aria-hidden="true"></i></span> Advisory Board </p> 
-         <p class="regular semiBold mrg_B_5 mt-4 clrBlack"><span class="semiMedium"><i class="fa fa-angle-right " aria-hidden="true"></i></span> Executive Council </p> 
-         <p class="regular semiBold mrg_B_5 mt-4 clrBlack"><span class="semiMedium"><i class="fa fa-angle-right " aria-hidden="true"></i></span> Academic Council </p>
-         <p class="regular semiBold mrg_B_30 mt-4 clrBlack"><span class="semiMedium"><i class="fa fa-angle-right " aria-hidden="true"></i></span> Examination Council </p> --%>
+     
 
          <p class="clrDarkGrey semiMedium mrg_B_20 "><span class="semiBold clrBlack">Board of Management</span></p>
          <span class="shortLine themeBgThr"></span>
@@ -97,7 +93,7 @@
          <%--Apply For Expert Committee Member:- ( Make an application form to apply as a committee member) Link form here.--%>
          
 
-         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="tiny"><i class="fa fa-circle " aria-hidden="true"></i></span> Additional activities/Schemes :- </p>
+         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="regular"><i class="fa fa-info-circle " aria-hidden="true"></i></span> Additional activities/Schemes :- </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack">VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC) </span>is inviting applications for the following Schemes and awards for students and training centers </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack"><i class=" fa fa-angle-right " aria-hidden="true"></i> STUDENT'S SCHOLARSHIP EXAMINATIONS NATIONAL LEVEL BRILLIANT STUDENT AWARDS</span></p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack"><i class=" fa fa-angle-right " aria-hidden="true"></i> APPLICATIONS FOR EXPERT COMMITTEES MEMBER. </span></p>
@@ -106,7 +102,7 @@
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack"><i class=" fa fa-angle-right " aria-hidden="true"></i>	APPLICATIONS FOR INNOVATIVE IDEAS IN TRAINING AND DEVELOPMENT</span></p>
          <span class="greyLine"></span>
 
-         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="tiny"><i class="fa fa-circle " aria-hidden="true"></i></span> VTCC ACCREDITATIONS :- </p>
+         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="small"><i class="fa fa-tachometer" aria-hidden="true"></i></span> VTCC ACCREDITATIONS :- </p>
          <img src="images/about-us/accri logo.jpg" class="img-fluid qaimg" />
          <p class="clrDarkGrey semiMedium mrg_B_30"><span class="semiBold themeClrThr">QUALITY ASSURANCE AND ACCREDITATION COMMITTEE, NEW DELHI, INDIA (QAAC) गुणवत्ता आश्वासन एवं प्रत्यायन समिति, नई दिल्ली, भारत </span></p>
          <p class="clrDarkGrey regular fontRegular mrg_B_30"><span class="semiBold clrBlack">QUALITY ASSURANCE AND ACCREDITATION COMMITTEE, NEW DELHI, INDIA (QAAC) </span>is an independent, Assessment & Certification Agency & a National organization for recognized quality standard certification & various Accreditation. </p>
