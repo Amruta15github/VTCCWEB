@@ -35,6 +35,8 @@ public partial class adminpanel_Dashboard : System.Web.UI.Page
             arrCounts[7] = c.returnAggregate("Select Count(CarActId) From CareerActivity ").ToString();
 
             arrCounts[8] = c.returnAggregate("Select Count(CertID) From CertificateData ").ToString();
+
+            arrCounts[9] = c.returnAggregate("Select Count(CertID) From CertificateData ").ToString();
         }
         catch (Exception ex)
         {

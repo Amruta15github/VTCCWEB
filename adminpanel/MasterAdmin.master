@@ -183,6 +183,15 @@
 						</li>
 
 						<li class="nav-item">
+							<a href="certificate-data-entry.aspx" class="nav-link">
+								<i class="nav-icon fa fa-file"></i>
+								<p>
+									Certificate Data
+								</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
 							<a href="testimonials-master.aspx" class="nav-link">
 								<i class="nav-icon fa fa-user"></i>
 								<p>

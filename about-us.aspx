@@ -61,7 +61,7 @@
          <p class="regular semiBold mrg_B_5 mt-4 clrBlack"><span class="semiMedium"><i class="fa fa-angle-right " aria-hidden="true"></i></span>  Library facility. </p>     
          <span class="greyLine"></span>
 
-         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="regular"><i class="fa fa-user " aria-hidden="true"></i></span> EXPERT COMMITTEES :- </p>
+         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="regular"><i class="fa fa-users " aria-hidden="true"></i></span> EXPERT COMMITTEES :- </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_30"><span class="semiBold clrBlack">VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC)</span>established various expert committees for designing student qualification frameworks, preparing examination structures, evaluating skill training programs, taking exams, issuing certificates, appointing training centers and examination centers, evaluating students etc., for control assessment and certification work.</p>
      
 
@@ -93,7 +93,7 @@
          <%--Apply For Expert Committee Member:- ( Make an application form to apply as a committee member) Link form here.--%>
          
 
-         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="regular"><i class="fa fa-info-circle " aria-hidden="true"></i></span> Additional activities/Schemes :- </p>
+         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><img src="images/icons/rgbvtcc1.jpg"  /> Additional activities/Schemes :- </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack">VOCATIONAL TRAINING AND CERTIFICATION COMMITTEE, NEW DELHI, INDIA (VTCC) </span>is inviting applications for the following Schemes and awards for students and training centers </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack"><i class=" fa fa-angle-right " aria-hidden="true"></i> STUDENT'S SCHOLARSHIP EXAMINATIONS NATIONAL LEVEL BRILLIANT STUDENT AWARDS</span></p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack"><i class=" fa fa-angle-right " aria-hidden="true"></i> APPLICATIONS FOR EXPERT COMMITTEES MEMBER. </span></p>
@@ -102,7 +102,7 @@
          <p class="clrDarkGrey regular fontRegular mrg_B_20"><span class="semiBold clrBlack"><i class=" fa fa-angle-right " aria-hidden="true"></i>	APPLICATIONS FOR INNOVATIVE IDEAS IN TRAINING AND DEVELOPMENT</span></p>
          <span class="greyLine"></span>
 
-         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="small"><i class="fa fa-tachometer" aria-hidden="true"></i></span> VTCC ACCREDITATIONS :- </p>
+         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><img src="images/icons/accredited.png" /> VTCC ACCREDITATIONS :- </p>
          <img src="images/about-us/accri logo.jpg" class="img-fluid qaimg" />
          <p class="clrDarkGrey semiMedium mrg_B_30"><span class="semiBold themeClrThr">QUALITY ASSURANCE AND ACCREDITATION COMMITTEE, NEW DELHI, INDIA (QAAC) गुणवत्ता आश्वासन एवं प्रत्यायन समिति, नई दिल्ली, भारत </span></p>
          <p class="clrDarkGrey regular fontRegular mrg_B_30"><span class="semiBold clrBlack">QUALITY ASSURANCE AND ACCREDITATION COMMITTEE, NEW DELHI, INDIA (QAAC) </span>is an independent, Assessment & Certification Agency & a National organization for recognized quality standard certification & various Accreditation. </p>
@@ -199,7 +199,7 @@
          <p class="clrDarkGrey regular fontRegular mrg_B_30"><span class="semiBold clrBlack">Udyam Registration Number is - UDYAM-MH-29-0075426.</span></p>
          <span class="greyLine"></span>
 
-         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="tiny"><i class="fa fa-circle " aria-hidden="true"></i></span> Approval / Recognitions :- </p>
+         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="regular"><i class="fa fa-check-circle " aria-hidden="true"></i></span> Approval / Recognitions :- </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20"></p>
      
      </div>
