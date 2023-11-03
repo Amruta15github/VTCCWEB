@@ -33,7 +33,7 @@ public partial class adminpanel_certificate_data_entry : System.Web.UI.Page
                     {
                         btnSave.Text = "Save Info";
                         btnDelete.Visible = false;
-                        //txtDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                       
 
                     }
                     else
@@ -108,7 +108,7 @@ public partial class adminpanel_certificate_data_entry : System.Web.UI.Page
                 {
                     DataRow row = dtcert.Rows[0];
                     lblId.Text = certIdx.ToString();
-                    //txtDate.Text = Convert.ToDateTime(row["CertUploadDate"]).ToString("dd/MM/yyyy");
+                  
                     txtcertnumber.Text = row["CertNumber"].ToString();
                     txtcoursename.Text = row["CertCourseName"].ToString();
                     txtduration.Text = row["CertDuration"].ToString();
@@ -190,14 +190,14 @@ public partial class adminpanel_certificate_data_entry : System.Web.UI.Page
             //2
             DateTime appDate1 = DateTime.Now;
             string[] arrDate1 = txtissuedate.Text.Split('/');
-            if (c.IsDate(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]) == false)
+            if (c.IsDate(arrDate1[1] + "/" + arrDate1[0] + "/" + arrDate1[2]) == false)
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
                 return;
             }
             else
             {
-                appDate = Convert.ToDateTime(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]);
+                appDate1 = Convert.ToDateTime(arrDate1[1] + "/" + arrDate1[0] + "/" + arrDate1[2]);
             }
             DateTime cDate1 = DateTime.Now;
             string currentDate1 = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
@@ -205,14 +205,14 @@ public partial class adminpanel_certificate_data_entry : System.Web.UI.Page
             //3
             DateTime appDate2 = DateTime.Now;
             string[] arrDate2= txtfromdate.Text.Split('/');
-            if (c.IsDate(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]) == false)
+            if (c.IsDate(arrDate2[1] + "/" + arrDate2[0] + "/" + arrDate2[2]) == false)
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
                 return;
             }
             else
             {
-                appDate = Convert.ToDateTime(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]);
+                appDate2 = Convert.ToDateTime(arrDate2[1] + "/" + arrDate2[0] + "/" + arrDate2[2]);
             }
             DateTime cDate2 = DateTime.Now;
             string currentDate2 = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
@@ -220,14 +220,14 @@ public partial class adminpanel_certificate_data_entry : System.Web.UI.Page
             //4
             DateTime appDate3 = DateTime.Now;
             string[] arrDate3 = txttodate.Text.Split('/');
-            if (c.IsDate(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]) == false)
+            if (c.IsDate(arrDate3[1] + "/" + arrDate3[0] + "/" + arrDate3[2]) == false)
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
                 return;
             }
             else
             {
-                appDate = Convert.ToDateTime(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]);
+                appDate3 = Convert.ToDateTime(arrDate3[1] + "/" + arrDate3[0] + "/" + arrDate3[2]);
             }
             DateTime cDate3 = DateTime.Now;
             string currentDate3= cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
@@ -235,14 +235,14 @@ public partial class adminpanel_certificate_data_entry : System.Web.UI.Page
             //5
             DateTime appDate4 = DateTime.Now;
             string[] arrDate4 = txtstudregdate.Text.Split('/');
-            if (c.IsDate(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]) == false)
+            if (c.IsDate(arrDate4[1] + "/" + arrDate4[0] + "/" + arrDate4[2]) == false)
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
                 return;
             }
             else
             {
-                appDate = Convert.ToDateTime(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]);
+                appDate4 = Convert.ToDateTime(arrDate4[1] + "/" + arrDate4[0] + "/" + arrDate4[2]);
             }
             DateTime cDate4 = DateTime.Now;
             string currentDate4 = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
@@ -264,9 +264,7 @@ public partial class adminpanel_certificate_data_entry : System.Web.UI.Page
 
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "waitAndMove('certificate-data-entry.aspx', 2000);", true);
 
-            //clear all
-            txtcertnumber.Text = txtcoursename.Text = txtduration.Text = txtavgmarks.Text = txtgrade.Text = txtexammon.Text = txtissuedate.Text = txtstudname.Text = txtcentername.Text = txtfromdate.Text = txttodate.Text = txtstudregdate.Text = txtcertplace.Text = txtcenterno.Text = "";
-
+          
 
         }
         catch (Exception ex)
