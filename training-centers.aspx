@@ -95,9 +95,7 @@ tr:nth-child(even) {
 
             <asp:GridView ID="gvexam" runat="server" GridLines="None"
                 AutoGenerateColumns="false">
-                <%-- <HeaderStyle CssClass="thead-dark" />--%>
-				<%--<RowStyle CssClass="" />
-				<AlternatingRowStyle CssClass="alt" />--%>
+               
 			<Columns>
                <%--  <asp:BoundField DataField="CenterID">
 						<HeaderStyle CssClass="HideCol" />
@@ -123,7 +121,7 @@ tr:nth-child(even) {
                 <EmptyDataTemplate>
 					<span class="warning">Its Empty Here... :(</span>
 				</EmptyDataTemplate>
-				<%--<PagerStyle CssClass="" />--%>
+				
             </asp:GridView>
             </div>
        

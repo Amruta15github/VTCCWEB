@@ -156,7 +156,7 @@
                                 <li><a href= "<%=rootPath +"about-us" %>">Our Profile</a></li>
                                 <li><a href="<%=rootPath +"courses"%>">Courses Information</a></li>
                                 <li><a href="<%=rootPath +"news"%>">Latest News</a></li>
-                                <li><a href="<%=rootPath +"#"%>">VTCC Tie-ups</a></li>
+                                <li><a href="<%=rootPath +"tie-ups"%>">VTCC Tie-ups</a></li>
                             </ul>
                         </li>
                         <li><a href="<%=rootPath +"affiliation-centers"%>">VTCC ATC Affiliation</a></li>

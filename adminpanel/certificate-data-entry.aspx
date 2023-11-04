@@ -11,14 +11,14 @@
 			});
 		});
      </script>
-	<script type="text/javascript">
-        window.onload = function () {
+	<%--<script type="text/javascript">
+        window.onload = function () {--%>
             //alert("window load");
 
             <%-- duDatepicker('#<%= txtDate.ClientID %>', {
                 auto: true, inline: true, format: 'dd/mm/yyyy',
 			});--%>
-           duDatepicker('#<%= txtexammon.ClientID %>', {
+           <%--duDatepicker('#<%= txtexammon.ClientID %>', {
                 auto: true, inline: true, format: 'dd/mm/yyyy',
 			});
             duDatepicker('#<%= txtissuedate.ClientID %>', {
@@ -33,7 +33,47 @@
             duDatepicker('#<%= txtstudregdate.ClientID %>', {
                 auto: true, inline: true, format: 'dd/mm/yyyy',
             });
-        }
+        }--%>
+   <%-- </script>--%>
+	<script type="text/javascript">
+            function setupcalendar() {
+            <%-- $('#<% =txtBirthDate.ClientID%>').datepick({ onSelect: function (dates) { getAge() }, dateFormat: 'dd/mm/yyyy' });--%>
+			 <%-- $('#<%=txtTrDate.ClientID %>').datepick({ dateFormat: 'dd/mm/yyyy' });--%>
+
+
+              duDatepicker('#<%= txtexammon.ClientID %>', {
+                  auto: true, inline: true, format: 'dd/mm/yyyy',
+              });
+              duDatepicker('#<%= txtissuedate.ClientID %>', {
+                  auto: true, inline: true, format: 'dd/mm/yyyy',
+              });
+              duDatepicker('#<%= txtfromdate.ClientID %>', {
+                  auto: true, inline: true, format: 'dd/mm/yyyy',
+              });
+              duDatepicker('#<%= txttodate.ClientID %>', {
+                auto: true, inline: true, format: 'dd/mm/yyyy',
+			});
+              duDatepicker('#<%= txtstudregdate.ClientID %>', {
+                  auto: true, inline: true, format: 'dd/mm/yyyy',
+              });
+
+          }
+      </script>
+
+
+	 <script type="text/javascript">
+         function pageLoad(sender, args) {
+             if (args.get_isPartialLoad()) {
+                 setupcalendar();
+             }
+         }
+     </script>
+
+    <script type="text/javascript">
+            // Call setupAutocomplete on initial page load
+            $(document).ready(function () {
+                setupcalendar();
+            });
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -69,71 +109,71 @@
 					
 					
 					<div class="form-group col-md-6">
-						<label>Certificate CourseName:*</label>
+						<label>Course Name:*</label>
 						<asp:TextBox ID="txtcoursename" runat="server" CssClass="form-control" Width="100%" 
 							 ></asp:TextBox>					
 				    </div>
 
 						<div class="form-group col-md-6">
-						<label>Certificate Duration:*</label>
+						<label>Duration:*</label>
 						<asp:TextBox ID="txtduration" runat="server" CssClass="form-control" Width="100%" 
 							MaxLength="10" ></asp:TextBox>					
 				    </div>
 
 						<div class="form-group col-md-6">
-						<label>Certificate AvgMarks:*</label>
+						<label>Average Marks:*</label>
 						<asp:TextBox ID="txtavgmarks" runat="server" CssClass="form-control" Width="100%" 
 							 ></asp:TextBox>					
 				    </div>
 
 					<div class="form-group col-md-6">
-						<label>Certificate Grade:*</label>
+						<label>Grade:*</label>
 						<asp:TextBox ID="txtgrade" runat="server" CssClass="form-control" Width="100%" 
 							MaxLength="10" ></asp:TextBox>					
 				    </div>
 
 					<div class="form-group col-md-6">
-						<label>Certificate ExamMonth:*</label>
+						<label>Exam Month:*</label>
 						<asp:TextBox ID="txtexammon" runat="server" CssClass="form-control" Width="100%" 
 							></asp:TextBox>					
 				    </div>
 
 					<div class="form-group col-md-6">
-						<label>Certificate IssueDate:*</label>
+						<label>Issue Date:*</label>
 						<asp:TextBox ID="txtissuedate" runat="server" CssClass="form-control" Width="100%" 
 							></asp:TextBox>					
 				    </div>
 
 						<div class="form-group col-md-6">
-						<label>Certificate StudentName:*</label>
+						<label>Student Name:*</label>
 						<asp:TextBox ID="txtstudname" runat="server" CssClass="form-control" Width="100%" 
 							MaxLength="50" ></asp:TextBox>					
 				    </div>
 
 					<div class="form-group col-md-6">
-						<label>Certificate CenterName:*</label>
+						<label>Center Name:*</label>
 						<asp:TextBox ID="txtcentername" runat="server" CssClass="form-control" Width="100%" 
 							MaxLength="150" ></asp:TextBox>					
 				    </div>
 
 					<div class="form-group col-md-6">
-						<label>Certificate FromDate:*</label>
+						<label>From Date:*</label>
 						<asp:TextBox ID="txtfromdate" runat="server" CssClass="form-control" Width="100%" 
 							 ></asp:TextBox>					
 				    </div>
 					<div class="form-group col-md-6">
-						<label>Certificate ToDate:*</label>
+						<label>To Date:*</label>
 						<asp:TextBox ID="txttodate" runat="server" CssClass="form-control" Width="100%" 
 							 ></asp:TextBox>					
 				    </div>
 					<div class="form-group col-md-6">
-						<label>Certificate StudentRegDate:*</label>
+						<label>Student Registration Date:*</label>
 						<asp:TextBox ID="txtstudregdate" runat="server" CssClass="form-control" Width="100%" 
 							 ></asp:TextBox>					
 				    </div>
 
 					<div class="form-group col-md-6">
-						<label>Certificate Place:*</label>
+						<label>Place:*</label>
 						<asp:TextBox ID="txtcertplace" runat="server" CssClass="form-control" Width="100%" 
 							MaxLength="40" ></asp:TextBox>					
 				    </div>
@@ -155,7 +195,7 @@
                     </div>--%>
 
 					<div class="form-group col-md-6">
-						<label>Certificate CenterNo:*</label>
+						<label>Center Number:*</label>
 						<asp:TextBox ID="txtcenterno" runat="server" CssClass="form-control" Width="100%" 
 				 			MaxLength="50" ></asp:TextBox>					
 				    </div>
@@ -191,19 +231,19 @@
 						<ItemStyle  CssClass="HideCol"/>
 					</asp:BoundField>
 
-					 <asp:BoundField DataField="CertUploadDate" HeaderText="Certificate UploadDate">
+					 <asp:BoundField DataField="Upload Date" HeaderText="Certificate UploadDate">
 						<ItemStyle Width="20%" />
 					</asp:BoundField>
 
-					 <asp:BoundField DataField="CertNumber" HeaderText="Certificate Number">
+					 <asp:BoundField DataField="Certificate Number" HeaderText="Certificate Number">
 						<ItemStyle Width="20%" />
 					</asp:BoundField>
 
-					 <asp:BoundField DataField="CertStudentName" HeaderText="Student Name ">
+					 <asp:BoundField DataField="Student Name" HeaderText="Student Name ">
 						<ItemStyle Width="20%" />
 					</asp:BoundField>
 
-					 <asp:BoundField DataField="CertCenterName" HeaderText="CenterName">
+					 <asp:BoundField DataField="Center Name" HeaderText="CenterName">
 						<ItemStyle Width="10%" />
 					</asp:BoundField>
 
