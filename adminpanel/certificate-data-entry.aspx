@@ -178,21 +178,6 @@
 							MaxLength="40" ></asp:TextBox>					
 				    </div>
 
-				   <%--	<div class="form-group col-md-6">
-                        <label>StudPhto:*</label>
-                        <asp:FileUpload ID="fuImage" runat="server" CssClass="form-control-file" />
-                        <span class="space10"></span>
-                        <%= certificate %><span class="space5"></span>
-
-                    </div>--%>
-
-					<%--<div class="form-group col-md-6">
-                        <label>StudSign:*</label>
-                        <asp:FileUpload ID="fulsign" runat="server" CssClass="form-control-file" />
-                        <span class="space10"></span>
-                       <%= certificate %><span class="space5"></span>
-
-                    </div>--%>
 
 					<div class="form-group col-md-6">
 						<label>Center Number:*</label>
@@ -231,19 +216,19 @@
 						<ItemStyle  CssClass="HideCol"/>
 					</asp:BoundField>
 
-					 <asp:BoundField DataField="Upload Date" HeaderText="Certificate UploadDate">
+					 <asp:BoundField DataField="CertUploadDate" HeaderText="Certificate UploadDate">
 						<ItemStyle Width="20%" />
 					</asp:BoundField>
 
-					 <asp:BoundField DataField="Certificate Number" HeaderText="Certificate Number">
+					 <asp:BoundField DataField="CertNumber" HeaderText="Certificate Number">
 						<ItemStyle Width="20%" />
 					</asp:BoundField>
 
-					 <asp:BoundField DataField="Student Name" HeaderText="Student Name ">
+					 <asp:BoundField DataField="CertStudentName" HeaderText="Student Name ">
 						<ItemStyle Width="20%" />
 					</asp:BoundField>
 
-					 <asp:BoundField DataField="Center Name" HeaderText="CenterName">
+					 <asp:BoundField DataField="CertCenterName" HeaderText="Center Name">
 						<ItemStyle Width="10%" />
 					</asp:BoundField>
 
