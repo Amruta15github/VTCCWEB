@@ -35,13 +35,14 @@
             });
         }--%>
    <%-- </script>--%>
+
 	<script type="text/javascript">
             function setupcalendar() {
             <%-- $('#<% =txtBirthDate.ClientID%>').datepick({ onSelect: function (dates) { getAge() }, dateFormat: 'dd/mm/yyyy' });--%>
 			 <%-- $('#<%=txtTrDate.ClientID %>').datepick({ dateFormat: 'dd/mm/yyyy' });--%>
 
 
-              duDatepicker('#<%= txtexammon.ClientID %>', {
+             <%-- duDatepicker('#<%= txtexammon.ClientID %>', {
                   auto: true, inline: true, format: 'dd/mm/yyyy',
               });
               duDatepicker('#<%= txtissuedate.ClientID %>', {
@@ -55,7 +56,7 @@
 			});
               duDatepicker('#<%= txtstudregdate.ClientID %>', {
                   auto: true, inline: true, format: 'dd/mm/yyyy',
-              });
+              });--%>
 
           }
       </script>
@@ -132,17 +133,17 @@
 							MaxLength="10" ></asp:TextBox>					
 				    </div>
 
-					<div class="form-group col-md-6">
+					<%--<div class="form-group col-md-6">
 						<label>Exam Month:*</label>
 						<asp:TextBox ID="txtexammon" runat="server" CssClass="form-control" Width="100%" 
 							></asp:TextBox>					
-				    </div>
+				    </div>--%>
 
-					<div class="form-group col-md-6">
+					<%--<div class="form-group col-md-6">
 						<label>Issue Date:*</label>
 						<asp:TextBox ID="txtissuedate" runat="server" CssClass="form-control" Width="100%" 
 							></asp:TextBox>					
-				    </div>
+				    </div>--%>
 
 						<div class="form-group col-md-6">
 						<label>Student Name:*</label>
@@ -156,31 +157,31 @@
 							MaxLength="150" ></asp:TextBox>					
 				    </div>
 
-					<div class="form-group col-md-6">
+					<%--<div class="form-group col-md-6">
 						<label>From Date:*</label>
 						<asp:TextBox ID="txtfromdate" runat="server" CssClass="form-control" Width="100%" 
 							 ></asp:TextBox>					
-				    </div>
-					<div class="form-group col-md-6">
+				    </div>--%>
+					<%--<div class="form-group col-md-6">
 						<label>To Date:*</label>
 						<asp:TextBox ID="txttodate" runat="server" CssClass="form-control" Width="100%" 
 							 ></asp:TextBox>					
-				    </div>
-					<div class="form-group col-md-6">
+				    </div>--%>
+					<%--<div class="form-group col-md-6">
 						<label>Student Registration Date:*</label>
 						<asp:TextBox ID="txtstudregdate" runat="server" CssClass="form-control" Width="100%" 
 							 ></asp:TextBox>					
-				    </div>
+				    </div>--%>
 
 					<div class="form-group col-md-6">
-						<label>Place:*</label>
+						<label>Place:</label>
 						<asp:TextBox ID="txtcertplace" runat="server" CssClass="form-control" Width="100%" 
 							MaxLength="40" ></asp:TextBox>					
 				    </div>
 
 
 					<div class="form-group col-md-6">
-						<label>Center Number:*</label>
+						<label>Center Number:</label>
 						<asp:TextBox ID="txtcenterno" runat="server" CssClass="form-control" Width="100%" 
 				 			MaxLength="50" ></asp:TextBox>					
 				    </div>

@@ -197,18 +197,10 @@
                                 
                     </form>
                 </div>
-                    </ContentTemplate>
+               </ContentTemplate>
             </asp:UpdatePanel> 
-            </div>
 
-               <div class="col-md-4">
-                <!-- Image on the side -->
-                <img src="images/atc-process-vtcc.png" alt="Registration Image" class="img-fluid"/>
-            </div>
-        </div>
-         
-        <span class="space30"></span>
-        <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="tiny"><i class="fa fa-circle " aria-hidden="true"></i></span> We, ATC (PROPOSED AUTHORIZED TRAINING CENTER) understand and agree that</p>
+         <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><span class="tiny"><i class="fa fa-circle " aria-hidden="true"></i></span> We, ATC (PROPOSED AUTHORIZED TRAINING CENTER) understand and agree that</p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">1. The location of the proposed Centre shall be fixed only in the specific Area as selected by us and the selected location shall not be changed by us anytime during, and subsequent to the Network Partner Registration Process </p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">2. VTTC New Delhi reserves the right</p>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">a. To modify the terms and conditions of the ATC Registration Process without any prior notice and VTCC New Delhi shall not be liable to anyone for any such modification/s</p>
@@ -218,11 +210,22 @@
          <p class="clrDarkGrey regular fontRegular mrg_B_20">b. We shall abide by the various guidelines, communications, norms issued and specified by VTCC from time to time</p>
          <span class="space10"></span>
          <asp:CheckBox ID="Chkagree" runat="server" /> <a href="#">Accept terms and conditions for continue the from</a>
-         <span class="space20"></span>
+         <span class="space30"></span>
         <div style="display: flex; justify-content: center; align-items: center;">
         <asp:Button ID="btnSubmit" CssClass="btn themeBgThr clrWhite" runat="server" Text="Submit" OnClick="btnSubmit_Click"/>
         </div>
-    </div>
+            </div>
+
+               <div class="col-md-4">
+                <!-- Image on the side -->
+                <img src="images/atc-process-vtcc.png" alt="Registration Image" class="img-fluid"/>
+            </div>
+        </div>
+         
+       <%-- <div class="col-md-4">--%>
+       
+   <%-- </div>--%>
+          </div>
     <!-- registration form Ends -->
     <span class="space30"></span>
 </asp:Content>

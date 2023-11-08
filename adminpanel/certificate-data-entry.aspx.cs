@@ -114,13 +114,13 @@ public partial class adminpanel_certificate_data_entry : System.Web.UI.Page
                     txtduration.Text = row["CertDuration"].ToString();
                     txtavgmarks.Text = row["CertAvgMarks"].ToString();
                     txtgrade.Text = row["CertGrade"].ToString();
-                    txtexammon.Text = Convert.ToDateTime(row["CertExamMonth"]).ToString("dd/MM/yyyy");
-                    txtissuedate.Text = Convert.ToDateTime(row["CertIssueDate"]).ToString("dd/MM/yyyy");
+                    //txtexammon.Text = Convert.ToDateTime(row["CertExamMonth"]).ToString("dd/MM/yyyy");
+                    //txtissuedate.Text = Convert.ToDateTime(row["CertIssueDate"]).ToString("dd/MM/yyyy");
                     txtstudname.Text = row["CertStudentName"].ToString();
                     txtcentername.Text = row["CertCenterName"].ToString();
-                    txtfromdate.Text = Convert.ToDateTime(row["CertFromDate"]).ToString("dd/MM/yyyy");
-                    txttodate.Text = Convert.ToDateTime(row["CertToDate"]).ToString("dd/MM/yyyy");
-                    txtstudregdate.Text = Convert.ToDateTime(row["CertStudentRegDate"]).ToString("dd/MM/yyyy");
+                    //txtfromdate.Text = Convert.ToDateTime(row["CertFromDate"]).ToString("dd/MM/yyyy");
+                    //txttodate.Text = Convert.ToDateTime(row["CertToDate"]).ToString("dd/MM/yyyy");
+                    //txtstudregdate.Text = Convert.ToDateTime(row["CertStudentRegDate"]).ToString("dd/MM/yyyy");
                     txtcertplace.Text = row["CertPlace"].ToString();
                     txtcenterno.Text = row["CertCenterNo"].ToString();
 
@@ -163,7 +163,7 @@ public partial class adminpanel_certificate_data_entry : System.Web.UI.Page
         {
             GetAllControls(this.Controls);
             //Empty Validations
-            if (txtcertnumber.Text == "" || txtcoursename.Text == "" || txtduration.Text == "" || txtavgmarks.Text == "" || txtgrade.Text == "" || txtexammon.Text == "" || txtissuedate.Text == "" || txtstudname.Text == "" || txtcentername.Text == "" || txtfromdate.Text == "" || txttodate.Text == "" || txtstudregdate.Text == "" || txtcertplace.Text == "" || txtcenterno.Text == "")
+            if (txtcertnumber.Text == "" || txtcoursename.Text == "" || txtduration.Text == "" || txtavgmarks.Text == "" || txtgrade.Text == "" || txtstudname.Text == "" || txtcentername.Text == "")
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'All * Fields are mandatory');", true);
                 return;
@@ -172,92 +172,92 @@ public partial class adminpanel_certificate_data_entry : System.Web.UI.Page
             //Insert Update data
             int maxId = lblId.Text == "[New]" ? c.NextId("CertificateData", "CertID") : Convert.ToInt32(lblId.Text);
 
-            DateTime appDate = DateTime.Now;
-            string[] arrDate = txtexammon.Text.Split('/');
-            if (c.IsDate(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]) == false)
-            {
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
-                return;
-            }
-            else
-            {
-                appDate = Convert.ToDateTime(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]);
-            }
+            //DateTime appDate = DateTime.Now;
+            //string[] arrDate = txtexammon.Text.Split('/');
+            //if (c.IsDate(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]) == false)
+            //{
+            //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
+            //    return;
+            //}
+            //else
+            //{
+            //    appDate = Convert.ToDateTime(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]);
+            //}
 
-            DateTime cDate = DateTime.Now;
-            string currentDate = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
+            //DateTime cDate = DateTime.Now;
+            //string currentDate = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
 
-            //2
-            DateTime appDate1 = DateTime.Now;
-            string[] arrDate1 = txtissuedate.Text.Split('/');
-            if (c.IsDate(arrDate1[1] + "/" + arrDate1[0] + "/" + arrDate1[2]) == false)
-            {
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
-                return;
-            }
-            else
-            {
-                appDate1 = Convert.ToDateTime(arrDate1[1] + "/" + arrDate1[0] + "/" + arrDate1[2]);
-            }
-            DateTime cDate1 = DateTime.Now;
-            string currentDate1 = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
+            ////2
+            //DateTime appDate1 = DateTime.Now;
+            //string[] arrDate1 = txtissuedate.Text.Split('/');
+            //if (c.IsDate(arrDate1[1] + "/" + arrDate1[0] + "/" + arrDate1[2]) == false)
+            //{
+            //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
+            //    return;
+            //}
+            //else
+            //{
+            //    appDate1 = Convert.ToDateTime(arrDate1[1] + "/" + arrDate1[0] + "/" + arrDate1[2]);
+            //}
+            //DateTime cDate1 = DateTime.Now;
+            //string currentDate1 = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
 
-            //3
-            DateTime appDate2 = DateTime.Now;
-            string[] arrDate2= txtfromdate.Text.Split('/');
-            if (c.IsDate(arrDate2[1] + "/" + arrDate2[0] + "/" + arrDate2[2]) == false)
-            {
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
-                return;
-            }
-            else
-            {
-                appDate2 = Convert.ToDateTime(arrDate2[1] + "/" + arrDate2[0] + "/" + arrDate2[2]);
-            }
-            DateTime cDate2 = DateTime.Now;
-            string currentDate2 = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
+            ////3
+            //DateTime appDate2 = DateTime.Now;
+            //string[] arrDate2= txtfromdate.Text.Split('/');
+            //if (c.IsDate(arrDate2[1] + "/" + arrDate2[0] + "/" + arrDate2[2]) == false)
+            //{
+            //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
+            //    return;
+            //}
+            //else
+            //{
+            //    appDate2 = Convert.ToDateTime(arrDate2[1] + "/" + arrDate2[0] + "/" + arrDate2[2]);
+            //}
+            //DateTime cDate2 = DateTime.Now;
+            //string currentDate2 = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
 
-            //4
-            DateTime appDate3 = DateTime.Now;
-            string[] arrDate3 = txttodate.Text.Split('/');
-            if (c.IsDate(arrDate3[1] + "/" + arrDate3[0] + "/" + arrDate3[2]) == false)
-            {
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
-                return;
-            }
-            else
-            {
-                appDate3 = Convert.ToDateTime(arrDate3[1] + "/" + arrDate3[0] + "/" + arrDate3[2]);
-            }
-            DateTime cDate3 = DateTime.Now;
-            string currentDate3= cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
+            ////4
+            //DateTime appDate3 = DateTime.Now;
+            //string[] arrDate3 = txttodate.Text.Split('/');
+            //if (c.IsDate(arrDate3[1] + "/" + arrDate3[0] + "/" + arrDate3[2]) == false)
+            //{
+            //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
+            //    return;
+            //}
+            //else
+            //{
+            //    appDate3 = Convert.ToDateTime(arrDate3[1] + "/" + arrDate3[0] + "/" + arrDate3[2]);
+            //}
+            //DateTime cDate3 = DateTime.Now;
+            //string currentDate3= cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
 
-            //5
-            DateTime appDate4 = DateTime.Now;
-            string[] arrDate4 = txtstudregdate.Text.Split('/');
-            if (c.IsDate(arrDate4[1] + "/" + arrDate4[0] + "/" + arrDate4[2]) == false)
-            {
-                ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
-                return;
-            }
-            else
-            {
-                appDate4 = Convert.ToDateTime(arrDate4[1] + "/" + arrDate4[0] + "/" + arrDate4[2]);
-            }
-            DateTime cDate4 = DateTime.Now;
-            string currentDate4 = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
+            ////5
+            //DateTime appDate4 = DateTime.Now;
+            //string[] arrDate4 = txtstudregdate.Text.Split('/');
+            //if (c.IsDate(arrDate4[1] + "/" + arrDate4[0] + "/" + arrDate4[2]) == false)
+            //{
+            //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
+            //    return;
+            //}
+            //else
+            //{
+            //    appDate4 = Convert.ToDateTime(arrDate4[1] + "/" + arrDate4[0] + "/" + arrDate4[2]);
+            //}
+            //DateTime cDate4 = DateTime.Now;
+            //string currentDate4 = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
 
          
 
             if (lblId.Text == "[New]")
             {
-                c.ExecuteQuery("Insert into CertificateData (CertID, CertUploadDate, CertNumber, CertCourseName, CertDuration, CertAvgMarks, CertGrade, CertExamMonth, CertIssueDate, CertStudentName,CertCenterName,CertFromDate,CertToDate,CertStudentRegDate,CertPlace,CertCenterNo) Values (" + maxId + ",  '" + DateTime.Now + "', '" + txtcertnumber.Text + "', '" + txtcoursename.Text + "','" + txtduration.Text + "'," + txtavgmarks.Text + ",'" + txtgrade.Text + "','" + appDate + "','" + appDate1 + "','" + txtstudname.Text + "','" + txtcentername.Text + "','" + appDate2 + "','" + appDate3 + "','" + appDate4 + "','" + txtcertplace.Text + "','" + txtcenterno.Text + "')");
+                c.ExecuteQuery("Insert into CertificateData (CertID, CertUploadDate, CertNumber, CertCourseName, CertDuration, CertAvgMarks, CertGrade, CertStudentName,CertCenterName,CertPlace,CertCenterNo) Values (" + maxId + ",  '" + DateTime.Now + "', '" + txtcertnumber.Text + "', '" + txtcoursename.Text + "','" + txtduration.Text + "'," + txtavgmarks.Text + ",'" + txtgrade.Text + "','" + txtstudname.Text + "','" + txtcentername.Text + "','" + txtcertplace.Text + "','" + txtcenterno.Text + "')");
 
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Certificate Data Added');", true);
             }
             else
             {
-                c.ExecuteQuery("Update CertificateData set CertID=" + maxId + ", CertUploadDate = '" + DateTime.Now + "', CertNumber='" + txtcertnumber.Text + "', CertCourseName='" + txtcoursename.Text + "', CertDuration='" + txtduration.Text + "', CertAvgMarks= " + txtavgmarks.Text + ", CertGrade= '" + txtgrade.Text + "', CertExamMonth= '" + appDate + "', CertIssueDate='" + appDate1 + "', CertStudentName='" + txtstudname.Text + "', CertCenterName='" + txtcentername.Text + "', CertFromDate='" + appDate2 + "',CertToDate='" + appDate3 + "',CertStudentRegDate='" + appDate4 + "',CertPlace='" + txtcertplace.Text + "',CertCenterNo='" + txtcenterno.Text + "' where CertID=" + maxId);
+                c.ExecuteQuery("Update CertificateData set CertID=" + maxId + ", CertUploadDate = '" + DateTime.Now + "', CertNumber='" + txtcertnumber.Text + "', CertCourseName='" + txtcoursename.Text + "', CertDuration='" + txtduration.Text + "', CertAvgMarks= " + txtavgmarks.Text + ", CertGrade= '" + txtgrade.Text + "', CertStudentName='" + txtstudname.Text + "', CertCenterName='" + txtcentername.Text + "',CertPlace='" + txtcertplace.Text + "',CertCenterNo='" + txtcenterno.Text + "' where CertID=" + maxId);
 
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Certificate Data Updated');", true);
             }
