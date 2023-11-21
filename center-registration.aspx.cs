@@ -44,8 +44,7 @@ public partial class center_registration : System.Web.UI.Page
         try
         {
             txtCity.Text = txtCity.Text.Trim().Replace("'", "");
-            txttaluka.Text = txttaluka.Text.Trim().Replace("'", "");
-            
+            txttaluka.Text = txttaluka.Text.Trim().Replace("'", ""); 
             txtEmail.Text = txtEmail.Text.Trim().Replace("'", "");
             txtbday.Text = txtbday.Text.Trim().Replace("'", "");
             txtorgname.Text = txtorgname.Text.Trim().Replace("'", "");

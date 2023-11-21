@@ -26,31 +26,35 @@
     </div>
     <!-- Page Header Ends -->
 
-    <span class="space50"></span>
-    <section id="vtcc tieups"></section>
+  <span class="space50"></span>
+    <section id="tieups"></section>
      <div class="container">
       <h2 class="pageH2 large themeClrThr text-center">VTCC Tie-Ups</h2>
       <span class="space30"></span>
-         <div class="form-row">
-             <div class="form-group col-md-6">
-                 <label for="inputtitle" class="fontRegular semiBold clrBlack">Tieup Title  : </label>
-                 <asp:TextBox ID="txttieuptitle"  class="form-control"  runat="server"></asp:TextBox>
-             </div>
 
-             <div class="form-group col-md-6">
-                  <label for="inputintro" class="fontRegular semiBold clrBlack">Logos or Certificate Upload: </label>
-                 <asp:FileUpload ID="fuImage" runat="server" CssClass="form-control-file" />
-                 <span class="space10"></span>
-             </div>
-
-              <div class="form-group col-md-6">
-                 <label for="inputintro" class="fontRegular semiBold clrBlack">Introduction : </label>
-                 <asp:TextBox ID="txtintro" class="form-control"  runat="server" TextMode="MultiLine"></asp:TextBox>
-             </div>
-
-             
+       <%--  <div class="row">
+         <span class="space30"></span>
+         <div class="col-md-6">
+          <p class=" other clrBlack regular fontRegular mrg_B_40"> logo </p>
+          <p class="clrDarkGrey semiBold medium mrg_B_10"> Tieups title</p>
+          <p class="clrBlack regular fontRegular mrg_B_40">Intro</p>
+            <span class="space10"></span>
+          <a href="https://www.indiabrand.co.in/bulk-whatsapp-marketing-software-Whatchat-Pro" class=" other clrBlack regular fontRegular mrg_B_40">View Certificate</a> 
+         
          </div>
-
+         
+          <div class="col-md-6">
+          <p class=" other clrBlack regular fontRegular mrg_B_40"> logo </p>
+          <p class="clrDarkGrey semiBold medium mrg_B_10">Tieups title</p>
+          <p class="clrBlack regular fontRegular mrg_B_40">Intro</p>
+            <span class="space10"></span>
+          <a href="https://www.indiabrand.co.in/bulk-whatsapp-marketing-software-Whatchat-Pro" class=" other clrBlack regular fontRegular mrg_B_40">View Certificate</a> 
+         </div>
+       
+         
+        </div>--%>
+        
+          <%=Gettieup()%>   
          </div>
 </asp:Content>
 

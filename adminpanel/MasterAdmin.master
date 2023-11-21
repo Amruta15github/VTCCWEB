@@ -201,6 +201,15 @@
 						</li>
 
 						<li class="nav-item">
+							<a href="tieups-master.aspx" class="nav-link">
+								<i class="nav-icon fa fa-handshake"></i>
+								<p>
+									Tie-ups
+								</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
 							<a href="testimonials-master.aspx" class="nav-link">
 								<i class="nav-icon fa fa-user"></i>
 								<p>
