@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Text;
 
+
 public partial class tie_ups : System.Web.UI.Page
 {
     iClass c = new iClass();
@@ -39,28 +40,33 @@ public partial class tie_ups : System.Web.UI.Page
                         {
                             strMarkup.Append("<div class=\"tieup-logo\">");
 
-                            strMarkup.Append("<img src=\"" + Master.rootPath + "upload/tieuplogo/" + row["TieUpLogo"].ToString() + "\" alt=\"" + row["TieUpLogo"].ToString() + "\" class=\"width100\" />");
+                            strMarkup.Append("<img src=\"" + Master.rootPath + "upload/tieuplogo/" + row["TieUpLogo"].ToString() + "\" alt=\"" + row["TieUpLogo"].ToString() + "\" class=\"tieup-item\" />");
 
                             strMarkup.Append("</div>");
                            
                         }
+                        strMarkup.Append("<span class=\"space20\"></span>");
+                      
+                        strMarkup.Append("<div class=\" clrBlack semiBold semiMedium  mb-2\">" + row["TieUpTitle"].ToString() + "</div>");
 
-                        string nUrl = Master.rootPath + "tie-ups/" + c.UrlGenerator(row["TieUpTitle"].ToString().ToLower() + "-" + row["TieUpID"].ToString());
-
-                        string tieupTitle = row["TieUpTitle"].ToString().Length >= 17 ? row["TieUpTitle"].ToString().Substring(0, 17) + "..." : row["TieUpTitle"].ToString();
-                        strMarkup.Append("<a href=\"" + nUrl + "\" class=\"news-Tag mrg_B_10 fontRegular\">" + tieupTitle + "</a>");
-                       
-
-                        string tieupDesc = row["TieUpIntro"].ToString().Length >= 154 ? row["TieUpIntro"].ToString().Substring(0, 154) + "..." : row["TieUpIntro"].ToString();
-
-                        strMarkup.Append("<p class=\"fontRegular line-ht-5 regular mrg_B_15\">" + tieupDesc + "</p>");
-
-                        //strMarkup.Append("<a href=\"" + nUrl + "\" class=\"Readmore fontRegular\">Read More</a>");
-                        strMarkup.Append("<span class=\"space10\"></span>");
+                        strMarkup.Append("<div class=\"fontRegular line-ht-5 regular mrg_B_15\">" + row["TieUpIntro"].ToString() + "</div>");
 
                         //certificate
-                        //if (row["newsPhoto"] != DBNull.Value && row["newsPhoto"].ToString() != "" && row["newsPhoto"].ToString() != "no-photo.png")
-                         strMarkup.Append("</div>");//row
+                        if (row["TieUpCertificate"] != DBNull.Value && row["TieUpCertificate"].ToString() != "" && row["TieUpCertificate"].ToString() != "no-photo.png")
+                        {
+                            
+                                strMarkup.Append("<div class=\"tieup-certi\">");
+
+                                strMarkup.Append("<a href=\"" + Master.rootPath + "upload/tieupcerti/" + row["TieUpCertificate"].ToString() + "\" alt=\"" + row["TieUpCertificate"].ToString() + "\"target=\"_blank\" />View Document</a> ");
+
+                                strMarkup.Append("</div>");
+
+                        }
+                       
+                            strMarkup.Append("<span class=\"space20\"></span>");
+                          
+
+                        strMarkup.Append("</div>");//row
                         strMarkup.Append("<div class=\"float_clear\"></div>");
 
                     }
@@ -75,8 +81,7 @@ public partial class tie_ups : System.Web.UI.Page
             }
         }
         catch (Exception ex)
-        {
-            //nwsstr = c.ErrNotification(3, ex.Message.ToString());
+        {          
             return ex.Message.ToString();
         }
     }

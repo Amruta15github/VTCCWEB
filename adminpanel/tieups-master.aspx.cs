@@ -138,23 +138,12 @@ public partial class adminpanel_tieups_master : System.Web.UI.Page
                         tieuplogo = "<img src=\"" + Master.rootPath + "upload/tieuplogo/" + row["TieUpLogo"].ToString() + "\" width=\"200\" />";
                        
                     }
-                    
-
-                    //if (row["TieUpCertificate"] != DBNull.Value && row["TieUpCertificate"] != null && row["TieUpCertificate"].ToString() != "" && row["TieUpCertificate"].ToString() != "no-photo.png")
-                    //{
-                    //    tieupcerti = "<img src=\"" + Master.rootPath + "upload/tieupcerti/" + row["TieUpCertificate"].ToString() + "\" width=\"200\" />";
-                    //    btnRemove.Visible = true;
-                    //}
-                    //else
-                    //{
-                    //    btnRemove.Visible = false;
-                    //}
-
+                                      
                     //viewcerti
                     if (row["TieUpCertificate"] != DBNull.Value && row["TieUpCertificate"] != null && row["TieUpCertificate"].ToString() != "" && row["TieUpCertificate"].ToString() != "no-photo.png")
                     {
 
-                        tieupcerti = "<a href=\"" + Master.rootPath + "upload/tieupcerti/" + row["TieUpCertificate"].ToString() + "\"width=\"200\" \" target=\"_blank\">view certificate</a>";
+                        tieupcerti = "<a href=\"" + Master.rootPath + "upload/tieupcerti/" + row["TieUpCertificate"].ToString() + "\"width=\"200\" \" target=\"_blank\">View Document</a>";
                         btnRemove.Visible = true;
                     }
                     else

@@ -5399,3 +5399,17 @@ body {
     text-decoration-thickness: 2px;
     text-underline-position: under;
 }
+
+.tieup-item {
+    /* Example fixed size for each item */
+    width: 100px; /* Adjust according to your layout */
+    height:auto; /* Adjust according to your layout */
+    /* Add other necessary styles (e.g., borders, margins, paddings) */
+}
+
+.tieup-certi {
+    /* Example fixed size for each item */
+    width: 200px; /* Adjust according to your layout */
+    height: auto; /* Adjust according to your layout */
+    /* Add other necessary styles (e.g., borders, margins, paddings) */
+}
