@@ -5,6 +5,16 @@
      <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvO0AHfg1cuND1KXbw3t5xZr5p4PVrEk4">
     </script>
+
+ <style>
+        .other {
+           color:black;
+          
+        }
+            .other:hover {
+                color:#d19563;
+            }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <!-- Page Header Starts -->

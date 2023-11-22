@@ -57,7 +57,7 @@ public partial class tie_ups : System.Web.UI.Page
                             
                                 strMarkup.Append("<div class=\"tieup-certi\">");
 
-                                strMarkup.Append("<a href=\"" + Master.rootPath + "upload/tieupcerti/" + row["TieUpCertificate"].ToString() + "\" alt=\"" + row["TieUpCertificate"].ToString() + "\"target=\"_blank\" />View Document</a> ");
+                                strMarkup.Append("<a href=\"" + Master.rootPath + "upload/tieupcerti/" + row["TieUpCertificate"].ToString() + "\" alt=\"" + row["TieUpCertificate"].ToString() + "\" class=\"other\"target=\"_blank\" />View Document</a> ");
 
                                 strMarkup.Append("</div>");
 

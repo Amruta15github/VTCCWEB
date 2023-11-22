@@ -55,7 +55,7 @@
                   <%= tieupcerti %>
                 <%--  <a href="#">view certificate</a>--%>
                   <span class="space5"></span>
-                 <asp:Button ID="btnRemove" runat="server" CssClass="btn btn-secondary" Text="Remove Photo"  OnClientClick="return confirm('Are you sure to remove photo?');" OnClick="btnRemove_Click" />
+                 <asp:Button ID="btnRemove" runat="server" CssClass="btn btn-secondary" Text="Remove Document"  OnClientClick="return confirm('Are you sure to remove photo?');" OnClick="btnRemove_Click" />
              </div>
 
                     </div>
