@@ -10,6 +10,7 @@ using System.IO;
 
 public partial class adminpanel_searchcenter_master : System.Web.UI.Page
 {
+
     iClass c = new iClass();
     protected void Page_Load(object sender, EventArgs e)
     {

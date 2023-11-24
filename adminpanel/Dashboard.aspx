@@ -154,7 +154,7 @@
 
               <%-- Small Boxces --%>
             <div class="col-lg-3 col-6">
-                <div class="small-box bg-purple">
+                <div class="small-box bg-pink">
                     <div class="inner">
                         <h3><%=arrCounts[11]%></h3>
                         <p>Committee Members</p>
