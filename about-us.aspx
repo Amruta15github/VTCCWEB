@@ -88,9 +88,9 @@
          <p class="clrDarkGrey semiMedium mrg_B_20 "><span class="semiBold clrBlack">Examination Council</span></p>
          <span class="shortLine themeBgThr"></span>
          <p class="clrDarkGrey regular fontRegular mrg_B_20">Examination Council is the highest body for the conduct of Examinations. It lays down pre-examination, the actual behavior of examination & post-examination processes of Examinations. The Examination Council appoints Paper Setters, Moderators, Evaluators and Result Committees. It functions under the overall control of the Board of Management. It takes all measures to maintain the reliability, validity and credibility of the examinations conducted by the Institution.</p>
-          <a href="#">Apply For Expert Committee Member </a>
+          <a href="committeemembers.aspx">Apply For Expert Committee Member </a>
          <span class="greyLine"></span>
-         <%--Apply For Expert Committee Member:- ( Make an application form to apply as a committee member) Link form here.--%>
+        
          
 
          <p class="semiBold medium mrg_B_10 mt-4 clrBlack"><img src="images/icons/rgbvtcc1.jpg"  /> Additional activities/Schemes :- </p>

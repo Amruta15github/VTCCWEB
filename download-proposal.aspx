@@ -67,10 +67,7 @@
                             <label for="inputEmail4" class="fontRegular semiBold clrBlack">Email Id: *</label>
                             <asp:TextBox ID="txtemail" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
                         </div>
-                       <%--  <div class="form-group">
-                            <div id="recaptcha" style="transform: scale(0.77); -webkit-transform: scale(0.77); transform-origin: 0 0; -webkit-transform-origin: 0 0;"></div>
-						<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-                        </div>--%>
+                     
 
                         <asp:Button ID="btnSubmit" CssClass="btn themeBgThr clrWhite" class="secbtn" runat="server" Text="Submit" OnClick="btnSubmit_Click"  />
                     </form>
