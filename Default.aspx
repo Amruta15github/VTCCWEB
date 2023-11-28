@@ -648,7 +648,15 @@
                             <strong><span class="semiBold">VTCC</span></strong>. All Rights Reserved
                         </div>
                         <div class="credits">Designed by <a href="http://www.intellect-systems.com/">Intellect Systems</a></div>
+                         </div>
+                         <div class="col-md-6 social-links text-md-right pt-3 pt-md-0">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div>
+                   
                    
                 </div>
             </div>
