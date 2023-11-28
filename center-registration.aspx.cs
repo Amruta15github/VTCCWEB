@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Text;
 public partial class center_registration : System.Web.UI.Page
 {
     iClass c = new iClass();
@@ -131,12 +131,23 @@ public partial class center_registration : System.Web.UI.Page
 
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Registration request has been submited successfully');", true);
 
+            //email
+            StringBuilder strMail = new StringBuilder();
+            strMail.Append("New ATC Application is filled by <b> " + txtorgname.Text + "</b> <br/><br/>");
+            //strMail.Append("Center Name : <b>" + txtorgname.Text + "</b> <br/>");
+            
+            //c.SendMail("info@intellect-systems.com", "Eibenstock Positron", "prajaktap204@gmail.com", strMail.ToString(), "New Feedback at PositronSolutions", "", true, "", "");
+            //c.SendMail("info@intellect-systems.com", "Eibenstock Positron", "customer.support@positronsolutions.com", strMail.ToString(), "New Feedback at PositronSolutions", "", true, "", "");
+
+            c.SendMail("info@intellect-systems.com", "VTCC Education", "vtccdelhi@gmail.com", strMail.ToString(), "New Feedback at VTCC Education", "", true, "", "");
+
             //clear all
             txtCity.Text = txtOwner.Text= txtorgname.Text = txtEmail.Text = txttaluka.Text  = txtbday.Text =  txtMobNo.Text = txtpin.Text=  "";
             ddrDistrict.SelectedIndex = ddrState.SelectedIndex = ddltypeoforg.SelectedIndex = ddlrole.SelectedIndex = 0;
             Radiomale.Checked = Radiofemale.Checked = Radiotransgender.Checked = false;
             Chkagree.Checked = false ;
-        }
+
+             }
         catch (Exception ex)
         {
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('error', 'Error Occoured While Processing');", true);

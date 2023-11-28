@@ -66,7 +66,7 @@ public partial class download_proposal : System.Web.UI.Page
             StringBuilder strMail = new StringBuilder();
 
             strMail.Append("Dear Sir, <br/>");
-            strMail.Append("You have a new feedback at mtsts.org, <br/>");
+            strMail.Append("You have a new feedback at vtccdelhi.org, <br/>");
             strMail.Append("Details are given below, <br/><br/>");
             strMail.Append("Traning Center Name : <b>" + txtcenterNm.Text + "</b> <br/>");
             strMail.Append("Name : <b>" + txtName.Text + "</b> <br/>");
@@ -78,12 +78,13 @@ public partial class download_proposal : System.Web.UI.Page
             //c.SendMail("info@intellect-systems.com", "Eibenstock Positron", "amrutaajari@gmail.com", strMail.ToString(), "New Feedback at PositronSolutions", "", true, "", "");
             //c.SendMail("info@intellect-systems.com", "Eibenstock Positron", "customer.support@positronsolutions.com", strMail.ToString(), "New Feedback at PositronSolutions", "", true, "", "");
 
-            c.SendMail("vtccdelhi@gmail.com", "VTCC Education", "vtccdelhi@gmail.com", strMail.ToString(), "New Feedback at VTCC Education", "", true, "", "");
+            c.SendMail("info@intellect-systems.com", "VTCC Education", "vtccdelhi@gmail.com", strMail.ToString(), "New Feedback at VTCC Education", "", true, "", "");
+            //c.SendMail("info@mtsts.org", "VTCC Education", "amrutaajari@gmail.com", strMail.ToString(), "New Feedback at VTCC Education", "", true, "", "");
 
-            //c.SendMail("vtccdelhi@gmail.com", "VTCC Education", "amrutaajari@gmail.com", strMail.ToString(), "New Feedback at VTCC Education", "", true, "", "");
+            
             //errMsg = c.ErrNotification(1, "Thank you for your Feedback..!! We'll get back to you soon..!!");
 
-            //ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Thank you for your feedback. We will contact you soon.');", true);
+            
 
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Thank you for your feedback. We will contact you soon.');", true);
 

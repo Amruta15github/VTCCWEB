@@ -106,7 +106,7 @@
                                 <a href="<%= rootPath %>" title="">
                                    <img src="<%=rootPath +"images/vtcc-logo.png"%>" alt="" title="" /></a>
                                 <span class="space5"></span>
-                               <%-- <span class="small bold">हुनर है तो रोजगार है</span>--%>
+                             
                             </div>
                         </div>
                         <div class="col-md-7 col-lg-7">
@@ -170,9 +170,9 @@
                             </ul>
                         </li>
                         <li class="list">
-                            <a class="subNav" href="<%=rootPath +"#"%>" <%--target="_blank"--%>>Verification</a>
+                            <a class="subNav">Verification</a>
                             <ul class="items">
-                                <li><a href="verify-certificate" >Student Certificate Verification</a></li>
+                                <li><a href="<%=rootPath +"verify-certificate"%>" >Student Certificate Verification</a></li>
                             </ul>
                         </li>
 
@@ -649,13 +649,7 @@
                         </div>
                         <div class="credits">Designed by <a href="http://www.intellect-systems.com/">Intellect Systems</a></div>
                     </div>
-                    <div class="col-md-6 social-links text-md-right pt-3 pt-md-0">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-youtube"></i></a>
-                        <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div>
+                   
                 </div>
             </div>
             
@@ -675,41 +669,7 @@
     </form>
 
 
-      <%-- Scroll Animation Script --%>
- <%--   <script>
-        function reveal() {
-            //alert("function called")
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("activate");
-                } else {
-                    reveals[i].classList.remove("activate");
-                }
-            }
-        }
-        function loaded() {
-            //alert("function loaded");
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("activate");
-                } else {
-                    reveals[i].classList.remove("activate");
-                }
-            }
-            //alert("function load end");
-        }
-        window.addEventListener("scroll", reveal);
-        window.addEventListener("load", loaded);
-    </script>--%>
-
+    
     <script type="text/javascript">
         function openNav() {
             //alert("demo");

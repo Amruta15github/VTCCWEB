@@ -953,6 +953,7 @@ public class iClass : IDisposable
             }
            // SmtpClient smtp = new SmtpClient("mail.intellect-systems.com", 25);
             SmtpClient smtp = new SmtpClient("smtp.zoho.com", 587);
+            //smtp.Credentials = new NetworkCredential("info@mtsts.org", "Indiapakistan1!");
             smtp.Credentials = new NetworkCredential("info@intellect-systems.com", "iTrans@2017");
 
             smtp.EnableSsl = true;
