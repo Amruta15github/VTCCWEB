@@ -59,7 +59,7 @@ tr:nth-child(even) {
      <div class="container ">
       <h2 class="pageH2 large themeClrThr text-center">Renewal Process</h2>
       <span class="space40"></span>
-          <asp:Label ID="lblId" runat="server" Text="[New]"></asp:Label>
+         <%-- <asp:Label ID="lblId" runat="server" Text="[New]"></asp:Label>--%>
           <asp:UpdatePanel ID="UpdatePanel1" runat="server">
           <ContentTemplate>
            <div class="row ">
@@ -71,55 +71,43 @@ tr:nth-child(even) {
 
                    <span class="semiBold regular mr-30">Search ATC: *</span>
                    <asp:RadioButton ID="rdoAtc" runat="server" Checked="true" GroupName="Radio Atc" />
+
                    <label class="semiBold regular mr-30">By ATC Code</label>
                    <asp:RadioButton ID="rdoEmail" runat="server" GroupName="Radio Atc" />
+
                    <label class="semiBold regular">By Registered Email</label>
                    <span class="space20"></span>
+
                    <label for="inputEmail4" class="fontRegular semiBold">Enter ATC Code / Email Id:*</label>
                    <span class="space10"></span>
+
                    <asp:TextBox ID="txtsearchbx" class="form-control w-50" placeholder="ATC Code/ Email" runat="server"></asp:TextBox>
                    <span class="space30"></span>
                </div>
            </div>
 
-              <asp:Button ID="btnSubmit" runat="server" CssClass="btn themeBgThr clrWhite" Text="Submit" OnClick="btnSubmit_Click" />
-              <span class="space20"></span>
+              <asp:Button ID="btnSubmit" runat="server" CssClass="btn themeBgThr clrWhite" Text="Search" OnClick="btnSubmit_Click" />
+              <span class="space30"></span>
 
               <div id="viewtable" runat="server">
-                  <div class="formPanel table-responsive-md">
-
-                      <asp:GridView ID="gvatcrenewal" runat="server" GridLines="None"
-                          AutoGenerateColumns="false">
-                          <Columns>
-                              <asp:BoundField DataField="CenterID">
-                                  <HeaderStyle CssClass="HideCol" />
-                                  <ItemStyle CssClass="HideCol" />
-                              </asp:BoundField>
-
-                              <asp:BoundField DataField="CenterName" HeaderText=" Center Name">
-                                  <ItemStyle Width="15%" />
-                              </asp:BoundField>
-
-                              <asp:BoundField DataField="CenterAddress" HeaderText="Address">
-                                  <ItemStyle Width="15%" />
-                              </asp:BoundField>
-
-                              <asp:BoundField DataField="CenterRegDate" HeaderText="Registration Date">
-                                  <ItemStyle Width="15%" />
-                              </asp:BoundField>
-
-                              <%-- <asp:BoundField DataField="CenterRenewDate" HeaderText="EmailId">
-						<ItemStyle Width="10%" />
-					</asp:BoundField>--%>
-                          </Columns>
-                          <EmptyDataTemplate>
-                              <span class="warning">Its Empty Here... :(</span>
-                          </EmptyDataTemplate>
-
-                      </asp:GridView>
+                  
+                   <table>
+                            <tr>
+                                <th>Center Name</th>                              
+                                <th>Registration Date</th>
+                                <th>Renew Date</th>
+                            </tr>
+                            <tr>
+                                <td><%= arrAtc[0] %></td>
+                                <td><%= arrAtc[1] %></td>
+                                <td><%= arrAtc[2] %></td>
+                              
+                            </tr>
+                        </table>
+                    
                        <span class="space30"></span>
-                      <a href="#" class="btn btn-outline-secondary">Proceed to Pay</a>
-                  </div>
+                      <a href="<%=arrAtc[3] %>" class="btn btn-outline-secondary">Proceed to Pay</a>
+                
               </div>
                    
           </ContentTemplate>
