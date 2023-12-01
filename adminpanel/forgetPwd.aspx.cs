@@ -33,7 +33,7 @@ public partial class adminpanel_forgetPwd : System.Web.UI.Page
         string userPwd = c.GetReqData("Users", "userPwd", "emailId='" + userName + "'").ToString();
         string msgData = "<p><b>User Email : </b>" + userName + "</p><br/><p><b>Password :</b>" + userPwd + "</p>";
 
-        // c.SendMail("info@nandadeepeyehospital.org", "VTCC", txtEmail.Text.Trim(), msgData, "Account Credentials", "", true, "", "");
+         c.SendMail("info@intellect-systems.com", "VTCC", txtEmail.Text.Trim(), msgData, "Account Credentials", "", true, "", "");
 
         ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Account details send to your email.');", true);
 
