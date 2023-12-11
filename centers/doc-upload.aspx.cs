@@ -10,7 +10,7 @@ using System.IO;
 public partial class centers_doc_upload : System.Web.UI.Page
 {
     iClass c = new iClass();
-    public string rootPath, centerlogo, text;
+    public string rootPath, centerlogo, centerphoto;
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -144,6 +144,54 @@ public partial class centers_doc_upload : System.Web.UI.Page
         {
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('error', 'Error Occoured While Processing');", true);
             c.ErrorLogHandler(this.ToString(), " btnsavelogo_Click", ex.Message.ToString());
+            return;
+        }
+    }
+
+    protected void btnownerphoto_Click(object sender, EventArgs e)
+    {
+        try
+        {
+
+            if (Session["centerMaster"] != null)
+            {
+                int centerID = Convert.ToInt32(Session["centerMaster"]);
+
+                string centerphoto = "";
+                if (fuownerphoto.HasFile)
+                {
+                    string fExt = Path.GetExtension(fuownerphoto.FileName).ToString().ToLower();
+
+                    if (fExt == ".jpg" || fExt == ".jpeg" || fExt == ".png" || fExt == ".pdf")
+                    {
+                        centerphoto = "center-photo-" + Session["centerMaster"].ToString() + DateTime.Now.ToString("ddMMyyyyHHmmss") + fExt;
+                        fuownerphoto.SaveAs(Server.MapPath("~/upload/centerownerphoto/") + centerphoto);
+
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Only  .jpeg .jpg .pdf .png files are allowed');", true);
+                        return;
+
+                    }
+                }
+
+                else if (fuownerphoto.HasFile == false)
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'please Select OwnerPhoto Before Hitting Save Button');", true);
+                    return;
+                }
+
+                c.ExecuteQuery("Update CentersData Set CenterOwnerPhoto='" + centerphoto + "' where CenterID=" + Session["centerMaster"]);
+
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Owner Photo  Updated');", true);
+
+            }
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('error', 'Error Occoured While Processing');", true);
+            c.ErrorLogHandler(this.ToString(), " btnownerphoto_Click", ex.Message.ToString());
             return;
         }
     }
