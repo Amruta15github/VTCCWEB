@@ -18,7 +18,7 @@ public partial class centers_MasterAdmin : System.Web.UI.MasterPage
         rootPath = c.ReturnHttp();
         //ScriptManager1.Services.Add(new ServiceReference(rootPath + "WebServices/MedCareWebService.asmx"));
 
-        if (Session["adminMaster"] == null)
+        if (Session["centerMaster"] == null)
         {
             Response.Redirect("Default.aspx");
         }

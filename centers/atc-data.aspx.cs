@@ -14,6 +14,8 @@ public partial class centers_atc_data : System.Web.UI.Page
 
     //protected void Page_Load(object sender, EventArgs e)
     //{
+        // lblCentId.Text = Convert.ToString(Session["CentID"]);
+
     //    //int centerId = 0; // Default value
 
     //    if (!IsPostBack)

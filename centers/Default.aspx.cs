@@ -17,7 +17,7 @@ public partial class centers_Default : System.Web.UI.Page
 
         if (!IsPostBack)
         {
-            if (Session["adminMaster"] != null)
+            if (Session["centerMaster"] != null)
             {
                 Response.Redirect("Dashboard.aspx");
             }
@@ -49,10 +49,15 @@ public partial class centers_Default : System.Web.UI.Page
 
                 return;
             }
+           
             else
             {
-                Session["adminMaster"] = txtUserName.Text;
+                int teamId = Convert.ToInt32(c.GetReqData("CentersData", "CenterID", "CenterUsername='" + txtUserName.Text + "'"));     
+                Session["centerMaster"] = teamId;
+                //Session["centerMaster"] = txtUserName.Text;
                 Response.Redirect("Dashboard.aspx", false);
+
+
             }
         }
         catch (Exception ex)
@@ -62,4 +67,9 @@ public partial class centers_Default : System.Web.UI.Page
             return;
         }
     }
-}
+
+   
+  
+       
+    }
+
