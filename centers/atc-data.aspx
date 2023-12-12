@@ -30,12 +30,12 @@
                                         <span class=" bold semiMedium">Basic Details</span>
                                         <span class="space20"></span>
                                         <div>
-                                            <p>Name of Organization/Center: <%= arrData[0] %></p>
-                                            <p>Type of Organization: <%= arrData[1] %></p>
-                                             <p>Select State: <%=arrData[2] %></p>
-                                              <p>Select District: <%=arrData[3] %></p>
-                                             <p>Taluka: <%=arrData[4] %></p>
-                                             <p>City Name: <%=arrData[5] %></p>
+                                            <p>Name of Organization/Center : <%= arrData[0] %></p>
+                                            <p>Type of Organization : <%= arrData[1] %></p>
+                                             <p>Select State : <%=arrData[2] %></p>
+                                              <p>Select District : <%=arrData[3] %></p>
+                                             <p>Taluka : <%=arrData[4] %></p>
+                                             <p>City Name : <%=arrData[5] %></p>
                                             <!--  basic details... -->
                                         </div>
                                     </div>
@@ -43,10 +43,10 @@
                                         <span class="bold semiMedium">Other Details</span>
                                         <span class="space20"></span>
                                         <div>
-                                            <p>Owner Name/ Competent Authority: <%= arrData[6] %></p>
-                                            <p>Gender: <%= arrData[7] %></p>
-                                             <p>Birth date: <%= arrData[8] %></p>
-                                             <p>Role: <%= arrData[9] %></p>
+                                            <p>Owner Name/ Competent Authority : <%= arrData[6] %></p>
+                                            <p>Gender : <%= arrData[7] %></p>
+                                             <p>Birth date : <%= arrData[8] %></p>
+                                             <p>Role : <%= arrData[9] %></p>
 
                                             <!-- Other details... -->
                                         </div>
@@ -55,9 +55,9 @@
                                         <span class="bold semiMedium ">Contact Details</span>
                                         <span class="space20"></span>
                                         <div>
-                                            <p>Email Id: <%= arrData[10] %></p>
+                                            <p>Email Id : <%= arrData[10] %></p>
                                             <p>Mobile No.: <%= arrData[11] %></p>
-                                             <p>Pincode: <%= arrData[12] %></p>
+                                             <p>Pincode : <%= arrData[12] %></p>
                                             
 
                                             <!-- contact details... -->
