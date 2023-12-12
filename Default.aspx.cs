@@ -28,6 +28,12 @@ public partial class _Default : System.Web.UI.Page
                     Response.Redirect(rootPath, false);
                 }
 
+                if (Request.QueryString["act"] == "centerlogout")
+                {
+                    Session["centerMaster"] = null;
+
+                    Response.Redirect(rootPath, false);
+                }
             }
         }
     }
