@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="document-upload | VTCC" Language="C#" MasterPageFile="~/centers/MasterAdmin.master" AutoEventWireup="true" CodeFile="doc-upload.aspx.cs" Inherits="centers_doc_upload" %>
-<%@ MasterType VirtualPath="~/MasterParent.master" %>
+<%@ MasterType VirtualPath="~/centers/MasterAdmin.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -26,13 +26,14 @@
                             <div class="col-md-8">
                                 <asp:FileUpload ID="fulogo" runat="server" CssClass="form-control-file" />
                             </div>
-                            <span class="space10"></span>
-                            <%= centerlogo %>
-                            <span class="space5"></span>
+                          
                              
                             <div class="col-md-4">
                                 <asp:Button ID="btnsavelogo" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" OnClick="btnsavelogo_Click" />
                             </div>
+                             <span class="space10"></span>
+                            <%= centerlogo %>
+                            <span class="space5"></span>
                                                    
                   
                         </div>
@@ -46,13 +47,14 @@
                             <div class="col-md-8">
                                 <asp:FileUpload ID="fuownerphoto" runat="server" CssClass="form-control-file" />
                             </div>
-                            <span class="space10"></span>
-                            <%= centerphoto %>
-                            <span class="space5"></span>
-                            <%--<asp:Button ID="btnRemove" runat="server" CssClass="btn btn-secondary" Text="Remove Document"  OnClientClick="return confirm('Are you sure to remove photo?');" />--%>
+                            
+                          
                             <div class="col-md-4">
                                 <asp:Button ID="btnownerphoto" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" OnClick="btnownerphoto_Click" />
                             </div>
+                            <span class="space10"></span>
+                            <%= centerphoto %>
+                            <span class="space5"></span>
                         </div>
                     </div>
 
@@ -64,13 +66,14 @@
                             <div class="col-md-8">
                                 <asp:FileUpload ID="fuid" runat="server" CssClass="form-control-file" />
                             </div>
-                            <span class="space10"></span>
-                            <%--<%= tieupcerti %>--%>
-                            <span class="space5"></span>
-                            <%--<asp:Button ID="btnRemove" runat="server" CssClass="btn btn-secondary" Text="Remove Document"  OnClientClick="return confirm('Are you sure to remove photo?');" />--%>
+                           
+                            
                             <div class="col-md-4">
-                                <asp:Button ID="btnidproof" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" />
+                                <asp:Button ID="btnidproof" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" OnClick="btnidproof_Click" />
                             </div>
+                            <span class="space10"></span>
+                            <%= centeridproof %>
+                            <span class="space5"></span>
                         </div>
                     </div>
                     <span class="greyLine"></span>
@@ -81,13 +84,14 @@
                             <div class="col-md-8">
                                 <asp:FileUpload ID="fueducerti" runat="server" CssClass="form-control-file" />
                             </div>
-                            <span class="space10"></span>
-                            <%--<%= tieupcerti %>--%>
-                            <span class="space5"></span>
-                            <%--<asp:Button ID="btnRemove" runat="server" CssClass="btn btn-secondary" Text="Remove Document"  OnClientClick="return confirm('Are you sure to remove photo?');" />--%>
+                           
+                            
                             <div class="col-md-4">
-                                <asp:Button ID="btneducerti" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" />
+                                <asp:Button ID="btneducerti" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" OnClick="btneducerti_Click" />
                             </div>
+                             <span class="space10"></span>
+                            <%= centereducerti %>
+                            <span class="space5"></span>
                         </div>
                     </div>
 
@@ -99,17 +103,18 @@
                             <div class="col-md-8">
                                 <asp:FileUpload ID="fuprofcourses" runat="server" CssClass="form-control-file" />
                             </div>
-                            <span class="space10"></span>
-                            <%--<%= tieupcerti %>--%>
-                            <span class="space5"></span>
-                            <%--<asp:Button ID="btnRemove" runat="server" CssClass="btn btn-secondary" Text="Remove Document"  OnClientClick="return confirm('Are you sure to remove photo?');" />--%>
+                          
+                           
                             <div class="col-md-4">
-                                <asp:Button ID="btnprofcourses" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" />
+                                <asp:Button ID="btnprofcourses" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" OnClick="btnprofcourses_Click" />
                             </div>
+                              <span class="space10"></span>
+                            <%= centerprofcourse %>
+                            <span class="space5"></span>
                         </div>
                     </div>
 
-                    <span class="greyLine"></span>
+                    
                 </div>
                 <%--  </div>--%>
             </div>
