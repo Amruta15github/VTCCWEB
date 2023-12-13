@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 public partial class centers_MasterAdmin : System.Web.UI.MasterPage
 {
     iClass c = new iClass();
-    public string rootPath;
+    public string rootPath, centerid;
     protected void Page_Load(object sender, EventArgs e)
     {
         rootPath = c.ReturnHttp();
@@ -16,11 +16,20 @@ public partial class centers_MasterAdmin : System.Web.UI.MasterPage
     protected void Page_Init(object sender, EventArgs e)
     {
         rootPath = c.ReturnHttp();
-        //ScriptManager1.Services.Add(new ServiceReference(rootPath + "WebServices/MedCareWebService.asmx"));
+       
 
         if (Session["centerMaster"] == null)
         {
             Response.Redirect("Default.aspx");
         }
+
+        if (Session["centerMaster"] == null)
+        {
+            Response.Redirect("Default.aspx", false);
+        }
+        centerid = c.GetReqData("CentersData", "CenterName", "CenterID=" + Session["centerMaster"]).ToString() ;
+       
+
+
     }
 }

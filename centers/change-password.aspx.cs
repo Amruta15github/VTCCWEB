@@ -32,7 +32,7 @@ public partial class centers_change_password : System.Web.UI.Page
 
         try
         {
-            if (txtOld.Text == c.GetReqData("CentersData", "CenterUserPwd", "CenterID").ToString())
+            if (txtOld.Text == c.GetReqData("CentersData", "CenterUserPwd", "CenterID=" + Session["centerMaster"] +"").ToString())
             {
                 if (txtNew.Text.Length < 6)
                 {
@@ -43,7 +43,7 @@ public partial class centers_change_password : System.Web.UI.Page
                 {
                     if (txtNew.Text == txtConfirm.Text)
                     {
-                        c.ExecuteQuery("Update CentersData set CenterUserPwd='" + txtNew.Text + "' Where CenterID");
+                        c.ExecuteQuery("Update CentersData set CenterUserPwd='" + txtNew.Text + "' Where CenterID=" + Session["centerMaster"] + "");
 
                         ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Password successfully changed');", true);
 

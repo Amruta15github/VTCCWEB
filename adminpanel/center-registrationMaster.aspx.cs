@@ -145,7 +145,7 @@ public partial class adminpanel_center_registrationMaster : System.Web.UI.Page
                     txtcity.Text = row["CenterCity"].ToString();
                     txtowner.Text = row["CenterOwnerName"].ToString();             
                     txtbday.Text = Convert.ToDateTime(row["CenterOwnerBdate"]).ToString("dd/MM/yyyy");
-                    ddlrole.SelectedValue = row["CenterOwnerRole"].ToString();
+                    ddlrole.SelectedItem.Text = row["CenterOwnerRole"].ToString();
                     txtemail.Text = row["CenterEmailId"].ToString();
                     txtMobNo.Text = row["CenterMobile"].ToString();
                     txtactregno.Text = row["CenterRegNo"].ToString();
@@ -238,7 +238,7 @@ public partial class adminpanel_center_registrationMaster : System.Web.UI.Page
             txtMobNo.Text = txtMobNo.Text.Trim().Replace("'", "");
             txtPin.Text = txtPin.Text.Trim().Replace("'", "");
 
-            if (txtcity.Text == "" || txtemail.Text == "" || txtbday.Text == "" || txtorgname.Text == "" || txtMobNo.Text == "" || txttaluka.Text == "" || txtowner.Text == "" || ddlrole.SelectedValue == "" || txtPin.Text == "" || txtactregno.Text == "" || ddltypeoforg.SelectedValue == "" || ddrstate.SelectedValue == "" || ddrdist.SelectedValue == "")
+            if (txtcity.Text == "" || txtemail.Text == "" || txtbday.Text == "" || txtorgname.Text == "" || txtMobNo.Text == "" || txttaluka.Text == "" || txtowner.Text == "" || ddlrole.SelectedItem.Text == "" || txtPin.Text == "" || txtactregno.Text == "" || ddltypeoforg.SelectedValue == "" || ddrstate.SelectedValue == "" || ddrdist.SelectedValue == "")
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'All * marked fields are mandatory');", true);
                 return;
@@ -300,7 +300,7 @@ public partial class adminpanel_center_registrationMaster : System.Web.UI.Page
                 return;
             }
 
-            c.ExecuteQuery("Update CentersData Set CenterRegDate='" + DateTime.Now + "', CenterName='" + txtorgname.Text + "', FK_CenterTypeID='" + ddltypeoforg.SelectedValue + "', CenterState=" + ddrstate.SelectedValue + ", CenterDistrict= " + ddrdist.SelectedValue + ", CenterTaluka='" + txttaluka.Text + "', CenterCity='" + txtcity.Text + "', CenterOwnerName='" + txtowner.Text + "', CenterOwnerGender='" + gender + "', CenterOwnerBdate= '" + appDate + "', CenterOwnerRole='" + ddlrole.SelectedValue+ "', CenterMobile='" + txtMobNo.Text + "', CenterEmailId='" + txtemail.Text + "', CenterPincode='" + txtPin.Text + "', CenterRegNo='" + txtactregno.Text + "' , CenterUsername='" + txtusername.Text + "', CenterUserPwd='123456'  Where CenterID=" + Request.QueryString["id"]);
+            c.ExecuteQuery("Update CentersData Set CenterRegDate='" + DateTime.Now + "', CenterName='" + txtorgname.Text + "', FK_CenterTypeID='" + ddltypeoforg.SelectedValue + "', CenterState=" + ddrstate.SelectedValue + ", CenterDistrict= " + ddrdist.SelectedValue + ", CenterTaluka='" + txttaluka.Text + "', CenterCity='" + txtcity.Text + "', CenterOwnerName='" + txtowner.Text + "', CenterOwnerGender='" + gender + "', CenterOwnerBdate= '" + appDate + "', CenterOwnerRole='" + ddlrole.SelectedItem.Text+ "', CenterMobile='" + txtMobNo.Text + "', CenterEmailId='" + txtemail.Text + "', CenterPincode='" + txtPin.Text + "', CenterRegNo='" + txtactregno.Text + "' , CenterUsername='" + txtusername.Text + "', CenterUserPwd='123456'  Where CenterID=" + Request.QueryString["id"]);
 
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'CenterRegistration Updated Sucessfully');", true);
 

@@ -23,11 +23,10 @@
                     <div class="col-md-8">
                         <h1 class="pageH1 fontRegular">ATC Registration Information</h1>
                         <span class="space20"></span>
-                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                            <ContentTemplate>
+                       
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <span class=" bold semiMedium">Basic Details</span>
+                                        <span class=" semiMedium themeClrThr"><strong>Basic Details</strong></span>
                                         <span class="space20"></span>
                                         <div>
                                             <p>Name of Organization/Center : <%= arrData[0] %></p>
@@ -40,7 +39,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <span class="bold semiMedium">Other Details</span>
+                                        <span class="bold semiMedium themeClrThr"><strong>Other Details</strong></span>
                                         <span class="space20"></span>
                                         <div>
                                             <p>Owner Name/ Competent Authority : <%= arrData[6] %></p>
@@ -52,21 +51,18 @@
                                         </div>
                                     </div>
                                      <div class="col-md-6">
-                                        <span class="bold semiMedium ">Contact Details</span>
+                                        <span class="bold semiMedium themeClrThr"><strong>Contact Details</strong></span>
                                         <span class="space20"></span>
                                         <div>
                                             <p>Email Id : <%= arrData[10] %></p>
                                             <p>Mobile No.: <%= arrData[11] %></p>
-                                             <p>Pincode : <%= arrData[12] %></p>
-                                            
-
+                                             <p>Pincode : <%= arrData[12] %></p>                                       
                                             <!-- contact details... -->
                                         </div>
                                     </div>
                                     
                                 </div>
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
+                           
                     </div>
                 </div>
             </div>

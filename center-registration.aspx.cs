@@ -127,7 +127,7 @@ public partial class center_registration : System.Web.UI.Page
 
             int maxId = c.NextId("CentersData", "CenterID");
            
-            c.ExecuteQuery("Insert Into CentersData (CenterID, CenterRegDate, CenterRenewDate, CenterName, FK_CenterTypeID, CenterState, CenterDistrict, CenterTaluka, CenterCity, CenterOwnerName, CenterOwnerGender, CenterOwnerBdate, CenterOwnerRole, CenterMobile, CenterEmailId, CenterPincode, CenterStatus, DelMark) Values (" + maxId + ", '" + DateTime.Now + "','" + DateTime.Now + "', '" + txtorgname.Text + "', " + ddltypeoforg.SelectedValue + ", " + ddrState.SelectedValue + ", " + ddrDistrict.SelectedValue + ",  '" + txtCity.Text + "','" + txttaluka.Text + "','" + txtOwner.Text + "', '" + gender + "', '" + appDate + "','" + ddlrole.SelectedValue + "','" + txtMobNo.Text + "', '" + txtEmail.Text + "','" + txtpin.Text + "',' Pending  ', 0)");
+            c.ExecuteQuery("Insert Into CentersData (CenterID, CenterRegDate, CenterRenewDate, CenterName, FK_CenterTypeID, CenterState, CenterDistrict, CenterTaluka, CenterCity, CenterOwnerName, CenterOwnerGender, CenterOwnerBdate, CenterOwnerRole, CenterMobile, CenterEmailId, CenterPincode, CenterStatus, DelMark) Values (" + maxId + ", '" + DateTime.Now + "','" + DateTime.Now + "', '" + txtorgname.Text + "', " + ddltypeoforg.SelectedValue + ", " + ddrState.SelectedValue + ", " + ddrDistrict.SelectedValue + ",  '" + txtCity.Text + "','" + txttaluka.Text + "','" + txtOwner.Text + "', '" + gender + "', '" + appDate + "','" + ddlrole.SelectedItem.Text + "','" + txtMobNo.Text + "', '" + txtEmail.Text + "','" + txtpin.Text + "',' Pending  ', 0)");
 
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Registration request has been submited successfully');", true);
 
@@ -145,7 +145,7 @@ public partial class center_registration : System.Web.UI.Page
             txtCity.Text = txtOwner.Text= txtorgname.Text = txtEmail.Text = txttaluka.Text  = txtbday.Text =  txtMobNo.Text = txtpin.Text=  "";
             ddrDistrict.SelectedIndex = ddrState.SelectedIndex = ddltypeoforg.SelectedIndex = ddlrole.SelectedIndex = 0;
             Radiomale.Checked = Radiofemale.Checked = Radiotransgender.Checked = false;
-            Chkagree.Checked = false ;
+            Chkagree.Checked = false;
 
              }
         catch (Exception ex)
