@@ -27,10 +27,10 @@ public partial class placed_students : System.Web.UI.Page
         {
             StringBuilder strMarkup = new StringBuilder();
 
-            //using (DataTable dtstudeninfo = c.GetDataTable("SELECT * FROM StudentPlacement"))
-            using (DataTable dtplacemntdata = c.GetDataTable("Select * From Centersdata"))
+            using (DataTable dtstudeninfo = c.GetDataTable("SELECT * FROM StudentPlacement"))
+            //using (DataTable dtplacemntdata = c.GetDataTable("Select * From Centersdata"))
             {
-                if (dtplacemntdata.Rows.Count > 0)
+                if (dtstudeninfo.Rows.Count > 0)
                 {
                     int ncount = 1;
                     int bxcount = 0;
@@ -38,19 +38,21 @@ public partial class placed_students : System.Web.UI.Page
                     strMarkup.Append("<span class=\"space20\"></span>");
                     strMarkup.Append("<div class=\"row\">");
 
-                    foreach (DataRow row in dtplacemntdata.Rows)
-                    {
-                        if (c.IsRecordExist("Select StudPlcId From StudentPlacement Where FK_CenterID=" + Session["centerMaster"] + ""))
-                        {
-                            strMarkup.Append("<div class=\"p-3 shadow themeBgPrime clrWhite semiBold semiMedium fontRegular\">" + row["CenterName"].ToString() + "</br>");
-                            strMarkup.Append("<span class=\"fontRegular small\">" + row["CenterEmailId"].ToString() + "<span class=\"fontRegular small ml-3\">Contact: " + row["CenterMobile"].ToString() + "</span></span>");
-                            strMarkup.Append("</div>");
+                    //foreach (DataRow row in dtplacemntdata.Rows)
+                    //{
+                       
+                    //        if (c.IsRecordExist("Select StudPlcId From StudentPlacement Where FK_CenterID=" + Session["centerMaster"] + ""))
+                    //        {
+                    //        strMarkup.Append("<div class=\"p-3 shadow themeBgPrime clrWhite semiBold semiMedium fontRegular\">" + row["CenterName"].ToString() + "</br>");
+                    //        strMarkup.Append("<span class=\"fontRegular small\">" + row["CenterEmailId"].ToString() + "<span class=\"fontRegular small ml-3\">Contact: " + row["CenterMobile"].ToString() + "</span></span>");
+                    //        strMarkup.Append("</div>");
 
 
-                            using (DataTable dtstudeninfo = c.GetDataTable("Select * From StudentPlacement Where FK_CenterID=" + Session["centerMaster"] + ""))
-                            {
-                                strMarkup.Append("<span class=\"space20\"></span>");
-                                strMarkup.Append("<div class=\"row\">");
+                           
+                            //using (DataTable dtstudeninfo = c.GetDataTable("Select * From StudentPlacement Where  FK_CenterID=" + Session["centerMaster"] + ""))
+                            //{
+                            //    strMarkup.Append("<span class=\"space20\"></span>");
+                            //    strMarkup.Append("<div class=\"row\">");
 
                                 foreach (DataRow placrow in dtstudeninfo.Rows)
                                 {
@@ -89,6 +91,7 @@ public partial class placed_students : System.Web.UI.Page
                                     //ncount++;
                                 }
                                 strMarkup.Append("</div>");//row1
+                                //strMarkup.Append("</div>");
                                 strMarkup.Append("<span class=\"space50\"></span>");
 
 
@@ -97,9 +100,9 @@ public partial class placed_students : System.Web.UI.Page
                                 {
                                     strMarkup.Append("<div class=\"float_clear\"></div>");
                                 }
-                            }
-                        }
-                    }
+                    //        }
+                    //    }
+                    //}
 
                        return strMarkup.ToString();
                 }
