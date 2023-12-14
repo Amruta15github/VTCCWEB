@@ -253,7 +253,7 @@ public partial class adminpanel_studentplacement : System.Web.UI.Page
 
             if (lblId.Text == "[New]")
             {
-                c.ExecuteQuery("Insert into StudentPlacement(StudPlcId, StudPlcDate, StudPlcStudentName, StudPlcCourseName, StudPlcCompanyName, StudPlcJobPost, StudPlcCountry) Values (" + maxId + ", '" + appDate + "','" + txtstudplcname.Text + "', '" + txtcoursename.Text + "','" + txtcompanyname.Text + "','" + txtjobpost.Text + "','" + txtplccountry.Text + "')");
+                c.ExecuteQuery("Insert into StudentPlacement(StudPlcId, StudPlcDate, FK_CenterID, StudPlcStudentName, StudPlcCourseName, StudPlcCompanyName, StudPlcJobPost, StudPlcCountry) Values (" + maxId + ", '" + appDate + "','" + Session["centerMaster"] + "','" + txtstudplcname.Text + "', '" + txtcoursename.Text + "','" + txtcompanyname.Text + "','" + txtjobpost.Text + "','" + txtplccountry.Text + "')");
                 if (fileuploadphoto.HasFile)
                 {
                     c.ExecuteQuery("Update StudentPlacement Set StudPlcStudentPhoto='" + placstudPhoto + "' where StudPlcId=" + maxId + "");
@@ -264,7 +264,7 @@ public partial class adminpanel_studentplacement : System.Web.UI.Page
 
             else
             {
-                c.ExecuteQuery("Update StudentPlacement set StudPlcDate='" + appDate + "', StudPlcStudentName='" + txtstudplcname.Text + "', StudPlcCourseName='" + txtcoursename.Text + "',StudPlcCompanyName='" + txtcompanyname.Text + "',StudPlcJobPost='" + txtjobpost.Text + "',StudPlcCountry='" + txtplccountry.Text + "'  where StudPlcId=" + maxId);
+                c.ExecuteQuery("Update StudentPlacement set StudPlcDate='" + appDate + "',FK_CenterID='" + Session["centerMaster"] + "', StudPlcStudentName='" + txtstudplcname.Text + "', StudPlcCourseName='" + txtcoursename.Text + "',StudPlcCompanyName='" + txtcompanyname.Text + "',StudPlcJobPost='" + txtjobpost.Text + "',StudPlcCountry='" + txtplccountry.Text + "'  where StudPlcId=" + maxId);
 
                 if (fileuploadphoto.HasFile)
                 {

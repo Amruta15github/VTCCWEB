@@ -68,7 +68,7 @@ public partial class job_openings : System.Web.UI.Page
         try
         {
             StringBuilder strMarkup = new StringBuilder();
-            using (DataTable dtjobs = c.GetDataTable("SELECT JobId, JobDate, JobTitle, JobInform, JobSkills, FK_JobIndId, JobExperience, JobType  FROM JobOpenings  Order By JobId Desc"))
+            using (DataTable dtjobs = c.GetDataTable("SELECT JobId, JobDate, JobTitle, JobInform, JobSkills, FK_JobIndId, JobExperience, JobType , FK_CenterId FROM JobOpenings  Order By JobId Desc"))
             // using (DataTable dtjobs = c.GetDataTable("SELECT a.jobId, CONVERT(varchar(20), a.jobDate, 103) as jobDate, a.jobTitle, a.jobUrl,ISNULL( b.centName, 'MTSTS') as centName FROM OtherJobs a Inner Join Centersdata b On a.atcId=b.centId Order By a.jobId Desc"))
             {
 
@@ -97,8 +97,8 @@ public partial class job_openings : System.Web.UI.Page
                         DateTime nDate = Convert.ToDateTime(row["JobDate"]);
                         strMarkup.Append("<div class=\"regular fontRegular semiBold\">Posted On-<span class=\"fontRegular regular line-ht-5\">" + nDate.ToString("dd MMM yyyy") + "</span></div>");
                         strMarkup.Append("<span class=\"space10\"></span>");
-                        strMarkup.Append("<div class=\"regular fontRegular semiBold\">Posted By-<span class=\"fontRegular regular line-ht-5\">" + row["JobTitle"].ToString() + "</span></div>");
-
+                        strMarkup.Append("<div class=\"regular fontRegular semiBold\">Posted By-<span class=\"fontRegular regular line-ht-5\">" + GetcenterName(Convert.ToInt32(row["FK_CenterId"])) + "</span></div>");
+                                                                                                                   
                         strMarkup.Append("</div>");//p-2
                         strMarkup.Append("</div>");//col-md-6
                         strMarkup.Append("</div>");//boxShadow
@@ -200,6 +200,22 @@ public partial class job_openings : System.Web.UI.Page
             else
             {
                 return "Unknown Industry";
+            }
+        }
+
+    }
+
+    private string GetcenterName(int centerId)
+    {
+        using (DataTable dtind = c.GetDataTable("select CenterName from Centersdata where CenterID =" + centerId))
+        {
+            if (dtind.Rows.Count > 0)
+            {
+                return dtind.Rows[0]["CenterName"].ToString();
+            }
+            else
+            {
+                return "Unknown centername";
             }
         }
 

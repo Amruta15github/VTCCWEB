@@ -183,13 +183,13 @@ public partial class adminpanel_jobopenings_master : System.Web.UI.Page
 
             if (lblId.Text == "[New]")
             {
-                c.ExecuteQuery("Insert into JobOpenings (JobId, JobDate, JobTitle, JobInform, JobSkills, FK_JobIndId, JobExperience, JobType, JobViews, JobUrl) Values (" + maxId + ",  '" + appDate + "', '" + txtjobTitle.Text + "', '" + txtjobinfo.Text + "','" + txtskills.Text + "'," + ddljobind.SelectedValue + ",'" + txtexp.Text + "'," + ddljobtype.SelectedValue + ",0,'" + txtjoburl.Text + "')");
+                c.ExecuteQuery("Insert into JobOpenings (JobId, JobDate, FK_CenterId, JobTitle, JobInform, JobSkills, FK_JobIndId, JobExperience, JobType, JobViews, JobUrl) Values (" + maxId + ",  '" + appDate + "','" + Session["centerMaster"] + "', '" + txtjobTitle.Text + "', '" + txtjobinfo.Text + "','" + txtskills.Text + "'," + ddljobind.SelectedValue + ",'" + txtexp.Text + "'," + ddljobtype.SelectedValue + ",0,'" + txtjoburl.Text + "')");
 
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Job Added');", true);
             }
             else
             {
-                c.ExecuteQuery("Update JobOpenings set JobId=" + maxId + ", JobDate = '" + appDate + "', JobTitle='" + txtjobTitle.Text + "', JobInform='" + txtjobinfo.Text + "', JobSkills='" + txtskills.Text + "', FK_JobIndId= " + ddljobind.SelectedValue + ", JobExperience= '" + txtexp.Text + "', JobType= '" + ddljobtype.SelectedValue + "', JobUrl='" + txtjoburl.Text + "' where JobId=" + maxId);
+                c.ExecuteQuery("Update JobOpenings set JobId=" + maxId + ", JobDate = '" + appDate + "', FK_CenterId='" + Session["centerMaster"] + "',  JobTitle='" + txtjobTitle.Text + "', JobInform='" + txtjobinfo.Text + "', JobSkills='" + txtskills.Text + "', FK_JobIndId= " + ddljobind.SelectedValue + ", JobExperience= '" + txtexp.Text + "', JobType= '" + ddljobtype.SelectedValue + "', JobUrl='" + txtjoburl.Text + "' where JobId=" + maxId);
 
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Job Updated');", true);
             }
