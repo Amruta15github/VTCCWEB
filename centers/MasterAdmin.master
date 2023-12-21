@@ -134,6 +134,15 @@
 							</a>
 						</li>
 
+							<li class="nav-item">
+							<a href="add-centerphotos.aspx" class="nav-link">
+								<i class="nav-icon fa fa-download"></i>
+								<p>
+									Center Photos
+								</p>
+							</a>
+						</li>
+
 						<li class="nav-item">
 							<a href="change-password.aspx" class="nav-link">
 								<i class="nav-icon fa fa-lock"></i>

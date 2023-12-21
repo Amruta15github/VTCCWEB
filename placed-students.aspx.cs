@@ -14,7 +14,7 @@ public partial class placed_students : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-           
+
             GetStudentPlacements();
         }
     }
@@ -27,37 +27,36 @@ public partial class placed_students : System.Web.UI.Page
         {
             StringBuilder strMarkup = new StringBuilder();
 
-            //using (DataTable dtstudeninfo = c.GetDataTable("SELECT * FROM StudentPlacement"))
+           
             using (DataTable dtplacemntdata = c.GetDataTable("Select * From Centersdata"))
             {
                 if (dtplacemntdata.Rows.Count > 0)
                 {
-                    int ncount = 1;
+                    //int ncount = 1;
                     int bxcount = 0;
 
                     strMarkup.Append("<span class=\"space20\"></span>");
                     strMarkup.Append("<div class=\"row\">");
-
+                    
                     foreach (DataRow row in dtplacemntdata.Rows)
                     {
-                        //if (c.IsRecordExist("Select StudPlcId From StudentPlacement Where FK_CenterID=" + Session["centerMaster"] + ""))
+                        
                             if (c.IsRecordExist("Select StudPlcId From StudentPlacement Where FK_CenterID=" +row["CenterID"] +  ""))
                             {
-                            strMarkup.Append("<div class=\"themeClrPrime semiBold semiMedium fontRegular\">" + row["CenterName"].ToString() + "</br>");
-                            strMarkup.Append("<span class=\"fontRegular small\">" + row["CenterEmailId"].ToString() + "<span class=\"fontRegular small ml-3\">Contact: " + row["CenterMobile"].ToString() + "</span></span>");
+                            strMarkup.Append("<div class=\"organization-name-style mrg_B_10\">" + row["CenterName"].ToString() + "</br>");
+                            strMarkup.Append("<span class=\"space10\"></span>");
+                            strMarkup.Append("<span class=\"fontRegular small\">Email ID: " + row["CenterEmailId"].ToString() + "<span class=\"fontRegular small ml-3\">Contact: " + row["CenterMobile"].ToString() + "</span></span>");
                             strMarkup.Append("</div>");
-
-
-
+                                           
                             using (DataTable dtstudeninfo = c.GetDataTable("Select * From StudentPlacement Where FK_CenterID=" + row["CenterID"] + ""))
                             {
                                 strMarkup.Append("<span class=\"space20\"></span>");
                                 strMarkup.Append("<div class=\"row\">");
                                 strMarkup.Append("<span class=\"space20\"></span>");
-
+                               
                                 foreach (DataRow placrow in dtstudeninfo.Rows)
                                 {
-
+                                   
                                     strMarkup.Append("<div class=\"col-md-6 mb-4\">");
                                     strMarkup.Append("<div class=\"p-3 border border-secondary\">");
                                     strMarkup.Append("<div class=\"p-2\">");
@@ -92,19 +91,18 @@ public partial class placed_students : System.Web.UI.Page
                                     //ncount++;
                                 }
                                 strMarkup.Append("</div>");//row1
-                                //strMarkup.Append("</div>");//row3
-                                strMarkup.Append("<span class=\"space50\"></span>");
-
+                              
 
                                 bxcount++;
                                 if (bxcount % 2 == 0)
                                 {
                                     strMarkup.Append("<div class=\"float_clear\"></div>");
                                 }
+                                strMarkup.Append("</div>");//row3
                             }
                         }
                     }
-
+                   
                     return strMarkup.ToString();
                 }
                 else

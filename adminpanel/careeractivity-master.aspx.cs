@@ -166,13 +166,13 @@ public partial class adminpanel_careeractivity : System.Web.UI.Page
 
             if (lblId.Text == "[New]")
             {
-                c.ExecuteQuery("Insert into CareerActivity (CarActId, CarActDate, CarActTitle, CarActDescription, ViewsCount) Values (" + maxId + ",  '" + appDate + "', '" + txtcaractTitle.Text + "', '" + txtcaractDesc.Text + "',0)");
+                c.ExecuteQuery("Insert into CareerActivity (CarActId, CarActDate,FK_CenterID, CarActTitle, CarActDescription, ViewsCount) Values (" + maxId + ",  '" + appDate + "', '" + Session["centerMaster"] + "','" + txtcaractTitle.Text + "', '" + txtcaractDesc.Text + "',0)");
 
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Career Activity Added');", true);
             }
             else
             {
-                c.ExecuteQuery("Update CareerActivity set CarActId=" + maxId + ", CarActDate = '" + appDate + "', CarActTitle='" + txtcaractTitle.Text + "', CarActDescription='" + txtcaractDesc.Text + "' where CarActId=" + maxId);
+                c.ExecuteQuery("Update CareerActivity set CarActId=" + maxId + ", CarActDate = '" + appDate + "', FK_CenterId='" + Session["centerMaster"] + "', CarActTitle='" + txtcaractTitle.Text + "', CarActDescription='" + txtcaractDesc.Text + "' where CarActId=" + maxId);
 
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Career Activity Updated');", true);
             }

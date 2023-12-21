@@ -145,8 +145,9 @@
 
 /* Theme Colors */
 .themeBgPrime{background:#302a60;} /* Purple */
-.themeBgSec{background:#00a8eb;} /* Blue */
+/*.themeBgSec{background:#00a8eb;}*/ /* Blue */
 .themeBgThr {background:#d19563;} /* orange*/
+.themeBgSec{color:#5f79ee;} /*faintpurple*/
 
 .themeClrPrime{color:#302a60;}/* Purple */
 .themeClrSec{color:#00a8eb;}/* blue*/
@@ -844,6 +845,15 @@
         .slick-dots li a {
         }
 
+.organization-name-style {
+    background-color: #d19563;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 7px;
+    /* Additional styling specific to the organization name */
+}
 
 
 

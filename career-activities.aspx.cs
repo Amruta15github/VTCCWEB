@@ -31,54 +31,59 @@ public partial class career_activities : System.Web.UI.Page
         }
     }
 
+   
+
     public void GetCareerActivity()
     {
         try
         {
             StringBuilder strMarkup = new StringBuilder();
-            //using (DataTable dtcareer = c.GetDataTable("Select a.caId, a.caTitle, a.caDate, a.caDesc, b.centName from CareerActData a Inner Join CentersData b On a.atcId=b.centId Order By a.caId Desc"))
-            using (DataTable dtcareer = c.GetDataTable("Select CarActId, CarActDate, CarActTitle, CarActDescription from CareerActivity Order By CarActId Desc"))
-            {
-                if (dtcareer.Rows.Count > 0)
+           
+                //using (DataTable dtcareer = c.GetDataTable("Select a.caId, a.caTitle, a.caDate, a.caDesc, b.centName from CareerActData a Inner Join CentersData b On a.atcId=b.centId Order By a.caId Desc"))
+                using (DataTable dtcareer = c.GetDataTable("Select CarActId, CarActDate, CarActTitle, CarActDescription, FK_CenterID from CareerActivity Order By CarActId Desc"))
                 {
-                    int ncount = 1;
-                    foreach (DataRow row in dtcareer.Rows)
+                    if (dtcareer.Rows.Count > 0)
                     {
-                        strMarkup.Append("<span class=\"space30\"></span>");
-                        string nUrl = Master.rootPath + "career-activities/" + c.UrlGenerator(row["CarActTitle"].ToString().ToLower() + "-" + row["CarActId"].ToString());
-
-                        string caractTitle = row["CarActTitle"].ToString().Length >= 17 ? row["CarActTitle"].ToString().Substring(0, 17) + "..." : row["CarActTitle"].ToString();
-                        strMarkup.Append("<a href=\"" + nUrl + "\" class=\" semiBold medium themeClrThr\">" + caractTitle + "</a>");
-
-                        strMarkup.Append("<span class=\"space10\"></span>");
-
-                        //date
-                        DateTime nDate = Convert.ToDateTime(row["CarActDate"].ToString());
-                        strMarkup.Append("<span class=\"fontRegular\">" + nDate.ToString("dd MMM yyyy") + "<span class=\"fontRegular\"></span></span>");  /*|  " + row["centName"].ToString() + " </span>");*/
-                        strMarkup.Append("<span class=\"space10\"></span>");
-
-                        string carDesc = row["CarActDescription"].ToString().Length >= 154 ? row["CarActDescription"].ToString().Substring(0, 154) + "..." : row["CarActDescription"].ToString();
-
-                        strMarkup.Append("<p class=\"fontRegular line-ht-5 regular mrg_B_15\">" + carDesc + "</p>");
-                        strMarkup.Append("<span class=\"space10\"></span>");
-
-
-
-                        if (ncount < dtcareer.Rows.Count)
+                        int ncount = 1;
+                        foreach (DataRow row in dtcareer.Rows)
                         {
-                            strMarkup.Append("<span class=\"greyLine\"></span>");
+                    
+                            strMarkup.Append("<span class=\"space30\"></span>");
+                            string nUrl = Master.rootPath + "career-activities/" + c.UrlGenerator(row["CarActTitle"].ToString().ToLower() + "-" + row["CarActId"].ToString());
+
+                            string caractTitle = row["CarActTitle"].ToString().Length >= 17 ? row["CarActTitle"].ToString().Substring(0, 17) + "..." : row["CarActTitle"].ToString();
+                            strMarkup.Append("<a href=\"" + nUrl + "\" class=\" semiBold medium themeClrThr\">" + caractTitle + "</a>");
+
+                            strMarkup.Append("<span class=\"space10\"></span>");
+
+                            //date
+                            DateTime nDate = Convert.ToDateTime(row["CarActDate"].ToString());
+                            strMarkup.Append("<span class=\"fontRegular\">" + nDate.ToString("dd MMM yyyy") + "<span class=\"fontRegular\"></span> |  " + GetcenterName(Convert.ToInt32(row["FK_CenterID"])) + "</span>");
+                            strMarkup.Append("<span class=\"space10\"></span>");
+
+                            string carDesc = row["CarActDescription"].ToString().Length >= 154 ? row["CarActDescription"].ToString().Substring(0, 154) + "..." : row["CarActDescription"].ToString();
+
+                            strMarkup.Append("<p class=\"fontRegular line-ht-5 regular mrg_B_15\">" + carDesc + "</p>");
+                            strMarkup.Append("<span class=\"space10\"></span>");
+
+
+
+                            if (ncount < dtcareer.Rows.Count)
+                            {
+                                strMarkup.Append("<span class=\"greyLine\"></span>");
+                            }
+                            ncount++;
+
                         }
-                        ncount++;
-
+                        careerstr = strMarkup.ToString();
                     }
-                    careerstr = strMarkup.ToString();
-                }
-                else
-                {
-                    careerstr = "<div class=\"\"><div class=\"pad_10\"><span class=\"semiMedium fontRegular\">No Career Activities to display.</span></div></div>";
-                }
+                    else
+                    {
+                        careerstr = "<div class=\"\"><div class=\"pad_10\"><span class=\"semiMedium fontRegular\">No Career Activities to display.</span></div></div>";
+                    }
 
-            }
+                }
+           
         }
 
         catch (Exception ex)
@@ -87,6 +92,25 @@ public partial class career_activities : System.Web.UI.Page
             return;
         }
     }
+
+    private string GetcenterName(int centerId)
+    {
+        using (DataTable dtind = c.GetDataTable("select CenterName from Centersdata where CenterID =" + centerId))
+        {
+            if (dtind.Rows.Count > 0)
+            {
+                return dtind.Rows[0]["CenterName"].ToString();
+            }
+            else
+            {
+                return "Unknown centername";
+            }
+        }
+
+    }
+
+
+
 
     private void GetDetails(int NwsIdx)
     {
@@ -105,7 +129,8 @@ public partial class career_activities : System.Web.UI.Page
                     strMarkup.Append("<span class=\"space15\"></span>");
                     strMarkup.Append("<h2 class=\"pageH2 themeClrPrime mrg_B_5\">" + row["CarActTitle"].ToString() + "</h2>");
                     DateTime nDate = Convert.ToDateTime(row["CarActDate"]);
-                    strMarkup.Append("<span class=\"careerpost\"> VTCC Education | " + nDate.ToString("dd MMM yyyy") + "</span>"); /*|  " + row["centName"].ToString() + " </span>");*/
+                    strMarkup.Append("<span class=\"careerpost\">" + nDate.ToString("dd MMM yyyy") + "<span class=\"fontRegular\"></span> |  " + GetcenterName(Convert.ToInt32(row["FK_CenterID"])) + "</span>");
+                    // strMarkup.Append("<span class=\"fontRegular\">" + nDate.ToString("dd MMM yyyy") + "<span class=\"fontRegular\"></span> |  " + GetcenterName(Convert.ToInt32(row["FK_CenterID"])) + "</span>");
 
                     strMarkup.Append("<span class=\"space15\"></span>");
                     strMarkup.Append("<span class=\"semiMedium themeClrThr fontRegular\">Total Views : " + row["ViewsCount"].ToString() + "</span>");
