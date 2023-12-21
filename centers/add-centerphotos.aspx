@@ -16,102 +16,22 @@
         <span class="space10"></span>
                 <h1 class="pageH1 fontRegular">Center Photos</h1>
                 <span class="space20"></span>
-      <%--  <div class="row">--%>
+              
+                <div class="form-group col-md-6">
+						<label>Center Title:*</label>
+						<asp:TextBox ID="txttitle" runat="server" CssClass="form-control" Width="100%"></asp:TextBox>
+					</div>
 
-                <div class="col-md-8">
-                    <div class="form-group col-md-6">
-                        <label>Photos of institute :</label>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <asp:FileUpload ID="fuphotos" runat="server" CssClass="form-control-file" />
-                            </div>
-                          
-                             
-                            <div class="col-md-4">
-                                <asp:Button ID="btnsavephoto" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" />
-                            </div>
-                             <span class="space10"></span>
-                         <%--   <%= centerlogo %>--%>
-                            <span class="space5"></span>
-                                                   
-                  
-                        </div>
-                    </div>
-
-                    <span class="greyLine"></span>
-
-                    <div class="form-group col-md-6">
-                        <label>Office Room photo : </label>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <asp:FileUpload ID="furoomphoto" runat="server" CssClass="form-control-file" />
-                            </div>
-                            
-                          
-                            <div class="col-md-4">
-                                <asp:Button ID="btnroomphoto" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70"/>
-                            </div>
-                            <span class="space10"></span>
-                          <%--  <%= centerphoto %>--%>
-                            <span class="space5"></span>
-                        </div>
-                    </div>
-
-                    <span class="greyLine"></span>
-
-                    <div class="form-group col-md-6">
-                        <label>Lab Photo: </label>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <asp:FileUpload ID="fulabphoto" runat="server" CssClass="form-control-file" />
-                            </div>
-                           
-                            
-                            <div class="col-md-4">
-                                <asp:Button ID="btnlabphoto" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70"/>
-                            </div>
-                            <span class="space10"></span>
-                          <%--  <%= centeridproof %>--%>
-                            <span class="space5"></span>
-                        </div>
-                    </div>
-                    <span class="greyLine"></span>
-
-                    <div class="form-group col-md-6">
-                        <label>ATC Upload PDF: </label>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <asp:FileUpload ID="fuploadpdf" runat="server" CssClass="form-control-file" />
-                            </div>
-                           
-                            
-                            <div class="col-md-4">
-                                <asp:Button ID="btnuploadpdf" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" />
-                            </div>
-                             <span class="space10"></span>
-                          <%--  <%= centereducerti %>--%>
-                            <span class="space5"></span>
-                        </div>
-                    </div>
-
-                    <span class="greyLine"></span>
-
-                    <div class="form-group col-md-6">
-                        <label>Center out door photo: </label>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <asp:FileUpload ID="fuoutdoorphoto" runat="server" CssClass="form-control-file" />
-                            </div>
-                          
-                           
-                            <div class="col-md-4">
-                                <asp:Button ID="btnoutdoorphoto" runat="server" CssClass="btn btn-secondary" Text="Save" Width="70" />
-                            </div>
-                              <span class="space10"></span>
-                           <%-- <%= centerprofcourse %>--%>
-                            <span class="space5"></span>
-                        </div>
-                    </div>
+                <div class="form-group col-md-6">
+						<label>Center Image:</label>
+						<asp:FileUpload ID="fuImage" runat="server" CssClass="form-control-file" />
+						<span class="space10"></span>
+						<%--<%= nwsPhoto %>--%>
+                         <span class="space5"></span>
+					
+					</div>
+                    
+                <asp:Button ID="btnSave" runat="server" CssClass="btn btn-primary" Text="Save"  />
 
                     
                 </div>
@@ -119,6 +39,6 @@
             </div>
    </div>
         
-        </div>
+      
 </asp:Content>
 

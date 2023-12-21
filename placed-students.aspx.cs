@@ -36,7 +36,7 @@ public partial class placed_students : System.Web.UI.Page
                     int bxcount = 0;
 
                     strMarkup.Append("<span class=\"space20\"></span>");
-                    strMarkup.Append("<div class=\"row\">");
+                    strMarkup.Append("<div class=\"row\">");//row1
                     
                     foreach (DataRow row in dtplacemntdata.Rows)
                     {
@@ -51,7 +51,7 @@ public partial class placed_students : System.Web.UI.Page
                             using (DataTable dtstudeninfo = c.GetDataTable("Select * From StudentPlacement Where FK_CenterID=" + row["CenterID"] + ""))
                             {
                                 strMarkup.Append("<span class=\"space20\"></span>");
-                                strMarkup.Append("<div class=\"row\">");
+                                strMarkup.Append("<div class=\"row\">");//row2
                                 strMarkup.Append("<span class=\"space20\"></span>");
                                
                                 foreach (DataRow placrow in dtstudeninfo.Rows)
@@ -60,7 +60,7 @@ public partial class placed_students : System.Web.UI.Page
                                     strMarkup.Append("<div class=\"col-md-6 mb-4\">");
                                     strMarkup.Append("<div class=\"p-3 border border-secondary\">");
                                     strMarkup.Append("<div class=\"p-2\">");
-                                    strMarkup.Append("<div class=\"row\">");
+                                    strMarkup.Append("<div class=\"row\">");//row3
 
                                     if (placrow["StudPlcStudentPhoto"] != DBNull.Value && placrow["StudPlcStudentPhoto"].ToString() != "" && placrow["StudPlcStudentPhoto"].ToString() != "no-photo.png" && placrow["StudPlcStudentPhoto"] != null)
                                     {
