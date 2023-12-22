@@ -119,8 +119,16 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
 
                     if (row["CentPhotoFile"] != DBNull.Value && row["CentPhotoFile"] != null && row["CentPhotoFile"].ToString() != "" && row["CentPhotoFile"].ToString() != "no-photo.png")
                     {
-                        centerphoto = "<img src=\"" + Master.rootPath + "upload/centerphotos/" + row["CentPhotoFile"].ToString() + "\" width=\"200\" />";
+                        string fileExtension = Path.GetExtension(row["CentPhotoFile"].ToString()).ToLower();
 
+                        if (fileExtension == ".pdf")
+                        {
+                            centerphoto = "<a href=\"" + Master.rootPath + "upload/centerphotos/" + row["CentPhotoFile"].ToString() + "\" target=\"_blank\">View Document</a>";
+                        }
+                        else
+                        {
+                            centerphoto = "<img src=\"" + Master.rootPath + "upload/centerphotos/" + row["CentPhotoFile"].ToString() + "\" width=\"200\" />";
+                        }
                     }
 
                 }
