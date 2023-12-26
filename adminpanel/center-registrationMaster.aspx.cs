@@ -334,7 +334,7 @@ public partial class adminpanel_center_registrationMaster : System.Web.UI.Page
         catch (Exception ex)
         {
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('error', 'Error Occoured While Processing');", true);
-            c.ErrorLogHandler(this.ToString(), "btnDelete_Click", ex.Message.ToString());
+            c.ErrorLogHandler(this.ToString(),"btnDelete_Click", ex.Message.ToString());
             return;
         }
     }

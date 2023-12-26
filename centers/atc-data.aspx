@@ -31,8 +31,8 @@
                                         <div>
                                             <p>Name of Organization/Center : <%= arrData[0] %></p>
                                             <p>Type of Organization : <%= arrData[1] %></p>
-                                             <p>Select State : <%=arrData[2] %></p>
-                                              <p>Select District : <%=arrData[3] %></p>
+                                             <p>State : <%=arrData[2] %></p>
+                                              <p>District : <%=arrData[3] %></p>
                                              <p>Taluka : <%=arrData[4] %></p>
                                              <p>City Name : <%=arrData[5] %></p>
                                             <!--  basic details... -->

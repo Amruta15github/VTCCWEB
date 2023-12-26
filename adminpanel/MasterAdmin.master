@@ -117,6 +117,13 @@
 						</li>
 
 						<li class="nav-item">
+							<a href="approve-atc.aspx" class="nav-link">
+								<i class="nav-icon fas fa-window-maximize"></i>
+								<p>Approved Centers</p>
+							</a>
+						</li>
+
+						<li class="nav-item">
 							<a href="other-products.aspx" class="nav-link">
 								<i class="nav-icon fas fa-window-maximize"></i>
 								<p>VTCC Other Products</p>
