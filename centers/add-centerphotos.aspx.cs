@@ -200,9 +200,13 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
 
                 else
                 {
-                    c.ExecuteQuery("Update CenterPhotos set  CentPhotoTitle='" + txttitle.Text + "', CentPhotoFile='" + centerphoto+ "' where CentPhotoId=" + maxId);
+                    c.ExecuteQuery("Update CenterPhotos set  CentPhotoTitle='" + txttitle.Text + "'  where CentPhotoId=" + maxId);
 
-                   
+                    if (fuImage.HasFile)
+                    {
+                        c.ExecuteQuery("Update CenterPhotos Set CentPhotoFile='" + centerphoto + "' where CentPhotoId=" + maxId + "");
+                    }
+
 
                     ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Center Photo  Updated');", true);
                 }
