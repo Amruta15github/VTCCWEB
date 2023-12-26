@@ -118,7 +118,7 @@
 
 						<li class="nav-item">
 							<a href="approve-atc.aspx" class="nav-link">
-								<i class="nav-icon fas fa-window-maximize"></i>
+								<i class="nav-icon fas fa-thumbs-up"></i>
 								<p>Approved Centers</p>
 							</a>
 						</li>
