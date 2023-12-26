@@ -11,25 +11,28 @@
     
     <!-- registration form start -->
     <span class="space20"></span>
-    <div class="container">
+     <h2 class="pgTitle">ATC Registration Information</h2>
+    <span class="space10"></span>
+   
+   
         <div class="card card-primary">
+            <div class="card-header">
+				<h3 class="card-title">ATC Registration Information</h3>
+			</div>
             <!-- Card Body -->
             <div class="card-body">
                 <div class="colorLightBlue">
                     <asp:Label ID="lblId" runat="server" Text="[New]"></asp:Label>
                 </div>
-                <span class="space30"></span>
+                <span class="space20"></span>
                 <div class="row">
-                    <div class="col-md-8">
-                        <h1 class="pageH1 fontRegular">ATC Registration Information</h1>
-                        <span class="space20"></span>
-                       
+                    <div class="col-md-8">                                                             
                                 <div class="row">
                                     <div class="col-md-6">
                                         <span class=" semiMedium themeClrThr"><strong>Basic Details</strong></span>
                                         <span class="space20"></span>
                                         <div>
-                                            <p>Name of Organization/Center : <%= arrData[0] %></p>
+                                            <p>Center Name : <%= arrData[0] %></p>
                                             <p>Type of Organization : <%= arrData[1] %></p>
                                              <p>State : <%=arrData[2] %></p>
                                               <p>District : <%=arrData[3] %></p>
@@ -42,7 +45,7 @@
                                         <span class="bold semiMedium themeClrThr"><strong>Other Details</strong></span>
                                         <span class="space20"></span>
                                         <div>
-                                            <p>Owner Name/ Competent Authority : <%= arrData[6] %></p>
+                                            <p>Owner Name : <%= arrData[6] %></p>
                                             <p>Gender : <%= arrData[7] %></p>
                                              <p>Birth date : <%= arrData[8] %></p>
                                              <p>Role : <%= arrData[9] %></p>
@@ -67,7 +70,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    
     <!-- registration form Ends -->
     <span class="space30"></span>
 </asp:Content>

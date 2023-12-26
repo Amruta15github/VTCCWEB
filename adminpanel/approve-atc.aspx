@@ -43,14 +43,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
  <%--  <p>view redirect info</p>--%>
 	  <!-- registration form start -->
-     <h2 class="pgTitle">Approve Center Master</h2>
+     <h2 class="pgTitle">Approve Center Details</h2>
     <span class="space10"></span>
    
    <div id="editinfo" runat="server">
    
         <div class="card card-primary">
             	<div class="card-header">
-				<h3 class="card-title">Approve Centers Master</h3>
+				<h3 class="card-title">Approve Centers Details</h3>
 			</div>
             <!-- Card Body -->
             <div class="card-body">
@@ -63,35 +63,35 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div>
-                                            <p>Center Registration Date : <%= arrData[0] %></p>
-                                            <p>Center Renew Date : <%= arrData[1] %></p>
-                                            <p>ATC Register Number : <%= arrData[2] %></p>
-                                            <p>Name of Organization/ Center : <%= arrData[3] %></p>
-                                            <p>Type of Organization : <%= arrData[4] %></p>
-                                            <p>Center State : <%=arrData[5] %></p>
-                                            <p>Center District : <%=arrData[6] %></p>
-                                            <p>Taluka : <%=arrData[7] %></p>
-                                            <p>City : <%=arrData[8] %></p>
-                                            <p>Email Id : <%= arrData[9] %></p>
-                                            <p>Mobile No.: <%= arrData[10] %></p>
-                                            <p>Pincode : <%= arrData[11] %></p>
+                                            <p><strong>Registration Date :</strong> <%= arrData[0] %></p>
+                                            <p><strong>Renew Date :</strong> <%= arrData[1] %></p>
+                                            <p><strong>ATC Register Number : </strong> <%= arrData[2] %></p>
+                                            <p><strong>Name :</strong> <%= arrData[3] %></p>
+                                            <p><strong>Type of Organization :</strong> <%= arrData[4] %></p>
+                                            <p><strong>State :</strong> <%=arrData[5] %></p>
+                                            <p><strong>District :</strong> <%=arrData[6] %></p>
+                                            <p><strong>Taluka :</strong> <%=arrData[7] %></p>
+                                            <p><strong>City :</strong> <%=arrData[8] %></p>
+                                            <p><strong>Email Id :</strong> <%= arrData[9] %></p>
+                                            <p><strong>Mobile No.:</strong> <%= arrData[10] %></p>
+                                            <p><strong>Pincode :</strong> <%= arrData[11] %></p>
                                             <!--  basic details... -->
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div>
-                                            <p>Owner Name : <%= arrData[12] %></p>
-                                            <p>Gender : <%= arrData[13] %></p>
-                                            <p>Birth Date : <%= arrData[14] %></p>
-                                            <p>Owner Photo : <%= arrData[15] %></p>
-                                            <p>Role : <%= arrData[16] %></p>
+                                            <p><strong>Owner Name :</strong> <%= arrData[12] %></p>
+                                            <p><strong>Gender :</strong> <%= arrData[13] %></p>
+                                            <p><strong>Birth Date : </strong> <%= arrData[14] %></p>
+                                            <p><strong>Owner Photo :</strong> <%= arrData[15] %> <%= centerphoto %></p>
+                                            <p><strong>Role :</strong> <%= arrData[16] %></p>
 
-                                            <p>Username : <%= arrData[17] %></p>
-                                            <p>UserPassword : <%= arrData[18] %></p>
-                                            <p>Center Logo: <%= arrData[19] %></p>
-                                            <p>Profcourses : <%= arrData[20] %></p>
-                                            <p>Educertificate : <%= arrData[21] %></p>
-                                            <p>IDproof : <%= arrData[22] %></p>
+                                            <p><strong>Username :</strong> <%= arrData[17] %></p>
+                                            <p><strong>UserPassword :</strong> <%= arrData[18] %></p>
+                                            <p><strong>Center Logo:</strong> <%= arrData[19] %> <%= centerlogo %></p>
+                                            <p><strong>Profcourses :</strong> <%= arrData[20] %>   <%= centerprofcourse %></p>
+                                            <p><strong>Educertificate :</strong> <%= arrData[21] %>  <%= centereducerti %></p>
+                                            <p><strong>IDproof :</strong> <%= arrData[22] %>   <%= centeridproof %></p>
 
                                             <!-- Other details... -->
                                         </div>

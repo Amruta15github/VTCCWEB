@@ -10,7 +10,7 @@ using System.IO;
 public partial class adminpanel_approve_atc : System.Web.UI.Page
 {
     iClass c = new iClass();
-    public string rootPath;
+    public string rootPath, centerlogo, centerphoto, centeridproof, centereducerti, centerprofcourse;
     public string[] arrData = new string[30];
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -170,7 +170,42 @@ public partial class adminpanel_approve_atc : System.Web.UI.Page
                     arrData[21] = row["CenterEduCertificate"].ToString();
                     arrData[22] = row["CenterIDProof"].ToString();
 
+                    if (row["CenterLogo"] != DBNull.Value && row["CenterLogo"] != null && row["CenterLogo"].ToString() != "" && row["CenterLogo"].ToString() != "no-photo.png")
+                    {
+
+                        centerlogo = "<img src=\"" + Master.rootPath + "upload/centerlogo/" + row["CenterLogo"].ToString() + "\"width=\"200\" >";
+                      
+                    }
+                   
+
+                    if (row["CenterOwnerPhoto"] != DBNull.Value && row["CenterOwnerPhoto"] != null && row["CenterOwnerPhoto"].ToString() != "" && row["CenterOwnerPhoto"].ToString() != "no-photo.png")
+                    {
+
+                        centerphoto = "<img src=\"" + Master.rootPath + "upload/centerownerphoto/" + row["CenterOwnerPhoto"].ToString() + "\"width=\"200\" >";
+
+                    }
+
+                    if (row["CenterIDProof"] != DBNull.Value && row["CenterIDProof"] != null && row["CenterIDProof"].ToString() != "" && row["CenterIDProof"].ToString() != "no-photo.png")
+                    {
+
+                        centeridproof = "<img src=\"" + Master.rootPath + "upload/centeridproof/" + row["CenterIDProof"].ToString() + "\"width=\"200\" >";
+
+                    }
+
+                    if (row["CenterEduCertificate"] != DBNull.Value && row["CenterEduCertificate"] != null && row["CenterEduCertificate"].ToString() != "" && row["CenterEduCertificate"].ToString() != "no-photo.png")
+                    {
+
+                        centereducerti = "<img src=\"" + Master.rootPath + "upload/centereducerti/" + row["CenterEduCertificate"].ToString() + "\"width=\"200\" >";
+
+                    }
+                    if (row["CenterProfCourse"] != DBNull.Value && row["CenterProfCourse"] != null && row["CenterProfCourse"].ToString() != "" && row["CenterProfCourse"].ToString() != "no-photo.png")
+                    {
+
+                        centerprofcourse = "<img src=\"" + Master.rootPath + "upload/centerprofcourse/" + row["CenterProfCourse"].ToString() + "\"width=\"200\" >";
+
+                    }
                 }
+
             }
         }
         catch (Exception ex)
