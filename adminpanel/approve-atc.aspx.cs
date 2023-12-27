@@ -159,50 +159,128 @@ public partial class adminpanel_approve_atc : System.Web.UI.Page
 
                     arrData[14] = Convert.ToDateTime(row["CenterOwnerBdate"]).ToString("dd/MM/yyyy");
 
-                    arrData[15] = row["CenterOwnerPhoto"].ToString();
+                    //arrData[15] = row["CenterOwnerPhoto"].ToString();
 
                     arrData[16] = row["CenterOwnerRole"].ToString();
 
                     arrData[17] = row["CenterUsername"].ToString();
                     arrData[18] = row["CenterUserPwd"].ToString();
-                    arrData[19] = row["CenterLogo"].ToString();
-                    arrData[20] = row["CenterProfCourse"].ToString();
-                    arrData[21] = row["CenterEduCertificate"].ToString();
-                    arrData[22] = row["CenterIDProof"].ToString();
+                    //arrData[19] = row["CenterLogo"].ToString();
+                    //arrData[20] = row["CenterProfCourse"].ToString();
+                    //arrData[21] = row["CenterEduCertificate"].ToString();
+                    //arrData[22] = row["CenterIDProof"].ToString();
+
+                    //if (row["CentPhotoFile"] != DBNull.Value && row["CentPhotoFile"] != null && row["CentPhotoFile"].ToString() != "" && row["CentPhotoFile"].ToString() != "no-photo.png")
+                    //{
+                    //    string fileExtension = Path.GetExtension(row["CentPhotoFile"].ToString()).ToLower();
+
+                    //    if (fileExtension == ".pdf")
+                    //    {
+                    //        centerphoto = "<a href=\"" + Master.rootPath + "upload/centerphotos/" + row["CentPhotoFile"].ToString() + "\" target=\"_blank\">View Document</a>";
+                    //    }
+                    //    else
+                    //    {
+                    //        centerphoto = "<img src=\"" + Master.rootPath + "upload/centerphotos/" + row["CentPhotoFile"].ToString() + "\" width=\"200\" />";
+                    //    }
+                    //}
 
                     if (row["CenterLogo"] != DBNull.Value && row["CenterLogo"] != null && row["CenterLogo"].ToString() != "" && row["CenterLogo"].ToString() != "no-photo.png")
                     {
+                        string fileExtension = Path.GetExtension(row["CenterLogo"].ToString()).ToLower();
 
-                        centerlogo = "<img src=\"" + Master.rootPath + "upload/centerlogo/" + row["CenterLogo"].ToString() + "\"width=\"200\" >";
-                      
+                        if (fileExtension == ".pdf")
+                        {
+                            centerlogo = "<a href=\"" + Master.rootPath + "upload/centerlogo/" + row["CenterLogo"].ToString() + "\" target=\"_blank\">View Document</a>";
+
+                        }
+                        else 
+                        {
+                            centerlogo = "<img src=\"" + Master.rootPath + "upload/centerlogo/" + row["CenterLogo"].ToString() + "\"width=\"150\" >";
+                        }
+
                     }
-                   
+                    else
+                    {
+                        centerlogo = "NA";
+                    }
+              
 
                     if (row["CenterOwnerPhoto"] != DBNull.Value && row["CenterOwnerPhoto"] != null && row["CenterOwnerPhoto"].ToString() != "" && row["CenterOwnerPhoto"].ToString() != "no-photo.png")
                     {
+                        string fileExtension = Path.GetExtension(row["CenterOwnerPhoto"].ToString()).ToLower();
 
-                        centerphoto = "<img src=\"" + Master.rootPath + "upload/centerownerphoto/" + row["CenterOwnerPhoto"].ToString() + "\"width=\"200\" >";
+                        if (fileExtension == ".pdf")
+                        {
+                            centerphoto = "<a href=\"" + Master.rootPath + "upload/centerownerphoto/" + row["CenterOwnerPhoto"].ToString() + "\" target=\"_blank\">View Document</a>";
 
+                        }
+                        else
+                        {
+                            centerphoto = "<img src=\"" + Master.rootPath + "upload/centerownerphoto/" + row["CenterOwnerPhoto"].ToString() + "\"width=\"150\" >";
+                        }
+                    }
+                    else
+                    {
+                        centerphoto = "NA";
                     }
 
                     if (row["CenterIDProof"] != DBNull.Value && row["CenterIDProof"] != null && row["CenterIDProof"].ToString() != "" && row["CenterIDProof"].ToString() != "no-photo.png")
                     {
+                        string fileExtension = Path.GetExtension(row["CenterIDProof"].ToString()).ToLower();
 
-                        centeridproof = "<img src=\"" + Master.rootPath + "upload/centeridproof/" + row["CenterIDProof"].ToString() + "\"width=\"200\" >";
+                        if (fileExtension == ".pdf")
+                        {
+                            centeridproof = "<a href=\"" + Master.rootPath + "upload/centeridproof/" + row["CenterIDProof"].ToString() + "\" target=\"_blank\">View Document</a>";
 
+                        }
+                        else
+                        {
+
+                            centeridproof = "<img src=\"" + Master.rootPath + "upload/centeridproof/" + row["CenterIDProof"].ToString() + "\"width=\"150\" >";
+                        }
+                    }
+                    else
+                    {
+                        centeridproof = "NA";
                     }
 
                     if (row["CenterEduCertificate"] != DBNull.Value && row["CenterEduCertificate"] != null && row["CenterEduCertificate"].ToString() != "" && row["CenterEduCertificate"].ToString() != "no-photo.png")
                     {
+                        string fileExtension = Path.GetExtension(row["CenterEduCertificate"].ToString()).ToLower();
 
-                        centereducerti = "<img src=\"" + Master.rootPath + "upload/centereducerti/" + row["CenterEduCertificate"].ToString() + "\"width=\"200\" >";
-
+                        if (fileExtension == ".pdf")
+                        {
+                            centereducerti = "<a href=\"" + Master.rootPath + "upload/centereducerti/" + row["CenterEduCertificate"].ToString() + "\" target=\"_blank\">View Document</a>";
+                            
+                        }
+                        else
+                        {
+                            centereducerti = "<img src=\"" + Master.rootPath + "upload/centereducerti/" + row["CenterEduCertificate"].ToString() + "\"width=\"150\" >";
+                        }
                     }
+                    else
+                    {
+                        centereducerti = "NA";
+                    }
+
                     if (row["CenterProfCourse"] != DBNull.Value && row["CenterProfCourse"] != null && row["CenterProfCourse"].ToString() != "" && row["CenterProfCourse"].ToString() != "no-photo.png")
                     {
+                        string fileExtension = Path.GetExtension(row["CenterProfCourse"].ToString()).ToLower();
 
-                        centerprofcourse = "<img src=\"" + Master.rootPath + "upload/centerprofcourse/" + row["CenterProfCourse"].ToString() + "\"width=\"200\" >";
+                        if (fileExtension == ".pdf")
+                        {
+                            centerprofcourse = "<a href=\"" + Master.rootPath + "upload/centerprofcourse/" + row["CenterProfCourse"].ToString() + "\" target=\"_blank\">View Document</a>";
 
+                        }
+                        else
+                        {
+
+                            centerprofcourse = "<img src=\"" + Master.rootPath + "upload/centerprofcourse/" + row["CenterProfCourse"].ToString() + "\"width=\"150\" >";
+                        }
+                    }
+                    else
+                    {
+                        centerprofcourse = "NA";
                     }
                 }
 

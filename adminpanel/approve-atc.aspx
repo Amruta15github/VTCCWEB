@@ -65,7 +65,7 @@
                                         <div>
                                             <p><strong>Registration Date :</strong> <%= arrData[0] %></p>
                                             <p><strong>Renew Date :</strong> <%= arrData[1] %></p>
-                                            <p><strong>ATC Register Number : </strong> <%= arrData[2] %></p>
+                                            <p><strong>ATC Register Number : </strong><%= arrData[2] %></p>
                                             <p><strong>Name :</strong> <%= arrData[3] %></p>
                                             <p><strong>Type of Organization :</strong> <%= arrData[4] %></p>
                                             <p><strong>State :</strong> <%=arrData[5] %></p>
@@ -75,23 +75,32 @@
                                             <p><strong>Email Id :</strong> <%= arrData[9] %></p>
                                             <p><strong>Mobile No.:</strong> <%= arrData[10] %></p>
                                             <p><strong>Pincode :</strong> <%= arrData[11] %></p>
+                                            <p><strong>Owner Name :</strong> <%= arrData[12] %></p>
+                                            <p><strong>Gender :</strong> <%= arrData[13] %></p>
+                                            <p><strong>Birth Date : </strong><%= arrData[14] %></p>
+                                            <p><strong>Role :</strong> <%= arrData[16] %></p>
+                                            <p><strong>Username :</strong> <%= arrData[17] %></p>
+                                            <p><strong>UserPassword :</strong> <%= arrData[18] %></p>
                                             <!--  basic details... -->
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div>
-                                            <p><strong>Owner Name :</strong> <%= arrData[12] %></p>
-                                            <p><strong>Gender :</strong> <%= arrData[13] %></p>
-                                            <p><strong>Birth Date : </strong> <%= arrData[14] %></p>
-                                            <p><strong>Owner Photo :</strong> <%= arrData[15] %> <%= centerphoto %></p>
-                                            <p><strong>Role :</strong> <%= arrData[16] %></p>
 
-                                            <p><strong>Username :</strong> <%= arrData[17] %></p>
-                                            <p><strong>UserPassword :</strong> <%= arrData[18] %></p>
-                                            <p><strong>Center Logo:</strong> <%= arrData[19] %> <%= centerlogo %></p>
-                                            <p><strong>Profcourses :</strong> <%= arrData[20] %>   <%= centerprofcourse %></p>
-                                            <p><strong>Educertificate :</strong> <%= arrData[21] %>  <%= centereducerti %></p>
-                                            <p><strong>IDproof :</strong> <%= arrData[22] %>   <%= centeridproof %></p>
+                                            <p><strong>Owner Photo :</strong> <%= arrData[15] %> 
+                                                <span class="space10"></span> <%= centerphoto %></p>
+
+                                            <p><strong>Center Logo:</strong> <%= arrData[19] %>
+                                                <span class="space10"></span> <%= centerlogo %></p>
+
+                                            <p><strong>Professional Courses Completed :</strong> <%= arrData[20] %>  
+                                                 <span class="space10"></span><%= centerprofcourse %></p>
+
+                                            <p><strong>Photo ID proof :</strong> <%= arrData[22] %>  
+                                                 <span class="space10"></span><%= centeridproof %></p>
+
+                                            <p><strong>Educational Qualification :</strong> <%= arrData[21] %>  
+                                                <span class="space10"></span> <%= centereducerti %></p>
 
                                             <!-- Other details... -->
                                         </div>
