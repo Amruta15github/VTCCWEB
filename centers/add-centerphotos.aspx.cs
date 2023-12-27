@@ -33,13 +33,13 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
                         btnSave.Text = "Save Info";
                         btnDelete.Visible = false;
                        
-                        //btnRemove.Visible = false;
+                       
                     }
                     else
                     {
                         btnSave.Text = "Modify Info";
-                        btnDelete.Visible = true;                     
-                       
+                        btnDelete.Visible = true;
+                        GetData(Convert.ToInt32(Session["centerMaster"]));
                     }
                 }
                 else
@@ -49,7 +49,7 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
                     FillGrid();
                 }
 
-                GetData(Convert.ToInt32(Session["centerMaster"]));
+                
             }
             lblId.Visible = false;
 
@@ -119,6 +119,7 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
                     txttitle.Text = row["CentPhotoTitle"].ToString();
 
                     if (row["CentPhotoFile"] != DBNull.Value && row["CentPhotoFile"] != null && row["CentPhotoFile"].ToString() != "" && row["CentPhotoFile"].ToString() != "no-photo.png")
+
                     {
                         string fileExtension = Path.GetExtension(row["CentPhotoFile"].ToString()).ToLower();
 
@@ -237,13 +238,9 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
             {
                 Literal litAnch = (Literal)e.Row.FindControl("litAnch");
                 litAnch.Text = "<a href=\"add-centerphotos.aspx?action=edit&id=" + e.Row.Cells[0].Text + "\"class=\"gAnch\" title=\"View/Edit\"></a>";
-
-
-                //Literal litAnchphto = new Literal();
-                //litAnchphto = (Literal)e.Row.FindControl("litAnchphto");
-                //litAnchphto.Text = "<a href=\"add-centerphotos.aspx?albumId=" + e.Row.Cells[0].Text + "\" class=\"addPhoto\" title=\"Add Photos \"></a>";
-
-            }
+                
+        
+        }
         }
         catch (Exception ex)
         {
@@ -257,7 +254,7 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
     {
         try
         {
-            c.ExecuteQuery("Delete CenterPhotos where CentPhotoId=" + Session["centerMaster"]);
+            c.ExecuteQuery("Delete CenterPhotos where CentPhotoId=" + Request.QueryString["id"]);
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Center Photos Deleted');", true);
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "waitAndMove('add-centerphotos.aspx', 2000);", true);
         }
