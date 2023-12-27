@@ -38,8 +38,8 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
                     else
                     {
                         btnSave.Text = "Modify Info";
-                        btnDelete.Visible = true;
-                        GetData(Convert.ToInt32(Request.QueryString["id"]));
+                        btnDelete.Visible = true;                     
+                       
                     }
                 }
                 else
@@ -49,7 +49,7 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
                     FillGrid();
                 }
 
-               
+                GetData(Convert.ToInt32(Session["centerMaster"]));
             }
             lblId.Visible = false;
 
@@ -67,7 +67,8 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
     {
         try
         {
-            using (DataTable dtphoto = c.GetDataTable("Select CentPhotoId,  CentPhotoTitle From CenterPhotos Order By CentPhotoId DESC"))
+            using (DataTable dtphoto = c.GetDataTable("Select CentPhotoId, CentPhotoTitle From CenterPhotos where FK_CenterID= " + Session["centerMaster"] +" Order By CentPhotoId DESC "))
+
             {
                 gvphotos.DataSource = dtphoto;
                 gvphotos.DataBind();
@@ -123,11 +124,11 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
 
                         if (fileExtension == ".pdf")
                         {
-                            centerphoto = "<a href=\"" + Master.rootPath + "upload/centerphotos/" + row["CentPhotoFile"].ToString() + "\" target=\"_blank\">View Document</a>";
+                            centerphoto = "<a href=\"" + Master.rootPath + "upload/centerphotos/thumb/" + row["CentPhotoFile"].ToString() + "\" target=\"_blank\">View Document</a>";
                         }
                         else
                         {
-                            centerphoto = "<img src=\"" + Master.rootPath + "upload/centerphotos/" + row["CentPhotoFile"].ToString() + "\" width=\"200\" />";
+                            centerphoto = "<img src=\"" + Master.rootPath + "upload/centerphotos/thumb/" + row["CentPhotoFile"].ToString() + "\" width=\"200\" />";
                         }
                     }
 
@@ -168,7 +169,8 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
                     if (fExt == ".jpeg" || fExt == ".png" || fExt == ".pdf" || fExt == ".jpg")
                     {
                         centerphoto = "center-photo-" + Session["centerMaster"].ToString() + DateTime.Now.ToString("ddMMyyyyHHmmss") + fExt;
-                        fuImage.SaveAs(Server.MapPath("~/upload/centerphotos/") + centerphoto);
+                        fuImage.SaveAs(Server.MapPath("~/upload/centerphotos/thumb/") + centerphoto);
+                        ImageUploadProcess(centerphoto);
 
                     }
                     else
@@ -255,7 +257,7 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
     {
         try
         {
-            c.ExecuteQuery("Delete CenterPhotos where CentPhotoId=" + Request.QueryString["id"]);
+            c.ExecuteQuery("Delete CenterPhotos where CentPhotoId=" + Session["centerMaster"]);
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Center Photos Deleted');", true);
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "waitAndMove('add-centerphotos.aspx', 2000);", true);
         }
@@ -270,5 +272,30 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
     protected void btnCancel_Click(object sender, EventArgs e)
     {
         Response.Redirect("add-centerphotos.aspx");
+    }
+    private void ImageUploadProcess(string centerphoto)
+    {
+        try
+        {
+
+            string origImgPath = "~/upload/centerphotos/original/";
+            string thumbImgPath = "~/upload/centerphotos/thumb/";
+            string normalImgPath = "~/upload/centerphotos/";
+
+            fuImage.SaveAs(Server.MapPath(origImgPath) + centerphoto);
+            c.ImageOptimizer(centerphoto, origImgPath, normalImgPath, 800, true);
+            c.ImageOptimizer(centerphoto, normalImgPath, thumbImgPath, 480, true);
+
+
+            //Delete rew image from server
+            File.Delete(Server.MapPath(origImgPath) + centerphoto);
+
+        }
+        catch (Exception ex)
+        {
+            ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('error', 'Error Occoured While Processing');", true);
+            c.ErrorLogHandler(this.ToString(), "ImageUploadProcess", ex.Message.ToString());
+            return;
+        }
     }
 }
