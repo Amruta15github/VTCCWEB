@@ -31,15 +31,13 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
                     if (Request.QueryString["action"] == "new")
                     {
                         btnSave.Text = "Save Info";
-                        btnDelete.Visible = false;
-                       
-                       
+                        btnDelete.Visible = false;                                         
                     }
                     else
                     {
                         btnSave.Text = "Modify Info";
                         btnDelete.Visible = true;
-                        GetData(Convert.ToInt32(Session["centerMaster"]));
+                        GetData(Convert.ToInt32(Request.QueryString["id"]));
                     }
                 }
                 else
@@ -125,7 +123,7 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
 
                         if (fileExtension == ".pdf")
                         {
-                            centerphoto = "<a href=\"" + Master.rootPath + "upload/centerphotos/thumb/" + row["CentPhotoFile"].ToString() + "\" target=\"_blank\">View Document</a>";
+                            centerphoto = "<a href=\"" + Master.rootPath + "upload/centerphotos/documents/" + row["CentPhotoFile"].ToString() + "\" target=\"_blank\">View Document</a>";
                         }
                         else
                         {
@@ -143,6 +141,7 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
             return;
         }
     }
+
     protected void btnSave_Click(object sender, EventArgs e)
     {
         try
@@ -167,11 +166,30 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
                 {
                     string fExt = Path.GetExtension(fuImage.FileName).ToString().ToLower();
 
-                    if (fExt == ".jpeg" || fExt == ".png" || fExt == ".pdf" || fExt == ".jpg")
+                    if (fExt == ".jpeg" || fExt == ".png" || fExt == ".jpg")
                     {
                         centerphoto = "center-photo-" + Session["centerMaster"].ToString() + DateTime.Now.ToString("ddMMyyyyHHmmss") + fExt;
                         fuImage.SaveAs(Server.MapPath("~/upload/centerphotos/thumb/") + centerphoto);
                         ImageUploadProcess(centerphoto);
+
+                    }
+                    else if (fExt == ".pdf")
+                    {
+                        try
+                        {
+                            centerphoto = "center-document-" + Session["centerMaster"].ToString() + DateTime.Now.ToString("ddMMyyyyHHmmss") + fExt;
+                            fuImage.SaveAs(Server.MapPath("~/upload/centerphotos/documents/") + centerphoto);
+                            // Handle PDF file upload separately (save in a different folder or process differently)
+                            // Add appropriate logic here to save the PDF file or perform necessary actions
+                        }
+                        catch (Exception ex)
+                        {
+                            // Log the exception details for debugging
+                            System.Diagnostics.Debug.WriteLine("Exception while saving PDF: " + ex.Message);
+
+                            ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('error', 'Error occurred while uploading the PDF file.');", true);
+                            return;
+                        }
 
                     }
                     else
@@ -284,7 +302,7 @@ public partial class centers_add_centerphotos : System.Web.UI.Page
             c.ImageOptimizer(centerphoto, normalImgPath, thumbImgPath, 480, true);
 
 
-            //Delete rew image from server
+            //Delete row image from server
             File.Delete(Server.MapPath(origImgPath) + centerphoto);
 
         }

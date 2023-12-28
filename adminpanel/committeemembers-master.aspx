@@ -95,7 +95,7 @@
     </asp:UpdatePanel> 
 
     <div id="viewinfo" runat="server">
-		<%--<a href="jobopenings-master.aspx?action=new" runat="server" class="btn btn-primary btn-md">Add New</a>--%>
+		<a href="committeemembers-master.aspx?action=new" runat="server" class="btn btn-primary btn-md">Add New</a>
 		
 		<span class="space20"></span>
 		<div class="formPanel table-responsive-md">

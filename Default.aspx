@@ -328,7 +328,7 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-3">
                             <a href="images/quality-a-certificate.png" data-fancybox="imggroup">
-                                <img src="images/vtcc-quality-assurance-and-accreditation.jpg" class="img-fluid" /></a>
+                                <img src="images/quality-a-certificate.png" class="img-fluid" /></a>
                         </div>
                         <div class="menu-content col-lg-9">
                             <span class="space40"></span>
