@@ -135,6 +135,15 @@
 						</li>
 
 							<li class="nav-item">
+							<a href="student-form.aspx" class="nav-link">
+								<i class="nav-icon fa fa-download"></i>
+								<p>
+									Student Admission Form
+								</p>
+							</a>
+						</li>
+
+							<li class="nav-item">
 							<a href="add-centerphotos.aspx" class="nav-link">
 								<i class="nav-icon fa fa-file-video"></i>
 								<p>

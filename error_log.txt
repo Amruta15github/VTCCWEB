@@ -58,3 +58,72 @@ ImageUploadProcess
 Parameter is not valid.
 
 
+30/12/2023 11:28 AM
+ASP.centers_student_form_aspx
+GetData
+'ddldist' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+
+
+30/12/2023 11:30 AM
+ASP.centers_student_form_aspx
+btnSave_Click
+Invalid column name 'StudID'.
+
+
+30/12/2023 11:52 AM
+ASP.centers_student_form_aspx
+btnSave_Click
+String or binary data would be truncated in table 'VTCCData.dbo.StudentsData', column 'StudWhatsApp'. Truncated value: 'demo1512@gmail.'.
+The statement has been terminated.
+
+
+30/12/2023 11:59 AM
+ASP.centers_student_form_aspx
+btnSave_Click
+String or binary data would be truncated in table 'VTCCData.dbo.StudentsData', column 'StudWhatsApp'. Truncated value: 'demo1512@gmail.'.
+The statement has been terminated.
+
+
+30/12/2023 12:03 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+String or binary data would be truncated in table 'VTCCData.dbo.StudentsData', column 'StudRegNo'. Truncated value: 'System.Web.UI.WebControls.Text'.
+The statement has been terminated.
+
+
+30/12/2023 12:04 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+String or binary data would be truncated in table 'VTCCData.dbo.StudentsData', column 'StudRegNo'. Truncated value: 'System.Web.UI.WebControls.Text'.
+The statement has been terminated.
+
+
+30/12/2023 12:09 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Violation of PRIMARY KEY constraint 'PK_StudentsData'. Cannot insert duplicate key in object 'dbo.StudentsData'. The duplicate key value is (2).
+The statement has been terminated.
+
+
+30/12/2023 12:11 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+String or binary data would be truncated in table 'VTCCData.dbo.StudentsData', column 'StudRegNo'. Truncated value: 'System.Web.UI.WebControls.Text'.
+The statement has been terminated.
+
+
+30/12/2023 12:25 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Violation of PRIMARY KEY constraint 'PK_StudentsData'. Cannot insert duplicate key in object 'dbo.StudentsData'. The duplicate key value is (2).
+The statement has been terminated.
+
+
+30/12/2023 01:52 PM
+ASP.centers_student_form_aspx
+GetData
+'ddldist' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+
+

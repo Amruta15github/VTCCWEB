@@ -180,7 +180,7 @@ public partial class adminpanel_tieups_master : System.Web.UI.Page
             {
                 string fExt = Path.GetExtension(fulogo.FileName).ToString().ToLower();
 
-                if (fExt == ".jpeg" || fExt == ".png")
+                if (fExt == ".jpeg" || fExt == ".png" || fExt == ".jpg")
                 {
                     tieuplogo = "tieup-logo-" + maxId + DateTime.Now.ToString("ddMMyyyyHHmmss") + fExt;
                    
