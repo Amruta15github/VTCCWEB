@@ -127,3 +127,217 @@ GetData
 Parameter name: value
 
 
+01/01/2024 11:43 AM
+ASP.centers_student_form_aspx
+btnSave_Click
+Conversion failed when converting the varchar value 'kolhapur' to data type int.
+
+
+01/01/2024 11:50 AM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near '0'.
+
+
+01/01/2024 11:50 AM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near '0'.
+
+
+01/01/2024 11:51 AM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near '0'.
+
+
+01/01/2024 11:52 AM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near '0'.
+
+
+01/01/2024 12:00 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near '0'.
+
+
+01/01/2024 12:12 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 12:20 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 12:21 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 12:32 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 12:41 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 12:57 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 01:29 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 01:35 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 01:36 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'AND'.
+
+
+01/01/2024 01:45 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'AND'.
+
+
+01/01/2024 01:46 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 01:57 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 01:59 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 02:01 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 02:46 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 02:47 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 03:01 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 03:06 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 03:08 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 03:22 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 03:22 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 03:26 PM
+ASP.centers_student_form_aspx
+btnSave_Click
+Incorrect syntax near the keyword 'And'.
+
+
+01/01/2024 05:21 PM
+ASP.centers_student_form_aspx
+GetData
+'ddldist' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+
+
+01/01/2024 05:21 PM
+ASP.centers_student_form_aspx
+btnDelete_Click
+Incorrect syntax near '='.
+
+
+01/01/2024 05:21 PM
+ASP.centers_student_form_aspx
+GetData
+'ddldist' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+
+
+01/01/2024 05:21 PM
+ASP.centers_student_form_aspx
+btnDelete_Click
+Incorrect syntax near '='.
+
+
+01/01/2024 05:22 PM
+ASP.centers_student_form_aspx
+GetData
+'ddldist' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+
+
+01/01/2024 05:38 PM
+ASP.centers_student_form_aspx
+GetData
+'ddldist' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+
+
+01/01/2024 05:38 PM
+ASP.centers_student_form_aspx
+btnDelete_Click
+Incorrect syntax near '='.
+
+

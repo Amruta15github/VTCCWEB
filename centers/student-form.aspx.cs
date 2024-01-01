@@ -175,6 +175,9 @@ public partial class centers_student_form : System.Web.UI.Page
     {
         try
         {
+            // Concatenating first name, middle name, and last name to create full name
+            string fullName = txtfirstname.Text.Trim() + " " + txtmiddlename.Text.Trim() + " " + txtlastname.Text.Trim();
+
             GetAllControls(this.Controls);
             //Empty Validations
             if (txtfirstname.Text == "" || txtmiddlename.Text == "" || txtlastname.Text == "" || txtmobile.Text == "" || txtemail.Text == "" || txtcoursename.Text == "" || ddlstate.SelectedValue == "" || ddldist.SelectedValue == "")
@@ -207,96 +210,82 @@ public partial class centers_student_form : System.Web.UI.Page
             //Insert Update data
             int maxId = lblId.Text == "[New]" ? c.NextId("StudentsData", "StudID") : Convert.ToInt32(lblId.Text);
 
-            //DateTime appDate = DateTime.Now;
-            //string[] arrDate = txtDate.Text.Split('/');
-            //if (c.IsDate(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]) == false)
-            //{
-            //    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Enter Valid Date');", true);
-            //    return;
-            //}
-            //else
-            //{
-            //    appDate = Convert.ToDateTime(arrDate[1] + "/" + arrDate[0] + "/" + arrDate[2]);
-            //}
 
-            //DateTime cDate = DateTime.Now;
-            //string currentDate = cDate.ToString("yyyy-MM-dd HH:mm:ss.fff");
 
-            if (Session["centerMaster"] != null)
+            string studphoto = "";
+            if (fustudImage.HasFile)
             {
-                int centerID = Convert.ToInt32(Session["centerMaster"]);
+                string fExt = Path.GetExtension(fustudImage.FileName).ToString().ToLower();
 
-
-                string studphoto = "";
-                if (fustudImage.HasFile)
+                if (fExt == ".jpeg" || fExt == ".png" || fExt == ".jpg")
                 {
-                    string fExt = Path.GetExtension(fustudImage.FileName).ToString().ToLower();
+                    studphoto = "stud-photo-" + maxId + DateTime.Now.ToString("ddMMyyyyHHmmss") + fExt;
 
-                    if (fExt == ".jpeg" || fExt == ".png" || fExt == ".jpg")
-                    {
-                        studphoto = "stud-photo-"  + Session["centerMaster"].ToString()  + DateTime.Now.ToString("ddMMyyyyHHmmss") + fExt;
-
-                        fustudImage.SaveAs(Server.MapPath("~/upload/studadmphoto/thumb/") + studphoto);
-                        ImageUploadProcess(studphoto);
-                    }
-                    else
-                    {
-                        ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Only .jpeg .png .jpg files are allowed');", true);
-                        return;
-
-                    }
-                }
-
-                string studsign = "";
-                if (fusignImage.HasFile)
-                {
-                    string fExt = Path.GetExtension(fusignImage.FileName).ToString().ToLower();
-
-                    if (fExt == ".jpeg" || fExt == ".png" || fExt == ".jpg")
-                    {
-                        studsign = "stud-sign-"  +Session["centerMaster"].ToString()  + DateTime.Now.ToString("ddMMyyyyHHmmss") + fExt;
-
-                        fusignImage.SaveAs(Server.MapPath("~/upload/studsign/") + studsign);
-                    }
-                    else
-                    {
-                        ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Only .jpeg .png .jpg files are allowed');", true);
-                        return;
-
-                    }
-                }
-
-                if (lblId.Text == "[New]")
-                {
-                    c.ExecuteQuery("Insert into StudentsData (StudID, FK_CenterId, StudRegNo, StudFirstName, StudMidName, StudLastName, StudMobile, StudWhatsApp, StudEmailId, StudEducation, FK_StateId, FK_DistrictId,StudCity,StudAddress, StudBirthDate, StudCourseName, StudPhoto, StudSignPhoto,DelMark) Values (" + maxId + ",'" + Session["centerMaster"] + "', '" + txtregno.Text + "', '" + txtfirstname.Text + "','" + txtmiddlename.Text + "','" + txtlastname.Text + "','" + txtmobile.Text + "','" + txtwhatsapp.Text + "','" + txtemail.Text + "','" + txteduc.Text + "'," + ddlstate.SelectedValue + "," + ddldist.SelectedValue + ",'" + txtcity.Text + "','" + txtaddress.Text + "','" + txtbirthdate.Text + "','" + txtcoursename.Text + "','" + studphoto + "','" + studsign + "',0)");
-
-                    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Student Form Added');", true);
+                    fustudImage.SaveAs(Server.MapPath("~/upload/studadmphoto/thumb/") + studphoto);
+                    ImageUploadProcess(studphoto);
                 }
                 else
                 {
-                    c.ExecuteQuery("Update StudentsData set StudID=" + maxId + ",  FK_CenterId='" + Session["centerMaster"] + "', StudRegNo = '" + txtregno.Text + "',  StudFirstName='" + txtfirstname.Text + "', StudMidName='" + txtmiddlename.Text + "', StudLastName='" + txtlastname.Text + "', StudMobile='" + txtmobile.Text + "', StudEmailId='" + txtemail.Text + "', StudWhatsApp='" + txtwhatsapp.Text + "', StudEducation='" + txteduc.Text + "', FK_StateId= " + ddlstate.SelectedValue + ", FK_DistrictId= " + ddldist.SelectedValue + ", StudCity= '" + txtcity.Text + "', StudAddress= '" + txtaddress.Text + "', StudBirthDate='" + txtbirthdate.Text + "' , StudCourseName='" + txtcoursename.Text + "' where StudID=" + maxId);
+                    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Only .jpeg .png .jpg files are allowed');", true);
+                    return;
 
-                    if (fustudImage.HasFile)
-                    {
-                        c.ExecuteQuery("Update StudentsData Set StudPhoto='" + studphoto + "' where StudID=" + maxId + "");
-                    }
+                }
+            }
 
-                    if (fusignImage.HasFile)
-                    {
-                        c.ExecuteQuery("Update StudentsData Set StudSignPhoto='" + studsign + "' where StudID=" + maxId + "");
-                    }
+            string studsign = "";
+            if (fusignImage.HasFile)
+            {
+                string fExt = Path.GetExtension(fusignImage.FileName).ToString().ToLower();
 
-                    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Student Form Updated');", true);
+                if (fExt == ".jpeg" || fExt == ".png" || fExt == ".jpg")
+                {
+                    studsign = "stud-sign-" + maxId + DateTime.Now.ToString("ddMMyyyyHHmmss") + fExt;
+
+                    fusignImage.SaveAs(Server.MapPath("~/upload/studsign/") + studsign);
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Only .jpeg .png .jpg files are allowed');", true);
+                    return;
+
+                }
+            }
+
+            if (c.IsRecordExist("Select StudID from StudentsData where StudRegNo='" + txtregno.Text + "' And DelMark=0"))
+            {
+                // Record already exists, perform an UPDATE
+                c.ExecuteQuery("Update StudentsData set StudID=" + maxId + ",  FK_CenterId='" + Session["centerMaster"] + "', StudRegNo = '" + txtregno.Text + "',  StudFirstName='" + txtfirstname.Text + "', StudMidName='" + txtmiddlename.Text + "', StudLastName='" + txtlastname.Text + "', StudMobile='" + txtmobile.Text + "', StudEmailId='" + txtemail.Text + "', StudWhatsApp='" + txtwhatsapp.Text + "', StudEducation='" + txteduc.Text + "', FK_StateId= " + ddlstate.SelectedValue + ", FK_DistrictId= " + ddldist.SelectedValue + ", StudCity= '" + txtcity.Text + "', StudAddress= '" + txtaddress.Text + "', StudBirthDate='" + txtbirthdate.Text + "' , StudCourseName='" + txtcoursename.Text + "', StudFullName='" + fullName + "' where StudID=" + maxId);
+
+                // Additional update operations for images if needed
+
+                if (fustudImage.HasFile)
+                {
+                    c.ExecuteQuery("Update StudentsData Set StudPhoto='" + studphoto + "' where StudID=" + maxId + "");
                 }
 
+                if (fusignImage.HasFile)
+                {
+                    c.ExecuteQuery("Update StudentsData Set StudSignPhoto='" + studsign + "' where StudID=" + maxId + "");
+                }
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Student Form Updated');", true);
+
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "waitAndMove('student-form.aspx', 2000);", true);
-
-                //clear all
-                txtregno.Text = txtfirstname.Text = txtmiddlename.Text = txtlastname.Text = txtmobile.Text = txtemail.Text = txtwhatsapp.Text = txteduc.Text = txtcity.Text = txtaddress.Text = txtbirthdate.Text = txtcoursename.Text = "";
-                ddlstate.SelectedIndex = ddldist.SelectedIndex = 0;
-
             }
+            else
+            {
+                // Record doesn't exist, perform an INSERT
+                c.ExecuteQuery("Insert into StudentsData (StudID, FK_CenterId, StudRegNo, StudFirstName, StudMidName, StudLastName, StudFullName, StudMobile, StudWhatsApp, StudEmailId, StudEducation, FK_StateId, FK_DistrictId,StudCity,StudAddress, StudBirthDate, StudCourseName, StudPhoto, StudSignPhoto,DelMark) Values (" + maxId + ",'" + Session["centerMaster"] + "', '" + txtregno.Text + "', '" + txtfirstname.Text + "','" + txtmiddlename.Text + "','" + txtlastname.Text + "','" + fullName + "','" + txtmobile.Text + "','" + txtwhatsapp.Text + "','" + txtemail.Text + "','" + txteduc.Text + "'," + ddlstate.SelectedValue + "," + ddldist.SelectedValue + ",'" + txtcity.Text + "','" + txtaddress.Text + "','" + txtbirthdate.Text + "','" + txtcoursename.Text + "','" + studphoto + "','" + studsign + "', 0)"); // Your insert SQL statement
+
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Student Form Added');", true);
+            }
+
+            // Clear form fields and perform other necessary operations
+
+            txtregno.Text = txtfirstname.Text = txtmiddlename.Text = txtlastname.Text = txtmobile.Text = txtemail.Text = txtwhatsapp.Text = txteduc.Text = txtcity.Text = txtaddress.Text = txtbirthdate.Text = txtcoursename.Text = "";
+            ddlstate.SelectedIndex = ddldist.SelectedIndex = 0;
+
         }
+
         catch (Exception ex)
         {
             ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('error', 'Error Occoured While Processing');", true);
