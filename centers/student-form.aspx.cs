@@ -253,6 +253,9 @@ public partial class centers_student_form : System.Web.UI.Page
 
             if (c.IsRecordExist("Select StudID from StudentsData where StudRegNo='" + txtregno.Text + "' And DelMark=0"))
             {
+                ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Student Registration Number is already exist');", true);
+                return;
+
                 // Record already exists, perform an UPDATE
                 c.ExecuteQuery("Update StudentsData set StudID=" + maxId + ",  FK_CenterId='" + Session["centerMaster"] + "', StudRegNo = '" + txtregno.Text + "',  StudFirstName='" + txtfirstname.Text + "', StudMidName='" + txtmiddlename.Text + "', StudLastName='" + txtlastname.Text + "', StudMobile='" + txtmobile.Text + "', StudEmailId='" + txtemail.Text + "', StudWhatsApp='" + txtwhatsapp.Text + "', StudEducation='" + txteduc.Text + "', FK_StateId= " + ddlstate.SelectedValue + ", FK_DistrictId= " + ddldist.SelectedValue + ", StudCity= '" + txtcity.Text + "', StudAddress= '" + txtaddress.Text + "', StudBirthDate='" + txtbirthdate.Text + "' , StudCourseName='" + txtcoursename.Text + "', StudFullName='" + fullName + "' where StudID=" + maxId);
 

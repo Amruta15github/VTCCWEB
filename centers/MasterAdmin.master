@@ -136,7 +136,7 @@
 
 							<li class="nav-item">
 							<a href="student-form.aspx" class="nav-link">
-								<i class="nav-icon fa fa-download"></i>
+								<i class="nav-icon fa fa-folder"></i>
 								<p>
 									Student Admission Form
 								</p>
