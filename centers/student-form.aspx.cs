@@ -210,8 +210,6 @@ public partial class centers_student_form : System.Web.UI.Page
             //Insert Update data
             int maxId = lblId.Text == "[New]" ? c.NextId("StudentsData", "StudID") : Convert.ToInt32(lblId.Text);
 
-
-
             string studphoto = "";
             if (fustudImage.HasFile)
             {
@@ -251,7 +249,7 @@ public partial class centers_student_form : System.Web.UI.Page
                 }
             }
 
-            if (c.IsRecordExist("Select StudID from StudentsData where StudRegNo='" + txtregno.Text + "' And DelMark=0"))
+            if (c.IsRecordExist("Select StudID from StudentsData where StudRegNo='" + txtregno.Text + "'  And DelMark=0"))
             {
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('warning', 'Student Registration Number is already exist');", true);
                 return;
@@ -270,8 +268,9 @@ public partial class centers_student_form : System.Web.UI.Page
                 {
                     c.ExecuteQuery("Update StudentsData Set StudSignPhoto='" + studsign + "' where StudID=" + maxId + "");
                 }
+        
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "myScript", "TostTrigger('success', 'Student Form Updated');", true);
-
+          
                 ScriptManager.RegisterClientScriptBlock(this, GetType(), "CallMyFunction", "waitAndMove('student-form.aspx', 2000);", true);
             }
             else
@@ -301,7 +300,6 @@ public partial class centers_student_form : System.Web.UI.Page
     {
         try
         {
-
             string origImgPath = "~/upload/studadmphoto/original/";
             string thumbImgPath = "~/upload/studadmphoto/thumb/";
             string normalImgPath = "~/upload/studadmphoto/";
@@ -309,7 +307,6 @@ public partial class centers_student_form : System.Web.UI.Page
             fustudImage.SaveAs(Server.MapPath(origImgPath) + studphoto);
             c.ImageOptimizer(studphoto, origImgPath, normalImgPath, 800, true);
             c.ImageOptimizer(studphoto, normalImgPath, thumbImgPath, 480, true);
-
 
             //Delete rew image from server
             File.Delete(Server.MapPath(origImgPath) + studphoto);
@@ -342,8 +339,6 @@ public partial class centers_student_form : System.Web.UI.Page
     {
         Response.Redirect("student-form.aspx");
     }
-
-   
 
     protected void ddlstate_SelectedIndexChanged1(object sender, EventArgs e)
     {

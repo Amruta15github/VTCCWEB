@@ -10,19 +10,19 @@
     <div class="container-fluid">
         <div class="row">
            <%--  <%-- Small Boxces --%>
-          <%--  <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-6">
                 <div class="small-box bg-info">
                     <div class="inner">
                         <h3><%=arrCounts[0]%></h3>
-                        <p>News</p>
+                        <p>Student Admission form</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
 
                     </div>
-                    <a href="news.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i> </a>
+                    <a href="student-form.aspx" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i> </a>
                 </div>
-            </div>--%>
+            </div>
             </div>
         </div>
 </asp:Content>
